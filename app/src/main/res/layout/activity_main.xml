@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E9EFF2"
     tools:context=".MainActivity">
 
     <TextView
@@ -17,6 +17,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/groupText"
         app:layout_constraintTop_toTopOf="@+id/groupText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ellipse_14" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -36,15 +44,15 @@
 
     <TextView
         android:id="@+id/MainPageText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="73dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="4dp"
         android:text="ГЛАВНАЯ"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/usernametext"
@@ -112,7 +120,7 @@
         android:layout_marginTop="272dp"
         android:backgroundTint="@color/white"
         android:text="МОИ"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="#F4694D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +134,7 @@
         android:backgroundTint="@color/white"
         android:text="ДОСТУПНЫЕ"
         android:textAllCaps="false"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="#F4694D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,8 +146,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
+        android:backgroundTint="#F4694D"
         android:text="ETU ID"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="#F4694D"
         android:textIsSelectable="false"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,7 +161,7 @@
         android:layout_width="97dp"
         android:layout_height="52dp"
         android:layout_marginTop="4dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:backgroundTint="#F4694D"
         android:text="Выйти"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
