@@ -1,6 +1,8 @@
 package com.example.mainlist
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -26,6 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun getCatList(): List<String> {
         return this.resources.getStringArray(R.array.cat_names).toList()
+    }
+
+
+    fun CreateTurn(view : View){
+        val intent = Intent(this, MainActivity2::class.java)
+        startActivity(intent)
     }
 
 
