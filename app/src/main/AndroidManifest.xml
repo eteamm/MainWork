@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MainList"
         tools:targetApi="31">
         <activity
+            android:name=".queue_editing"
+            android:exported="false" />
+        <activity
+            android:name=".ListOfParticipants"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
