@@ -81,8 +81,8 @@
 
         <ImageView
             android:id="@+id/smallBlock"
-            android:layout_width="385dp"
-            android:layout_height="183dp"
+            android:layout_width="410dp"
+            android:layout_height="162dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +143,6 @@
 
         </FrameLayout>
 
-
     </FrameLayout>
 
     <FrameLayout
@@ -161,7 +160,7 @@
             app:srcCompat="@drawable/rectangle_126" />
 
         <TextView
-            android:id="@+id/Headingtudents"
+            android:id="@+id/HeadingStudents"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="65dp"
@@ -202,7 +201,16 @@
                 android:layout_marginTop="10dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/lypa" />
+
         </FrameLayout>
+
+        <EditText
+            android:id="@+id/searchBlock2"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle_117" />
 
     </FrameLayout>
 
