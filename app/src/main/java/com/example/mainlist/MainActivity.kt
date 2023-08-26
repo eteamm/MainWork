@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         val button2 = findViewById<Button>(R.id.buttonYra)
         button2.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(this, Activity_Mainqueue::class.java)
             startActivity(intent);
         }
 
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun CreateTurn(view : View){
-        val intent = Intent(this, MainActivity2::class.java)
+        val intent = Intent(this, Activity_queue_create::class.java)
         startActivity(intent)
     }
 

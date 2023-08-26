@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MainList"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_Mainqueue"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_queue_create"
+            android:exported="false" />
+        <activity
             android:name=".EntryScreen"
             android:exported="false" />
         <activity
@@ -20,9 +26,6 @@
             android:exported="false" />
         <activity
             android:name=".ListOfParticipants"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
