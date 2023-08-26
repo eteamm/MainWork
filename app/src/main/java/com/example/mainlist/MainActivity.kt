@@ -4,20 +4,42 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mainlist.model.Users.MineUserEntity
 import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        val myJson = """
+{
+  "nickname": "Nikita Kadun",
+  "email": "kadunnikitacom@gmail.com",
+  "id": "1",
+  "workStatus": "Student",
+  "group": "2391",
+  "errorDetail": null
+}
+""".trimIndent()
         var gson = Gson()
+        var mMineUserEntity = gson?.fromJson(myJson, MineUserEntity.MineUserInfo::class.java)
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val button = findViewById<Button>(R.id.buttonRita)
+        val UserName = findViewById<TextView>(R.id.UserNameMain)
+        val Status = findViewById<TextView>(R.id.StatusMain)
+        val Group = findViewById<TextView>(R.id.GroupMain)
+        if (mMineUserEntity != null) {
+            UserName.text =mMineUserEntity.nickname
+        }
+        if (mMineUserEntity != null) {
+            Status.text =mMineUserEntity.workStatus
+        }
+        if (mMineUserEntity != null) {
+            Group.text =mMineUserEntity.group
+        }
         button.setOnClickListener {
             val intent = Intent(this, ListOfParticipants::class.java)
             startActivity(intent);
