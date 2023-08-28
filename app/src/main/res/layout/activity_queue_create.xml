@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="#E9EFF2"
     android:orientation="vertical"
-    tools:context=".Activity_queue_create">
+    tools:context=".Yuri.Activity_queue_create">
 
     <FrameLayout
         android:layout_width="wrap_content"

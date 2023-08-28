@@ -1,0 +1,11 @@
+<resources>
+
+    <string-array name="names">
+        <item>Никита</item>
+        <item>Юра</item>
+        <item>Андрей</item>
+        <item>Сергей</item>
+        <item>Рита</item>
+        <item>Максим</item>
+    </string-array>
+</resources>

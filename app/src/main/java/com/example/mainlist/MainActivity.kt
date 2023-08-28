@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mainlist.Yuri.Activity_Mainqueue
+import com.example.mainlist.Yuri.Activity_queue_create
 import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
@@ -75,7 +77,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun CreateTurn(view : View){
-        val intent = Intent(this, Activity_queue_create::class.java)
+        val intent = Intent(this, Activity_Mainqueue::class.java)
         startActivity(intent)
     }
 

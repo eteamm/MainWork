@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="#E9EFF2"
     android:orientation="vertical"
-    tools:context=".Activity_Mainqueue">
+    tools:context=".Yuri.Activity_Mainqueue">
 
     <FrameLayout
         android:layout_width="wrap_content"
@@ -141,5 +141,10 @@
         android:textSize="12sp"
         tools:layout_editor_absoluteX="211dp"
         tools:layout_editor_absoluteY="182dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

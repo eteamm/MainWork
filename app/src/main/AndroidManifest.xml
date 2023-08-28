@@ -13,10 +13,10 @@
         android:theme="@style/Theme.MainList"
         tools:targetApi="31">
         <activity
-            android:name=".Activity_Mainqueue"
+            android:name=".Yuri.Activity_Mainqueue"
             android:exported="false" />
         <activity
-            android:name=".Activity_queue_create"
+            android:name=".Yuri.Activity_queue_create"
             android:exported="false" />
         <activity
             android:name=".EntryScreen"
