@@ -15,4 +15,5 @@
         <item>Масяня</item>
         <item>Симба</item>
     </string-array>
+    <string name="РЕДАКТИРОВАТЬ">queue_editing</string>
 </resources>
