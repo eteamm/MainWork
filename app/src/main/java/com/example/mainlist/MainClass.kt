@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 
-class CustomRecyclerAdapter(private val names: List<String>) : RecyclerView
+class CustomRecyclerAdapter(private val names: List<Char>) : RecyclerView
 .Adapter<CustomRecyclerAdapter.MyViewHolder>() {
     var counter = 0
+    var gson = Gson()
+    var mMineUserEntity = gson?.fromJson(names, MassiveJSON.MineUserInfo::class.java)
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val largeTextView: TextView = itemView.findViewById(R.id.textViewLarge)
         val smallTextView: TextView = itemView.findViewById(R.id.textViewSmall)
@@ -23,13 +26,12 @@ class CustomRecyclerAdapter(private val names: List<String>) : RecyclerView
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val array = arrayOfNulls<Number>(100)
-
         for (i in array.indices) {
             array[i] = i + 1
 
         }
         holder.largeTextView.text = array[counter].toString() + " Кот"
-        holder.smallTextView.text = names[position]
+        holder.smallTextView.text = mMineUserEntity!!.group[1].toString()
         counter = counter + 1
     }
 

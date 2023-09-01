@@ -12,9 +12,10 @@ import com.example.mainlist.Yuri.Activity_Mainqueue
 import com.example.mainlist.Yuri.Activity_queue_create
 import com.google.gson.Gson
 
-class MainActivity : AppCompatActivity() {
+class MainScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         val myJson = """
 {
   "nickname": "Nikita Kadun",
@@ -28,11 +29,10 @@ class MainActivity : AppCompatActivity() {
         var gson = Gson()
         var mMineUserEntity = gson?.fromJson(myJson, MineUserEntity.MineUserInfo::class.java)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val button = findViewById<Button>(R.id.buttonRita)
-        val UserName = findViewById<TextView>(R.id.UserNameMain)
-        val Status = findViewById<TextView>(R.id.StatusMain)
-        val Group = findViewById<TextView>(R.id.GroupMain)
+        setContentView(R.layout.activity_mainscreen)
+        val UserName = findViewById<TextView>(R.id.userNameMain)
+        val Status = findViewById<TextView>(R.id.statusMain)
+        val Group = findViewById<TextView>(R.id.groupMain)
         if (mMineUserEntity != null) {
             UserName.text =mMineUserEntity.nickname
         }
@@ -47,19 +47,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        val button1 = findViewById<Button>(R.id.buttonRita2)
-        button1.setOnClickListener {
-            val intent = Intent(this, queue_editing::class.java)
+        val bExit = findViewById<Button>(R.id.bEXIT)
+        bExit.setOnClickListener {
+            val intent = Intent(this, EntryScreen::class.java)
             startActivity(intent);
         }
 
-        val button2 = findViewById<Button>(R.id.buttonYra)
-        button2.setOnClickListener {
-            val intent = Intent(this, Activity_Mainqueue::class.java)
-            startActivity(intent);
-        }
-
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+        val recyclerView: RecyclerView = findViewById(R.id.rec)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = CustomRecyclerAdapter(getCatList())
 
@@ -71,8 +65,21 @@ class MainActivity : AppCompatActivity() {
         return data
     }
 
-    private fun getCatList(): List<String> {
-        return this.resources.getStringArray(R.array.cat_names).toList()
+    private fun getCatList(): List<Char> {
+
+        val jsonList =
+            """
+{
+  "nickname": "Nikita Kadun",
+  "email": "kadunnikitacom@gmail.com",
+  "id": "1",
+  "workStatus": "Student",
+  "group": [ "2391","2392","2370","2371"]
+  "errorDetail": null
+}
+"""
+
+        return jsonList.toList()
     }
 
 
@@ -80,6 +87,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, Activity_Mainqueue::class.java)
         startActivity(intent)
     }
+
 
 
 }

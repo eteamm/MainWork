@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">MainList</string>
+    <string name="главная">ГЛАВНАЯ</string>
+    <string name="статус">статус</string>
+    <string name="группа">группа</string>
+
     <string-array name="cat_names">
         <item>Рыжик</item>
         <item>Барсик</item>
