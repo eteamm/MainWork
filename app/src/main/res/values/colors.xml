@@ -4,4 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#E9EFF2</color>
     <color name="block">#FFFFFFFF</color>
+    <color name="orange">#F4694D</color>
+    <color name="ultra_black">#1A212F</color>
+    <color name="grey1">#868686</color>
+    <color name="red">#FF0000</color>
+    <color name="grey2">#C6CED1</color>
 </resources>

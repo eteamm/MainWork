@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/oval"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
                     app:srcCompat="@drawable/ellipse_14" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/editing_title"
                     android:layout_width="83dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -38,7 +38,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/light"
                     android:gravity="left"
-                    android:text="СПИСОК\nУЧАСТНИКОВ"
+                    android:text="@string/list_of_participants"
                     android:textColor="#000000"
                     android:textSize="11sp" />
             </FrameLayout>
@@ -122,7 +122,7 @@
                                 android:ems="10"
                                 android:inputType="text"
                                 android:text="Name"
-                                tools:visibility="gone" />
+                                tools:visibility="visible" />
                         </LinearLayout>
 
                     </LinearLayout>
