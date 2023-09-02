@@ -4,215 +4,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9EFF2"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:ignore="contentDescription">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ellipse_14" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="83dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/light"
-            android:gravity="left"
-            android:text="СПИСОК\nУЧАСТНИКОВ"
-            android:textColor="#000000"
-            android:textSize="11sp" />
-    </FrameLayout>
-
-    <TextView
-        android:id="@+id/textView2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bold"
-        android:gravity="center"
-        android:text="Зачётная неделя"
-        android:textColor="#1A212F"
-        android:textSize="24sp" />
+        android:layout_height="match_parent" >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/admins"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="3dp"
-            android:fontFamily="@font/light"
-            android:gravity="center"
-            android:text="2 администратора"
-            android:textColor="#000000"
-            android:textSize="15sp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/students"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="3dp"
-            android:fontFamily="@font/light"
-            android:gravity="center"
-            android:text="4 участника"
-            android:textColor="#000000"
-            android:textSize="15sp" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ellipse_14" />
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/light"
+                    android:gravity="left"
+                    android:text="СПИСОК\nУЧАСТНИКОВ"
+                    android:textColor="#000000"
+                    android:textSize="11sp" />
+            </FrameLayout>
 
-        <ImageView
-            android:id="@+id/smallBlock"
-            android:layout_width="410dp"
-            android:layout_height="162dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rectangle_123" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:text="Зачётная неделя"
+                    android:textColor="#1A212F"
+                    android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/HeadingAdmin"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
-                android:layout_marginTop="17dp"
-                android:fontFamily="@font/bold"
-                android:gravity="center"
-                android:text="АДМИНИСТРАТОРЫ"
-                android:textColor="#1A212F"
-                android:textSize="15sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/line1"
-                android:layout_width="300dp"
-                android:layout_height="1.5dp"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="38dp"
-                android:scrollbarSize="10dp"
-                app:srcCompat="@drawable/line_10" />
+                    <TextView
+                        android:id="@+id/admins"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="45dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/light"
+                        android:gravity="center"
+                        android:text="2 администратора"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
 
-            <Button
-                android:id="@+id/SearchButton1"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="320dp"
-                android:layout_marginTop="12dp"
-                app:backgroundTint="#ffff" />
+                    <TextView
+                        android:id="@+id/students"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/light"
+                        android:gravity="center"
+                        android:text="4 участника"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
 
-            <ImageView
-                android:id="@+id/Search1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="163dp"
-                android:layout_marginTop="10dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/lypa" />
+                </LinearLayout>
 
-            <EditText
-                android:id="@+id/searchBlock"
-                android:layout_width="280dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rectangle_117" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="40dp">
 
-        </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/block"
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-    </FrameLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="TextView" />
 
-        <ImageView
-            android:id="@+id/bigBlock"
-            android:layout_width="398dp"
-            android:layout_height="409dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rectangle_126" />
+                            <EditText
+                                android:id="@+id/editTextText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:text="Name"
+                                tools:visibility="gone" />
+                        </LinearLayout>
 
-        <TextView
-            android:id="@+id/HeadingStudents"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="17dp"
-            android:fontFamily="@font/bold"
-            android:gravity="center"
-            android:text="УЧАСТНИКИ"
-            android:textColor="#1A212F"
-            android:textSize="15sp" />
+                    </LinearLayout>
 
-        <ImageView
-            android:id="@+id/line2"
-            android:layout_width="130dp"
-            android:layout_height="4dp"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="38dp"
-            android:scrollbarSize="10dp"
-            app:srcCompat="@drawable/line_10" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.cardview.widget.CardView>
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/block"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
-            <Button
-                android:id="@+id/SearchButton2"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="320dp"
-                android:layout_marginTop="12dp"
-                app:backgroundTint="#ffff" />
+                    <EditText
+                        android:id="@+id/editTextText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="Name" />
+                </LinearLayout>
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="163dp"
-                android:layout_marginTop="10dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/lypa" />
-
-        </FrameLayout>
-
-        <EditText
-            android:id="@+id/searchBlock2"
-            android:layout_width="280dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/rectangle_117" />
-
-    </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
 

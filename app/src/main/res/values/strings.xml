@@ -3,6 +3,7 @@
     <string name="главная">ГЛАВНАЯ</string>
     <string name="статус">статус</string>
     <string name="группа">группа</string>
+    <string name="description">Описание</string>
 
     <string-array name="cat_names">
         <item>Рыжик</item>
@@ -19,5 +20,5 @@
         <item>Масяня</item>
         <item>Симба</item>
     </string-array>
-    <string name="РЕДАКТИРОВАТЬ">queue_editing</string>
+    <string name="editing_queue">РЕДАКТИРОВАТЬ</string>
 </resources>
