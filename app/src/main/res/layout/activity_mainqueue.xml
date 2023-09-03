@@ -8,143 +8,197 @@
     android:orientation="vertical"
     tools:context=".Yuri.Activity_Mainqueue">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="646dp">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ellipse_14" />
-
-        <TextView
-            android:id="@+id/textView1"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="9dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/light"
-            android:gravity="left"
-            android:text="ОЧЕРЕДЬ"
-            android:textColor="#000000"
-            android:textSize="14sp" />
+            android:orientation="vertical">
 
-    </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/mainText4"
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="150dp"
-        android:shadowColor="#1B1B1B"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="0"
-        android:text="Зачетная неделя"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ellipse_14" />
 
-    <TextView
-        android:id="@+id/nameteacher3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="150dp"
-        android:text="Имя Преподавателя"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainText" />
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/light"
+                    android:gravity="left"
+                    android:text="@string/MainText"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/numberpeople4"
-        android:layout_width="94dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="-50dp"
-        android:layout_marginEnd="100dp"
-        android:shadowColor="#80FFFFFF"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="0"
-        android:text="132"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            </FrameLayout>
 
-    <TextView
-        android:id="@+id/peoplebox4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="30dp"
-        android:text="человека"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberpeople" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
 
-    <TextView
-        android:id="@+id/aboutBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="2dp"
-        android:text="Подробнее:"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameteacher" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/descriptionBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="3dp"
-        android:breakStrategy="high_quality"
-        android:maxWidth="300dp"
-        android:text="Приходим в аудиторию 1123 в 15 00. С собой иметь тетрадь, ручку"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AboutBox" />
+                    <LinearLayout
+                        android:layout_width="238dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mainText4"
+                            android:layout_width="218dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="23dp"
+                            android:layout_marginEnd="150dp"
+                            android:shadowColor="#1B1B1B"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="0"
+                            android:text="@string/Name_Turn"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                        <TextView
+                            android:id="@+id/nameteacher3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="@string/Name_teacher"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/mainText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/numberpeople4"
+                            android:layout_width="94dp"
+                            android:layout_height="wrap_content"
+                            android:shadowColor="#80FFFFFF"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="0"
+                            android:text="@string/Number_People"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/peoplebox4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/PeopleBox"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/numberpeople" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/aboutBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/Description1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameteacher" />
+
+                <TextView
+                    android:id="@+id/descriptionBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="3dp"
+                    android:breakStrategy="high_quality"
+                    android:maxWidth="300dp"
+                    android:text="@string/About"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/AboutBox" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bPeople2"
+                        android:layout_width="184dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/orange"
+                        android:text="@string/People_Turn"
+                        android:textSize="12sp"
+                        tools:layout_editor_absoluteX="26dp"
+                        tools:layout_editor_absoluteY="182dp" />
+
+                    <Button
+                        android:id="@+id/bExit2"
+                        android:layout_width="185dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/white"
+                        android:onClick="ExitfromTurn"
+                        android:text="@string/Exit_Turn"
+                        android:textColor="@color/orange"
+                        android:textSize="12sp"
+                        tools:layout_editor_absoluteX="211dp"
+                        tools:layout_editor_absoluteY="182dp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
-        android:id="@+id/bPeople2"
-        android:layout_width="184dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#F4694D"
-        android:text="участники"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="182dp" />
-
-    <Button
-        android:id="@+id/bExit2"
-        android:layout_width="185dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="210dp"
-        android:layout_marginTop="-45dp"
-        android:backgroundTint="#FBFBFB"
-        android:onClick="ExitfromTurn"
-        android:text="выйти из очереди"
-        android:textColor="#F4694D"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="182dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rec"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:id="@+id/bCreateTurn2"
+        android:layout_width="259dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:backgroundTint="@color/orange"
+        android:onClick="CreateTurn"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/Join_Turn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </LinearLayout>
