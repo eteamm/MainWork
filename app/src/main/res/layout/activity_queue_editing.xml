@@ -198,7 +198,8 @@
                         android:paddingBottom="20dp"
                         android:textColorHint="@color/grey2"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:singleLine="true"/>
 
                 </androidx.cardview.widget.CardView>
 
@@ -210,51 +211,10 @@
                     android:textColor="@color/red"
                     tools:visibility="gone"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="119dp"
-                        android:layout_height="59dp"
-                        android:layout_marginBottom="10dp"
-                        app:cardCornerRadius="45dp">
-
-                        <TextView
-                            android:id="@+id/group1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:paddingStart="32dp"
-                            android:paddingTop="13dp"
-                            android:paddingEnd="10dp"
-                            android:paddingBottom="10dp"
-                            android:text="@string/number1"
-                            android:textColor="@color/ultra_black"
-                            android:textSize="24sp"
-                            android:textStyle="bold"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <ImageView
-                        android:id="@+id/cancel1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="200dp"
-                        android:layout_weight="1"
-                        android:paddingStart="10dp"
-                        android:paddingTop="15dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="20dp"
-                        app:srcCompat="@drawable/cancel" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"/>
+                <ListView
+                    android:id="@+id/listOfGroups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
 
             </LinearLayout>
 
