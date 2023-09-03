@@ -35,7 +35,7 @@
                     android:layout_height="22dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="3dp"
-                    android:text="@string/главная"
+                    android:text="@string/Main"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.017"
@@ -55,7 +55,7 @@
                     android:id="@+id/usernametext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="0dp"
                     android:layout_marginTop="70dp"
                     android:text="Имя пользователя"
                     android:textSize="10sp"
@@ -73,7 +73,7 @@
                         android:id="@+id/userNameMain"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="0dp"
                         android:text="Имя Пользователя"
                         android:textSize="20sp"
@@ -90,7 +90,7 @@
                         android:layout_marginTop="0dp"
                         android:backgroundTint="#F4694D"
                         android:text="ETU ID"
-                        android:textColor="#F4694D"
+                        android:textColor="@color/orange"
                         android:textIsSelectable="false"
                         android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -105,7 +105,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="107dp"
+                        android:layout_width="78dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
@@ -113,9 +113,9 @@
                             android:id="@+id/statusText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
+                            android:layout_marginLeft="0dp"
                             android:layout_marginTop="0dp"
-                            android:text="@string/статус"
+                            android:text="@string/status"
                             android:textSize="10sp"
                             app:layout_constraintEnd_toEndOf="@+id/usernametext"
                             app:layout_constraintHorizontal_bias="0.0"
@@ -126,7 +126,7 @@
                             android:id="@+id/statusMain"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
+                            android:layout_marginLeft="0dp"
                             android:layout_marginTop="0dp"
                             android:text="СТАТУС"
                             app:layout_constraintEnd_toEndOf="@+id/statusText"
@@ -145,7 +145,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="0dp"
-                            android:text="@string/группа"
+                            android:text="@string/group"
                             android:textSize="10sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.166"
@@ -165,12 +165,13 @@
                             app:layout_constraintTop_toTopOf="@+id/groupText" />
                     </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="118dp"
-                        android:layout_height="match_parent"
+                    <Button
+                        android:id="@+id/bEXIT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/group_5" />
+                        android:text="Button" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -204,7 +205,7 @@
                         android:backgroundTint="@color/white"
                         android:text="ДОСТУПНЫЕ"
                         android:textAllCaps="false"
-                        android:textColor="#F4694D"
+                        android:textColor="@color/orange"
                         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.85"
@@ -216,7 +217,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rec"
                     android:layout_width="match_parent"
-                    android:layout_height="386dp" />
+                    android:layout_height="411dp" />
 
             </LinearLayout>
 
@@ -228,7 +229,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
-        android:backgroundTint="#F4694D"
+        android:backgroundTint="@color/orange"
         android:onClick="CreateTurn"
         android:text="Создать очередь"
         app:layout_constraintBottom_toBottomOf="parent"

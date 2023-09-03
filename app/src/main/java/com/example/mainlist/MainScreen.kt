@@ -42,7 +42,8 @@ class MainScreen : AppCompatActivity() {
         if (mMineUserEntity != null) {
             Group.text =mMineUserEntity.group
         }
-        button.setOnClickListener {
+        val bcreateturn = findViewById<Button>(R.id.bCreateTurn)
+        bcreateturn.setOnClickListener {
             val intent = Intent(this, ListOfParticipants::class.java)
             startActivity(intent);
         }

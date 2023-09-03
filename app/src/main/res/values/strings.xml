@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">MainList</string>
-    <string name="главная">ГЛАВНАЯ</string>
-    <string name="статус">статус</string>
-    <string name="группа">группа</string>
+    <string name="Main">ГЛАВНАЯ</string>
+    <string name="status">статус</string>
+    <string name="group">группа</string>
     <string name="description">Описание</string>
-
+    <string name="firsttask">Авторизируйся через ETU ID</string>
+    <string name="secondtask">Выбери или создай список</string>
+    <string name="thirdtask">Жди своей очереди!</string>
     <string-array name="cat_names">
         <item>Рыжик</item>
         <item>Барсик</item>
