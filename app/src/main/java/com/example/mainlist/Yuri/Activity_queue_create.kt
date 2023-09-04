@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.mainlist.MainActivity
+import com.example.mainlist.MainScreen
 import com.example.mainlist.R
 
 class Activity_queue_create : AppCompatActivity() {
@@ -14,7 +14,7 @@ class Activity_queue_create : AppCompatActivity() {
     }
 
     fun ExitfromCreateTurn(view: View){
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, MainScreen::class.java)
         startActivity(intent)
     }
 }

@@ -8,197 +8,199 @@
     android:orientation="vertical"
     tools:context=".Yuri.Activity_Mainqueue">
 
-    <ScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="646dp">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ellipse_14" />
-
-                <TextView
-                    android:id="@+id/textView1"
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="9dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/light"
-                    android:gravity="left"
-                    android:text="@string/MainText"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
+                    android:orientation="vertical">
 
-            </FrameLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="238dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/mainText4"
-                            android:layout_width="218dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="23dp"
-                            android:layout_marginEnd="150dp"
-                            android:shadowColor="#1B1B1B"
-                            android:shadowDx="0"
-                            android:shadowDy="0"
-                            android:shadowRadius="0"
-                            android:text="@string/Name_Turn"
-                            android:textSize="20sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-                        <TextView
-                            android:id="@+id/nameteacher3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:text="@string/Name_teacher"
-                            android:textSize="12sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/mainText" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <ImageView
+                        android:id="@+id/imageView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:orientation="vertical">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ellipse_14" />
 
-                        <TextView
-                            android:id="@+id/numberpeople4"
-                            android:layout_width="94dp"
-                            android:layout_height="wrap_content"
-                            android:shadowColor="#80FFFFFF"
-                            android:shadowDx="0"
-                            android:shadowDy="0"
-                            android:shadowRadius="0"
-                            android:text="@string/Number_People"
-                            android:textSize="20sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/light"
+                        android:gravity="left"
+                        android:text="@string/MainText"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
 
-                        <TextView
-                            android:id="@+id/peoplebox4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/PeopleBox"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/numberpeople" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/aboutBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="2dp"
-                    android:text="@string/Description1"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nameteacher" />
-
-                <TextView
-                    android:id="@+id/descriptionBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="3dp"
-                    android:breakStrategy="high_quality"
-                    android:maxWidth="300dp"
-                    android:text="@string/About"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/AboutBox" />
+                </FrameLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp">
 
-                    <Button
-                        android:id="@+id/bPeople2"
-                        android:layout_width="184dp"
-                        android:layout_height="45dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        android:backgroundTint="@color/orange"
-                        android:text="@string/People_Turn"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="238dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mainText4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:shadowColor="#1B1B1B"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="0"
+                                android:text="@string/Name_Turn"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                            <TextView
+                                android:id="@+id/nameteacher3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:text="@string/Name_teacher"
+                                android:textSize="12sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainText" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/numberpeople4"
+                                android:layout_width="94dp"
+                                android:layout_height="wrap_content"
+                                android:shadowColor="#80FFFFFF"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="0"
+                                android:text="@string/Number_People"
+                                android:textSize="20sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/peoplebox4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:text="@string/PeopleBox"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/numberpeople" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/descriptionBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:breakStrategy="high_quality"
+                        android:maxWidth="300dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/About"
                         android:textSize="12sp"
-                        tools:layout_editor_absoluteX="26dp"
-                        tools:layout_editor_absoluteY="182dp" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/AboutBox" />
 
-                    <Button
-                        android:id="@+id/bExit2"
-                        android:layout_width="185dp"
-                        android:layout_height="45dp"
-                        android:layout_marginTop="20dp"
-                        android:backgroundTint="@color/white"
-                        android:onClick="ExitfromTurn"
-                        android:text="@string/Exit_Turn"
-                        android:textColor="@color/orange"
-                        android:textSize="12sp"
-                        tools:layout_editor_absoluteX="211dp"
-                        tools:layout_editor_absoluteY="182dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp">
 
+                        <Button
+                            android:id="@+id/bPeople2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/orange"
+                            android:text="@string/People_Turn"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="26dp"
+                            tools:layout_editor_absoluteY="182dp" />
+
+                        <Button
+                            android:id="@+id/bExit2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:onClick="ExitfromTurn"
+                            android:text="@string/Exit_Turn"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="211dp"
+                            tools:layout_editor_absoluteY="182dp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
                 </LinearLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rec"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
             </LinearLayout>
+        </ScrollView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:id="@+id/bCreateTurn2"
+                android:layout_width="259dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:backgroundTint="@color/orange"
+                android:onClick="CreateTurn"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/Join_Turn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
-    </ScrollView>
-
-    <Button
-        android:id="@+id/bCreateTurn2"
-        android:layout_width="259dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:backgroundTint="@color/orange"
-        android:onClick="CreateTurn"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="@string/Join_Turn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    </FrameLayout>
 
 </LinearLayout>
