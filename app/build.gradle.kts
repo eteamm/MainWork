@@ -42,6 +42,10 @@ android {
             substitute(module("org.hamcrest:hamcrest-core:1.1")).using(module("junit:junit:4.10"))
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 
