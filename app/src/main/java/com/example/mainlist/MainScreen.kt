@@ -50,7 +50,7 @@ class MainScreen : AppCompatActivity() {
 
         val bExit = findViewById<Button>(R.id.bEXIT)
         bExit.setOnClickListener {
-            val intent = Intent(this, EntryScreen::class.java)
+            val intent = Intent(this, queue_editing::class.java)
             startActivity(intent);
         }
 

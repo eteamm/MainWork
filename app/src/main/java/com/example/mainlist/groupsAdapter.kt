@@ -19,15 +19,15 @@ class groupsAdapter: RecyclerView.Adapter<groupsAdapter.groupsHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): groupsHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.group_item, parent, false)
-        return groupsHolder(view)
+        return groupsHolder(view) //возвращает элементы для списка
     }
 
     override fun getItemCount(): Int {
-        return groupsList.size
+        return groupsList.size //возвращает кол-во элементов
     }
 
     override fun onBindViewHolder(holder: groupsHolder, position: Int) {
-        holder.bind(groupsList[position])
+        holder.bind(groupsList[position]) //заполнение данных в эл списка
     }
 
     fun addGroup(groups: group){

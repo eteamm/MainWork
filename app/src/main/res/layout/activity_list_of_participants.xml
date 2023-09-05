@@ -45,24 +45,26 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="20dp"
-                android:paddingRight="20dp">
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/title_queue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/bold"
                     android:gravity="center"
-                    android:text="Зачётная неделя"
+                    android:text="@string/Name_Turn"
                     android:textColor="#1A212F"
                     android:textSize="24sp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -81,7 +83,7 @@
                         android:id="@+id/students"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="80dp"
+                        android:layout_marginStart="60dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/light"
                         android:gravity="center"
@@ -96,57 +98,101 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="40dp">
 
-                    <LinearLayout
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/block"
-                        android:orientation="vertical"
-                        android:padding="20dp">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/adminss"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bold"
+                            android:gravity="center"
+                            android:hapticFeedbackEnabled="false"
+                            android:outlineProvider="none"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:soundEffectsEnabled="false"
+                            android:text="@string/admins_text"
+                            android:textColor="@color/ultra_black"
+                            android:textSize="16sp"
+                            tools:visibility="invisible" />
 
-                            <TextView
-                                android:id="@+id/textView3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="TextView" />
-
-                            <EditText
-                                android:id="@+id/editTextText"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:ems="10"
-                                android:inputType="text"
-                                android:text="Name"
-                                tools:visibility="visible" />
-                        </LinearLayout>
-
-                    </LinearLayout>
+                        <EditText
+                            android:id="@+id/search_admins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:text="Name"
+                            tools:visibility="visible" />
+                    </FrameLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
                 </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/block"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="40dp">
 
-                    <EditText
-                        android:id="@+id/editTextText"
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="text"
-                        android:text="Name" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Admins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bold"
+                            android:gravity="center"
+                            android:hapticFeedbackEnabled="false"
+                            android:outlineProvider="none"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:soundEffectsEnabled="false"
+                            android:text="@string/students_text"
+                            android:textColor="@color/ultra_black"
+                            android:textSize="16sp"
+                            tools:visibility="invisible" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardCornerRadius="40dp">
+
+                            <EditText
+                                android:id="@+id/search_students"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:paddingStart="30dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp"
+                                android:text="Name"
+                                tools:visibility="visible" />
+                        </androidx.cardview.widget.CardView>
+                    </FrameLayout>
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="200dp" />
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
         </LinearLayout>

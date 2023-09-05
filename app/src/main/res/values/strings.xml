@@ -36,8 +36,10 @@
     <string name="no_groups">Вы удалили все допустимые группы. Все участники, состоящие в этих группах, будут удалены из очереди. Вы сможете добавить
         новых пользователей через ссылку, или указав другие группы.</string>
     <string name="no_name">Нельзя сохранить очередь, пока поле пустое.</string>
-    <string name="number1">2391</string>
-    <string name="number2">2392</string>
+
+    <string name="titile_listOfParticipants">Зачётная неделя</string>
+    <string name="admins_text">АДМИНИСТРАТОРЫ</string>
+    <string name="students_text">УЧАСТНИКИ</string>
 
     <string name="MainText">ОЧЕРЕДЬ</string>
     <string name="Name_Turn">Зачетная неделя</string>

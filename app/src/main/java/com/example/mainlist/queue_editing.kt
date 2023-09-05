@@ -19,7 +19,6 @@ import com.example.mainlist.databinding.ActivityQueueEditingBinding
 class queue_editing : AppCompatActivity() {
     lateinit var binding: ActivityQueueEditingBinding
     private val adapter = groupsAdapter()
-    val imgCancel = findViewById<ImageView>(R.id.cancel)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQueueEditingBinding.inflate(layoutInflater)
@@ -55,10 +54,6 @@ class queue_editing : AppCompatActivity() {
         binding.apply{
             listOfGroups.layoutManager = LinearLayoutManager(this@queue_editing)
             listOfGroups.adapter = adapter
-            nameGroups.setOnKeyListener{
-                val groupp = group("lo", imgCancel)
-                adapter.addGroup(groupp)
-            }
 
         }
     }
