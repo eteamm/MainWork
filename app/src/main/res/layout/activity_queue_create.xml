@@ -166,24 +166,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="40dp">
 
             <Button
                 android:id="@+id/bcreate3"
-                android:layout_width="276dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="270dp"
                 android:backgroundTint="#F4694D"
                 android:text="@string/Create_Turn"
                 android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bback3"
-                android:layout_width="277dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="10dp"
                 android:background="#00E9EFF2"
                 android:backgroundTint="#80E9EFF2"
                 android:onClick="ExitfromCreateTurn"

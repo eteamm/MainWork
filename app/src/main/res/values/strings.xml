@@ -23,7 +23,7 @@
         <item>Симба</item>
     </string-array>
     <string name="editing_queue">РЕДАКТИРОВАТЬ</string>
-    <string name="list_of_participants">СПИСОК/nУЧАСТНИКОВ</string>
+    <string name="list_of_participants">СПИСОК УЧАСТНИКОВ</string>
     <string name="editing1">Название очереди</string>
     <string name="editing1_hint">Очередь в деканат</string>
     <string name="editing2">Описание очереди</string>

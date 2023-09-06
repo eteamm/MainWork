@@ -7,233 +7,241 @@
     android:orientation="vertical"
     tools:context=".activity_mainscreen">
 
-    <ScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="681dp">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ellipse_14" />
-
-                <TextView
-                    android:id="@+id/mainPageText2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="22dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="3dp"
-                    android:text="@string/Main"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.017"
-                    app:layout_constraintStart_toStartOf="@+id/imageView"
-                    app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-            </FrameLayout>
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/usernametext"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="70dp"
-                    android:text="Имя пользователя"
-                    android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.086"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ellipse_14" />
+
+                    <TextView
+                        android:id="@+id/mainPageText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/Main"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.017"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                </FrameLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="34dp"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
 
                     <TextView
-                        android:id="@+id/userNameMain"
+                        android:id="@+id/usernametext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:text="Имя Пользователя"
-                        android:textSize="20sp"
-                        app:layout_constraintEnd_toEndOf="@+id/usernametext"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/usernametext"
-                        app:layout_constraintTop_toBottomOf="@+id/usernametext" />
-
-                    <TextView
-                        android:id="@+id/bETU"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="86dp"
-                        android:layout_marginTop="0dp"
-                        android:backgroundTint="#F4694D"
-                        android:text="ETU ID"
-                        android:textColor="@color/orange"
-                        android:textIsSelectable="false"
-                        android:textSize="20sp"
+                        android:layout_marginTop="70dp"
+                        android:text="Имя пользователя"
+                        android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.852"
+                        app:layout_constraintHorizontal_bias="0.086"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="37dp"
-                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="78dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/statusText"
+                            android:id="@+id/userNameMain"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="0dp"
                             android:layout_marginTop="0dp"
-                            android:text="@string/status"
-                            android:textSize="10sp"
+                            android:text="Имя Пользователя"
+                            android:textSize="20sp"
                             app:layout_constraintEnd_toEndOf="@+id/usernametext"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="@+id/usernametext"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toBottomOf="@+id/usernametext" />
 
                         <TextView
-                            android:id="@+id/statusMain"
-                            android:layout_width="match_parent"
+                            android:id="@+id/bETU"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="0dp"
+                            android:layout_marginLeft="86dp"
                             android:layout_marginTop="0dp"
-                            android:text="СТАТУС"
-                            app:layout_constraintEnd_toEndOf="@+id/statusText"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/statusText"
-                            app:layout_constraintTop_toTopOf="@+id/statusText" />
+                            android:backgroundTint="#F4694D"
+                            android:text="ETU ID"
+                            android:textColor="@color/orange"
+                            android:textIsSelectable="false"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.852"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="147dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/groupText"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"
-                            android:text="@string/group"
-                            android:textSize="10sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.166"
-                            app:layout_constraintStart_toEndOf="@+id/statusText"
-                            app:layout_constraintTop_toTopOf="parent" />
+                        <LinearLayout
+                            android:layout_width="78dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/groupMain"
-                            android:layout_width="match_parent"
+                            <TextView
+                                android:id="@+id/statusText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="0dp"
+                                android:text="@string/status"
+                                android:textSize="10sp"
+                                app:layout_constraintEnd_toEndOf="@+id/usernametext"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="@+id/usernametext"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/statusMain"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="0dp"
+                                android:text="СТАТУС"
+                                app:layout_constraintEnd_toEndOf="@+id/statusText"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="@+id/statusText"
+                                app:layout_constraintTop_toTopOf="@+id/statusText" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="147dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/groupText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:text="@string/group"
+                                android:textSize="10sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.166"
+                                app:layout_constraintStart_toEndOf="@+id/statusText"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/groupMain"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="0dp"
+                                android:text="ГРУППА"
+                                app:layout_constraintEnd_toEndOf="@+id/groupText"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="@+id/groupText"
+                                app:layout_constraintTop_toTopOf="@+id/groupText" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/bEXIT"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginTop="0dp"
-                            android:text="ГРУППА"
-                            app:layout_constraintEnd_toEndOf="@+id/groupText"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/groupText"
-                            app:layout_constraintTop_toTopOf="@+id/groupText" />
+                            android:layout_weight="1"
+                            android:text="Button" />
+
                     </LinearLayout>
 
-                    <Button
-                        android:id="@+id/bEXIT"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Button" />
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bMy"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="МОИ"
+                            android:textColor="#F4694D"
+                            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.275"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/bINDostup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="ДОСТУПНЫЕ"
+                            android:textAllCaps="false"
+                            android:textColor="@color/orange"
+                            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.85"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:strokeColor="#673AB7" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="411dp" />
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/bMy"
-                        android:layout_width="68dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/white"
-                        android:text="МОИ"
-                        android:textColor="#F4694D"
-                        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.275"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:id="@+id/bINDostup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/white"
-                        android:text="ДОСТУПНЫЕ"
-                        android:textAllCaps="false"
-                        android:textColor="@color/orange"
-                        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.85"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:strokeColor="#673AB7" />
-                </LinearLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rec"
-                    android:layout_width="match_parent"
-                    android:layout_height="411dp" />
 
             </LinearLayout>
+        </ScrollView>
 
-        </LinearLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/bCreateTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="125dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/orange"
+            android:onClick="CreateTurn"
+            android:text="Создать очередь"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/bCreateTurn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="125dp"
-        android:backgroundTint="@color/orange"
-        android:onClick="CreateTurn"
-        android:text="Создать очередь"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    </FrameLayout>
 
 </LinearLayout>
