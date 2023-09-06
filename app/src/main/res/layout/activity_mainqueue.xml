@@ -204,7 +204,8 @@
                 android:onClick="CreateTurn"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:text="@string/Join_Turn" />
+                android:text="@string/Join_Turn"
+                app:iconSize="16sp" />
         </LinearLayout>
     </FrameLayout>
 

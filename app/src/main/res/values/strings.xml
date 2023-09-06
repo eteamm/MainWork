@@ -55,5 +55,6 @@
     <string name="go">Вперед!</string>
     <string name="etuid">ETU ID</string>
     <string name="nametxt">Имя Пользователя</string>
+    <string name="createbuttonturn">СОЗДАТЬ ОЧЕРЕДЬ</string>
 
 </resources>

@@ -181,8 +181,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:background="@color/background"
-                                    android:backgroundTint="@color/block"
-                                    android:backgroundTintMode="add"
+                                    android:backgroundTint="@color/background"
                                     android:src="@drawable/exit" />
                             </LinearLayout>
 
@@ -241,19 +240,28 @@
             </LinearLayout>
         </ScrollView>
 
-        <Button
-            android:id="@+id/bCreateTurn"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/orange"
-            android:onClick="CreateTurn"
-            android:text="Создать очередь"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:background="@drawable/gradient_background"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingTop="30dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:id="@+id/bCreateTurn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/orange"
+                android:onClick="CreateTurn"
+                android:text="@string/createbuttonturn"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </LinearLayout>
 
     </FrameLayout>
 
