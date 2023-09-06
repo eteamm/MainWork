@@ -48,6 +48,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="20dp"
+                android:paddingTop="20dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp">
 
@@ -154,7 +155,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="right"
                                 android:padding="6dp"
-                                android:src="@tools:sample/avatars"
+                                android:src="@drawable/search"
                                 app:srcCompat="@drawable/search" />
 
                         </FrameLayout>
@@ -227,7 +228,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_gravity="right"
                                 android:padding="6dp"
-                                android:src="@tools:sample/avatars"
+                                android:src="@drawable/search"
                                 app:srcCompat="@drawable/search" />
                         </FrameLayout>
 

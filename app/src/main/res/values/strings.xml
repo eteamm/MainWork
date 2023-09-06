@@ -53,5 +53,7 @@
     <string name="Join_Turn">ВСТАТЬ В ОЧЕРЕДЬ</string>
     <string name="Create_Turn">СОЗДАТЬ</string>
     <string name="go">Вперед!</string>
+    <string name="etuid">ETU ID</string>
+    <string name="nametxt">Имя Пользователя</string>
 
 </resources>
