@@ -63,4 +63,6 @@
     <string name="turnInfoSize">0 человек</string>
     <string name="turnInfoJoin">вступить</string>
     <string name="turnInfoNumber">0000</string>
+    <string name="positionName">Имя Фамилия Отчество</string>
+    <string name="positionNumber">0000</string>
 </resources>
