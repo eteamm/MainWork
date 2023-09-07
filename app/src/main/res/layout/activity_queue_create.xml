@@ -35,10 +35,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
                     android:layout_marginTop="9dp"
-                    android:layout_weight="1"
                     android:fontFamily="@font/light"
                     android:gravity="left"
-                    android:text="СОЗДАТЬ"
+                    android:text="@string/Create_Turn"
                     android:textColor="#000000"
                     android:textSize="14sp" />
 
@@ -55,9 +54,9 @@
                     android:id="@+id/textView13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="9dp"
                     android:fontFamily="@font/regular"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:text="Название очереди"
                     android:textColor="#868686"
                     android:textSize="11sp" />
@@ -71,27 +70,27 @@
                         android:id="@+id/editText2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginTop="9dp"
                         android:background="@null"
-                        android:ems="10"
                         android:fontFamily="@font/bold"
                         android:gravity="center_vertical"
                         android:hint="@string/editing1_hint"
                         android:inputType="text"
-                        android:paddingLeft="15dp"
-                        android:paddingTop="15dp"
-                        android:paddingRight="15dp"
-                        android:paddingBottom="25dp" />
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp"
+                        android:textSize="20sp" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
                     android:fontFamily="@font/regular"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:text="Описание очереди"
                     android:textColor="#868686"
                     android:textSize="11sp" />
@@ -104,28 +103,29 @@
                     <EditText
                         android:id="@+id/editText3"
                         android:layout_width="match_parent"
-                        android:layout_height="103dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginTop="9dp"
+                        android:layout_height="wrap_content"
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/bold"
-                        android:gravity="center_vertical"
+                        android:gravity="start|center_vertical"
                         android:hint="@string/editing2"
                         android:inputType="text"
-                        android:paddingLeft="15dp"
-                        android:paddingTop="15dp"
-                        android:paddingRight="15dp"
-                        android:paddingBottom="25dp" />
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp"
+                        android:textSize="20sp" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
                     android:fontFamily="@font/regular"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:text="Группы"
                     android:textColor="#868686"
                     android:textSize="11sp" />
@@ -139,18 +139,19 @@
                         android:id="@+id/editText4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginTop="9dp"
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/bold"
                         android:gravity="center_vertical"
                         android:hint="@string/editing4_hint"
                         android:inputType="text"
-                        android:paddingLeft="15dp"
-                        android:paddingTop="15dp"
-                        android:paddingRight="15dp"
-                        android:paddingBottom="25dp" />
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp"
+                        android:textSize="20sp" />
 
                 </androidx.cardview.widget.CardView>
 

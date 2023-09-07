@@ -56,5 +56,11 @@
     <string name="etuid">ETU ID</string>
     <string name="nametxt">Имя Пользователя</string>
     <string name="createbuttonturn">СОЗДАТЬ ОЧЕРЕДЬ</string>
-
+    <string name="three_steps">Всего три простых шага!</string>
+    <string name="turnInfoName">Название очереди</string>
+    <string name="turnInfoDesc">Подробнее: описание очереди</string>
+    <string name="turnInfoAuthor">Автор очереди</string>
+    <string name="turnInfoSize">0 человек</string>
+    <string name="turnInfoJoin">вступить</string>
+    <string name="turnInfoNumber">0000</string>
 </resources>

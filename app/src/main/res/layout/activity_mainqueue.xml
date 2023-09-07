@@ -141,37 +141,65 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
-                        android:paddingRight="20dp">
+                        android:paddingTop="15dp">
 
-                        <Button
-                            android:id="@+id/bPeople2"
+                        <FrameLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/orange"
-                            android:paddingTop="1dp"
-                            android:paddingBottom="1dp"
-                            android:text="@string/People_Turn"
-                            android:textSize="12sp"
-                            app:iconPadding="2sp"
-                            tools:layout_editor_absoluteX="26dp"
-                            tools:layout_editor_absoluteY="182dp" />
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1">
 
-                        <Button
-                            android:id="@+id/bExit2"
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/button_img_orange" />
+
+                            <Button
+                                android:id="@+id/bPeople2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_margin="0dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="0dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/orange"
+                                android:text="@string/People_Turn"
+                                android:textSize="12sp"
+                                tools:layout_editor_absoluteX="26dp"
+                                tools:layout_editor_absoluteY="182dp" />
+                        </FrameLayout>
+
+                        <FrameLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/block"
-                            android:backgroundTintMode="add"
-                            android:onClick="ExitfromTurn"
-                            android:text="@string/Exit_Turn"
-                            android:textColor="@color/orange"
-                            android:textSize="12sp"
-                            tools:layout_editor_absoluteX="211dp"
-                            tools:layout_editor_absoluteY="182dp" />
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/button_img_white" />
+
+                            <Button
+                                android:id="@+id/bExit2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/block"
+                                android:backgroundTintMode="add"
+                                android:onClick="ExitfromTurn"
+                                android:text="@string/Exit_Turn"
+                                android:textColor="@color/orange"
+                                android:textSize="12sp"
+                                tools:layout_editor_absoluteX="211dp"
+                                tools:layout_editor_absoluteY="182dp" />
+
+                        </FrameLayout>
 
                     </LinearLayout>
 
