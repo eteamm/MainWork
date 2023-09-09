@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,7 +49,7 @@ class MainScreen : AppCompatActivity() {
             startActivity(intent);
         }
 
-        val bExit = findViewById<Button>(R.id.bEXIT)
+        val bExit = findViewById<ImageButton>(R.id.exitBtn)
         bExit.setOnClickListener {
             val intent = Intent(this, queue_editing::class.java)
             startActivity(intent);
