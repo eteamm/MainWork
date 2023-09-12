@@ -11,8 +11,8 @@ import com.example.mainlist.R
 import com.example.mainlist.data.Turn
 
 
-public class TurnAdapter(private val turnList: MutableList<Turn>) : RecyclerView.Adapter<TurnAdapter.turnHolder>() {
-//    private var turnList = ArrayList<Turn>()
+public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<TurnAdapter.turnHolder>() {
+    private var turnList = ArrayList<Turn>();
     class turnHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.turnNameElement);
     }

@@ -58,13 +58,13 @@ class MainScreen : AppCompatActivity() {
 
         val recyclerView: RecyclerView = findViewById(R.id.rec)
         recyclerView.layoutManager = LinearLayoutManager(this)
-//        val turnAdapter = TurnAdapter(this)
+        val turnAdapter = TurnAdapter(this)
         val turnList = mutableListOf<Turn>()
         var turn = Turn("Name","Descre")
 //        turn.turnDescOut = "Описаниееее"
         turnList.add(0,turn)
-        recyclerView.adapter = TurnAdapter(turnList);
-//        turnAdapter.setItems(turnList)
+        recyclerView.adapter = turnAdapter
+        turnAdapter.setItems(turnList)
 
     }
 
