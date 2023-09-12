@@ -10,7 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.Yuri.Activity_Mainqueue
-import com.example.mainlist.Yuri.Activity_queue_create
+import com.example.mainlist.adapter.TurnAdapter
+import com.example.mainlist.data.Turn
 import com.google.gson.Gson
 
 class MainScreen : AppCompatActivity() {
@@ -55,9 +56,19 @@ class MainScreen : AppCompatActivity() {
             startActivity(intent);
         }
 
+        val turnAdapter : TurnAdapter = TurnAdapter()
+
+
         val recyclerView: RecyclerView = findViewById(R.id.rec)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = CustomRecyclerAdapter(getCatList())
+        val turnList = mutableListOf<Turn>()
+        lateinit var turn : Turn
+        turn.turnNameOut = "Зачетная неделя"
+        turn.turnDescOut = "Описаниееее"
+        turnList.add(0,turn)
+        recyclerView.adapter = turnAdapter
+        turnAdapter.setItems(turnList)
+
 
     }
 
