@@ -22,7 +22,7 @@
             android:name=".EntryScreen"
             android:exported="false" />
         <activity
-            android:name=".queue_editing"
+            android:name=".QueueEditing"
             android:exported="false" />
         <activity
             android:name=".ListOfParticipants"

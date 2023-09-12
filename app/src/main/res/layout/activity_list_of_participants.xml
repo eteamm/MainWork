@@ -10,7 +10,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,17 +30,19 @@
                     app:srcCompat="@drawable/ellipse_14" />
 
                 <TextView
-                    android:id="@+id/editing_title"
+                    android:id="@+id/editingTitle"
                     android:layout_width="83dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="3dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/light"
+                    android:fontFamily="@font/interproba"
                     android:gravity="left"
-                    android:text="@string/list_of_participants"
+                    android:lines="2"
+                    android:text="@string/ListOfParticipants"
                     android:textColor="#000000"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"
+                    android:textStyle="italic" />
             </FrameLayout>
 
             <LinearLayout
@@ -48,19 +50,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="20dp"
-                android:paddingTop="20dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp">
 
                 <TextView
-                    android:id="@+id/title_queue"
+                    android:id="@+id/titleQueue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/bold"
+                    android:fontFamily="@font/interproba"
                     android:gravity="center"
                     android:text="@string/Name_Turn"
                     android:textColor="#1A212F"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -74,11 +76,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="45dp"
                         android:layout_marginTop="3dp"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/interproba"
                         android:gravity="center"
-                        android:text="2 администратора"
+                        android:text="@string/AdminsQuantity"
                         android:textColor="#000000"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:textStyle="italic" />
 
                     <TextView
                         android:id="@+id/students"
@@ -86,11 +89,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
                         android:layout_marginTop="3dp"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/interproba"
                         android:gravity="center"
-                        android:text="4 участника"
+                        android:text="@string/StudentsQuantity"
                         android:textColor="#000000"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:textStyle="italic" />
 
                 </LinearLayout>
 
@@ -115,16 +119,17 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/bold"
+                                android:fontFamily="@font/interproba"
                                 android:gravity="center"
                                 android:hapticFeedbackEnabled="false"
                                 android:outlineProvider="none"
                                 android:paddingTop="10dp"
                                 android:paddingBottom="10dp"
                                 android:soundEffectsEnabled="false"
-                                android:text="@string/admins_text"
+                                android:text="@string/AdminsText"
                                 android:textColor="@color/ultra_black"
                                 android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:visibility="visible" />
 
                             <androidx.cardview.widget.CardView
@@ -132,10 +137,11 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="40dp"
                                 android:visibility="gone"
-                                app:cardCornerRadius="40dp">
+                                app:cardCornerRadius="40dp"
+                                tools:visibility="gone">
 
                                 <EditText
-                                    android:id="@+id/search_admins"
+                                    android:id="@+id/searchAdmins"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@null"
@@ -149,14 +155,28 @@
                                     tools:visibility="visible" />
                             </androidx.cardview.widget.CardView>
 
-                            <ImageView
-                                android:id="@+id/imageView9"
+                            <ImageButton
+                                android:id="@+id/searchButton1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="right"
+                                android:background="@null"
                                 android:padding="6dp"
                                 android:src="@drawable/search"
-                                app:srcCompat="@drawable/search" />
+                                app:srcCompat="@drawable/search"
+                                tools:visibility="visible" />
+
+                            <ImageButton
+                                android:id="@+id/cancelButton1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="0"
+                                android:background="@null"
+                                android:padding="6dp"
+                                android:src="@drawable/search"
+                                app:srcCompat="@drawable/cancel1"
+                                tools:visibility="gone" />
 
                         </FrameLayout>
 
@@ -185,19 +205,20 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:id="@+id/MembersTxt"
+                                android:id="@+id/members"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/bold"
+                                android:fontFamily="@font/interproba"
                                 android:gravity="center"
                                 android:hapticFeedbackEnabled="false"
                                 android:outlineProvider="none"
                                 android:paddingTop="10dp"
                                 android:paddingBottom="10dp"
                                 android:soundEffectsEnabled="false"
-                                android:text="@string/students_text"
+                                android:text="@string/StudentsText"
                                 android:textColor="@color/ultra_black"
                                 android:textSize="16sp"
+                                android:textStyle="bold"
                                 android:visibility="visible" />
 
                             <androidx.cardview.widget.CardView
@@ -209,7 +230,7 @@
                                 app:cardCornerRadius="40dp">
 
                                 <EditText
-                                    android:id="@+id/search_students"
+                                    android:id="@+id/searchStudents"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@null"
@@ -222,14 +243,27 @@
                                     tools:visibility="visible" />
                             </androidx.cardview.widget.CardView>
 
-                            <ImageView
-                                android:id="@+id/search"
+                            <ImageButton
+                                android:id="@+id/searchButton2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="right"
+                                android:background="@null"
                                 android:padding="6dp"
                                 android:src="@drawable/search"
                                 app:srcCompat="@drawable/search" />
+
+                            <ImageButton
+                                android:id="@+id/cancelButton2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="0"
+                                android:background="@null"
+                                android:padding="6dp"
+                                android:src="@drawable/search"
+                                app:srcCompat="@drawable/cancel1"
+                                tools:visibility="gone" />
                         </FrameLayout>
 
                         <androidx.recyclerview.widget.RecyclerView

@@ -41,7 +41,7 @@
                         android:layout_marginStart="6dp"
                         android:layout_marginTop="9dp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/inter"
                         android:gravity="left"
                         android:text="@string/MainText"
                         android:textColor="#000000"

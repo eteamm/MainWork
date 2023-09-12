@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.Yuri.Activity_Mainqueue
-import com.example.mainlist.Yuri.Activity_queue_create
 import com.google.gson.Gson
 
 class MainScreen : AppCompatActivity() {
@@ -51,7 +50,7 @@ class MainScreen : AppCompatActivity() {
 
         val bExit = findViewById<ImageButton>(R.id.exitBtn)
         bExit.setOnClickListener {
-            val intent = Intent(this, queue_editing::class.java)
+            val intent = Intent(this, QueueEditing::class.java)
             startActivity(intent);
         }
 

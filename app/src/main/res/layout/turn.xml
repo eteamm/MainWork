@@ -33,7 +33,7 @@
                         android:id="@+id/turnNameElement"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/bold"
+                        android:fontFamily="@font/inter"
                         android:text="@string/turnInfoName"
                         android:textSize="20sp" />
 
@@ -47,7 +47,7 @@
                             android:id="@+id/TurnAuthorElement"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/light"
+                            android:fontFamily="@font/inter"
                             android:paddingRight="8dp"
                             android:text="@string/turnInfoAuthor"
                             android:textSize="12sp" />
@@ -56,7 +56,7 @@
                             android:id="@+id/turnSizeElement"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/light"
+                            android:fontFamily="@font/inter"
                             android:text="@string/turnInfoSize"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -87,7 +87,7 @@
                 android:id="@+id/turnDescElement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/light"
+                android:fontFamily="@font/inter"
                 android:paddingTop="5dp"
                 android:paddingBottom="15dp"
                 android:text="@string/turnInfoDesc"

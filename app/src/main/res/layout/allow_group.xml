@@ -22,7 +22,7 @@
                 android:id="@+id/NumberAllowGroupTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/bold"
+                android:fontFamily="@font/inter"
                 android:paddingLeft="25dp"
                 android:paddingTop="13dp"
                 android:paddingRight="25dp"

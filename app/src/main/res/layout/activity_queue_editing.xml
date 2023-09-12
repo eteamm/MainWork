@@ -30,19 +30,21 @@
                     app:srcCompat="@drawable/ellipse_14" />
 
                 <TextView
-                    android:id="@+id/editing_title"
+                    android:id="@+id/EditingTitle"
                     android:layout_width="83dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="clip_vertical|left"
+                    android:layout_gravity="left"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="3dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/Inter"
+                    android:fontFamily="@font/interproba"
                     android:gravity="left"
+                    android:maxLines="1"
                     android:paddingTop="5dp"
-                    android:text="@string/editing_queue"
+                    android:text="@string/EditingQueue"
                     android:textColor="#000000"
-                    android:textSize="11sp" />
+                    android:textSize="8sp"
+                    android:textStyle="italic" />
 
             </FrameLayout>
 
@@ -55,14 +57,15 @@
                 android:visibility="visible">
 
                 <TextView
-                    android:id="@+id/queue_name"
+                    android:id="@+id/queueName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/Inter"
+                    android:fontFamily="@font/interproba"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="@string/editing1"
-                    android:textColor="@color/grey1" />
+                    android:textColor="@color/grey1"
+                    android:textStyle="italic" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -70,11 +73,11 @@
                     app:cardCornerRadius="40dp">
 
                     <EditText
-                        android:id="@+id/queue_name_block"
+                        android:id="@+id/queueNameBlock"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:hint="@string/editing1_hint"
+                        android:hint="@string/editing1Hint"
                         android:paddingStart="20dp"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"
@@ -88,22 +91,23 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/no_name"
+                    android:id="@+id/noName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_name"
+                    android:text="@string/noName"
                     android:textColor="@color/red"
                     tools:visibility="gone" />
 
                 <TextView
-                    android:id="@+id/queue_description"
+                    android:id="@+id/queueDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/Inter"
+                    android:fontFamily="@font/interproba"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="@string/editing2"
-                    android:textColor="@color/grey1" />
+                    android:textColor="@color/grey1"
+                    android:textStyle="italic" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -111,12 +115,12 @@
                     app:cardCornerRadius="40dp">
 
                     <EditText
-                        android:id="@+id/queue_description_block2"
+                        android:id="@+id/queueDescriptionBlock"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:gravity="start"
-                        android:hint="@string/editing2_hint"
+                        android:hint="@string/editing2Hint"
                         android:paddingStart="20dp"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"
@@ -131,14 +135,15 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/queue_people"
+                    android:id="@+id/queueMembers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/Inter"
+                    android:fontFamily="@font/interproba"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="@string/editing3"
-                    android:textColor="@color/grey1" />
+                    android:textColor="@color/grey1"
+                    android:textStyle="italic" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -235,14 +240,15 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/queue_groups"
+                    android:id="@+id/queueGroups"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/Inter"
+                    android:fontFamily="@font/interproba"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="@string/editing4"
-                    android:textColor="@color/grey1" />
+                    android:textColor="@color/grey1"
+                    android:textStyle="italic" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -253,12 +259,12 @@
                     app:cardCornerRadius="45dp">
 
                     <EditText
-                        android:id="@+id/queue_groups_block"
+                        android:id="@+id/queueGroupsBlock"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:background="@null"
-                        android:hint="@string/editing4_hint"
+                        android:hint="@string/editing4"
                         android:paddingStart="20dp"
                         android:paddingLeft="20dp"
                         android:paddingTop="10dp"
@@ -273,10 +279,10 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/no_groups"
+                    android:id="@+id/noGroups"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_groups"
+                    android:text="@string/noGroups"
                     android:textColor="@color/red"
                     tools:visibility="gone" />
 
@@ -298,15 +304,15 @@
 
 
                 <Button
-                    android:id="@+id/save_button"
+                    android:id="@+id/saveButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/orange"
-                    android:text="@string/save_button"
+                    android:text="@string/saveButton"
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/cancel_button"
+                    android:id="@+id/cancelButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -315,7 +321,7 @@
                     android:paddingTop="0dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="0dp"
-                    android:text="@string/cancel_button"
+                    android:text="@string/cancelButton"
                     android:textColor="@color/orange"
                     android:textSize="16sp" />
             </LinearLayout>
