@@ -6,18 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mainlist.MainScreen
 import com.example.mainlist.R
 import com.example.mainlist.data.Turn
 
 
-public class TurnAdapter : RecyclerView.Adapter<TurnAdapter.turnHolder>() {
-    var turnList = ArrayList<Turn>()
-    fun ItemAdapter2() {
-        turnList = ArrayList<Turn>()
-    }
-
+public class TurnAdapter(private val turnList: MutableList<Turn>) : RecyclerView.Adapter<TurnAdapter.turnHolder>() {
+//    private var turnList = ArrayList<Turn>()
     class turnHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var nameTextView: TextView = itemView.findViewById(R.id.turnNameElement);
+        val nameTextView: TextView = itemView.findViewById(R.id.turnNameElement);
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): turnHolder {
@@ -30,8 +27,8 @@ public class TurnAdapter : RecyclerView.Adapter<TurnAdapter.turnHolder>() {
     }
 
     override fun onBindViewHolder(holder: turnHolder, position: Int) {
-        val turn : Turn = turnList.get(position) //заполнение данных в эл списка
-        holder.nameTextView.setText(turn.turnName)
+        val turn : Turn = turnList[position] //заполнение данных в эл списка
+        holder.nameTextView.text = turn.turnName
     }
 
     fun addTurn(turn: Turn){
@@ -39,7 +36,7 @@ public class TurnAdapter : RecyclerView.Adapter<TurnAdapter.turnHolder>() {
         notifyDataSetChanged()
     }
 
-    fun setItems(item: List<Turn>) {
+    fun setItems(item: MutableList<Turn>) {
         turnList.clear()
         turnList.addAll(item)
         notifyDataSetChanged()
