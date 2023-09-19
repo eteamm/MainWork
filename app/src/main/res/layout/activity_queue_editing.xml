@@ -40,10 +40,10 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/light"
+                        android:fontFamily="@font/inter"
                         android:gravity="left"
                         android:paddingTop="5dp"
-                        android:text="@string/editing_queue"
+                        android:text="@string/EditingQueue"
                         android:textColor="#000000"
                         android:textSize="11sp" />
 
@@ -60,7 +60,7 @@
                         android:id="@+id/queue_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/regular"
+                        android:fontFamily="@font/inter"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:text="@string/editing1"
@@ -76,7 +76,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
-                            android:hint="@string/editing1_hint"
+                            android:hint="@string/editing1Hint"
                             android:paddingStart="20dp"
                             android:paddingLeft="20dp"
                             android:paddingTop="20dp"
@@ -93,7 +93,7 @@
                         android:id="@+id/no_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/no_name"
+                        android:text="@string/noName"
                         android:textColor="@color/red"
                         tools:visibility="gone" />
 
@@ -101,7 +101,6 @@
                         android:id="@+id/queue_description"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/regular"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:text="@string/editing2"
@@ -118,7 +117,7 @@
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:gravity="start"
-                            android:hint="@string/editing2_hint"
+                            android:hint="@string/editing2Hint"
                             android:paddingStart="20dp"
                             android:paddingLeft="20dp"
                             android:paddingTop="20dp"
@@ -136,7 +135,7 @@
                         android:id="@+id/queue_people"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/regular"
+                        android:fontFamily="@font/inter"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:text="@string/editing3"
@@ -169,7 +168,7 @@
                         android:id="@+id/queue_groups"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/regular"
+                        android:fontFamily="@font/inter"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:text="@string/editing4"
@@ -189,7 +188,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:background="@null"
-                            android:hint="@string/editing4_hint"
+                            android:hint="@string/editing4Hint"
                             android:paddingStart="20dp"
                             android:paddingLeft="20dp"
                             android:paddingTop="10dp"
@@ -207,7 +206,7 @@
                         android:id="@+id/no_groups"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/no_groups"
+                        android:text="@string/noGroups"
                         android:textColor="@color/red"
                         tools:visibility="gone" />
 
@@ -240,7 +239,7 @@
                 android:paddingTop="14dp"
                 android:paddingRight="90dp"
                 android:paddingBottom="14dp"
-                android:text="@string/save_button"
+                android:text="@string/saveButton"
                 android:textSize="16sp" />
 
             <Button
@@ -253,7 +252,7 @@
                 android:paddingTop="0dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="0dp"
-                android:text="@string/cancel_button"
+                android:text="@string/cancelButton"
                 android:textColor="@color/orange"
                 android:textSize="20sp" />
         </LinearLayout>
