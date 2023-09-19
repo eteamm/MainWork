@@ -72,7 +72,7 @@
                         app:cardCornerRadius="40dp">
 
                         <EditText
-                            android:id="@+id/queue_name_block"
+                            android:id="@+id/nameTurnInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
@@ -90,7 +90,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:id="@+id/no_name"
+                        android:id="@+id/noNameTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/noName"
@@ -112,7 +112,7 @@
                         app:cardCornerRadius="40dp">
 
                         <EditText
-                            android:id="@+id/queue_description_block2"
+                            android:id="@+id/descTurnInput"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@null"
@@ -178,12 +178,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
                         app:cardCornerRadius="45dp">
 
                         <EditText
-                            android:id="@+id/queue_groups_block"
+                            android:id="@+id/groupCreateInput"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -203,7 +201,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:id="@+id/no_groups"
+                        android:id="@+id/noGroupTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/noGroups"
@@ -211,6 +209,7 @@
                         tools:visibility="gone" />
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/allowGroupsRec"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
 
@@ -230,7 +229,7 @@
 
 
             <Button
-                android:id="@+id/save_button"
+                android:id="@+id/saveTurnBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -243,7 +242,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/cancel_button"
+                android:id="@+id/cancelCreateTurnBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"

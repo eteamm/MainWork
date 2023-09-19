@@ -11,7 +11,7 @@ class Activity_Mainqueue : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainqueue)
 
-        val recyclerView: RecyclerView = findViewById(R.id.rec)
+        val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = CustomAdapter(fillList())
         recyclerView.adapter = CustomAdapter(getCatList())

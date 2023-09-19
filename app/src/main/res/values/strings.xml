@@ -34,6 +34,7 @@
     <string name="StudentsText">УЧАСТНИКИ</string>
     <string name="AdminsQuantity">2 администратора</string>
     <string name="StudentsQuantity">4 участника</string>
+    <string name="search">Поиск</string>
 
     <string name="mainTextTurn">ОЧЕРЕДЬ</string>
     <string name="nameTurnTurn">Зачетная неделя</string>
