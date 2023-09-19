@@ -40,7 +40,7 @@
                         android:layout_height="22dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
-                        android:text="@string/Main"
+                        android:text="@string/MainMain"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.017"
@@ -68,14 +68,14 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/usernametext"
+                                android:id="@+id/usernameTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Имя пользователя"
                                 android:textSize="10sp" />
 
                             <TextView
-                                android:id="@+id/userNameMain"
+                                android:id="@+id/userNameMainTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/nametxt"
@@ -92,29 +92,29 @@
                                     android:orientation="vertical">
 
                                     <TextView
-                                        android:id="@+id/statusText"
+                                        android:id="@+id/statusTxt"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="0dp"
                                         android:layout_marginTop="0dp"
-                                        android:text="@string/status"
+                                        android:text="@string/StatusMain"
                                         android:textSize="10sp"
-                                        app:layout_constraintEnd_toEndOf="@+id/usernametext"
+                                        app:layout_constraintEnd_toEndOf="@+id/usernameTxt"
                                         app:layout_constraintHorizontal_bias="0.0"
-                                        app:layout_constraintStart_toStartOf="@+id/usernametext"
+                                        app:layout_constraintStart_toStartOf="@+id/usernameTxt"
                                         app:layout_constraintTop_toTopOf="parent" />
 
                                     <TextView
-                                        android:id="@+id/statusMain"
+                                        android:id="@+id/statusMainTxt"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="0dp"
                                         android:layout_marginTop="0dp"
                                         android:text="СТАТУС"
-                                        app:layout_constraintEnd_toEndOf="@+id/statusText"
+                                        app:layout_constraintEnd_toEndOf="@+id/statusTxt"
                                         app:layout_constraintHorizontal_bias="0.0"
-                                        app:layout_constraintStart_toStartOf="@+id/statusText"
-                                        app:layout_constraintTop_toTopOf="@+id/statusText" />
+                                        app:layout_constraintStart_toStartOf="@+id/statusTxt"
+                                        app:layout_constraintTop_toTopOf="@+id/statusTxt" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -123,28 +123,28 @@
                                     android:orientation="vertical">
 
                                     <TextView
-                                        android:id="@+id/groupText"
+                                        android:id="@+id/groupTxt"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="0dp"
-                                        android:text="@string/group"
+                                        android:text="@string/GroupMain"
                                         android:textSize="10sp"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintHorizontal_bias="0.166"
-                                        app:layout_constraintStart_toEndOf="@+id/statusText"
+                                        app:layout_constraintStart_toEndOf="@+id/statusTxt"
                                         app:layout_constraintTop_toTopOf="parent" />
 
                                     <TextView
-                                        android:id="@+id/groupMain"
+                                        android:id="@+id/groupMainTxt"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="0dp"
                                         android:layout_marginTop="0dp"
                                         android:text="ГРУППА"
-                                        app:layout_constraintEnd_toEndOf="@+id/groupText"
+                                        app:layout_constraintEnd_toEndOf="@+id/groupTxt"
                                         app:layout_constraintHorizontal_bias="0.0"
-                                        app:layout_constraintStart_toStartOf="@+id/groupText"
-                                        app:layout_constraintTop_toTopOf="@+id/groupText" />
+                                        app:layout_constraintStart_toStartOf="@+id/groupTxt"
+                                        app:layout_constraintTop_toTopOf="@+id/groupTxt" />
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -202,7 +202,7 @@
                             android:layout_marginTop="20dp"
                             android:layout_weight="1"
                             android:backgroundTint="@color/background"
-                            android:text="МОИ"
+                            android:text="@string/ButtonMyTextMain"
                             android:textColor="#F4694D"
                             app:layout_constraintBottom_toTopOf="@+id/recyclerView"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -211,7 +211,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <Button
-                            android:id="@+id/bINDostup"
+                            android:id="@+id/MainScreenInDostupBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="0dp"
@@ -219,7 +219,7 @@
                             android:layout_weight="1"
                             android:backgroundTint="@color/background"
                             android:backgroundTintMode="add"
-                            android:text="ДОСТУПНЫЕ"
+                            android:text="@string/ButtonInDostupTextMain"
                             android:textAllCaps="false"
                             android:textColor="@color/orange"
                             app:layout_constraintBottom_toTopOf="@+id/recyclerView"
@@ -252,12 +252,12 @@
             android:paddingBottom="20dp">
 
             <Button
-                android:id="@+id/bCreateTurn"
+                android:id="@+id/CreateTurnBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/orange"
                 android:onClick="CreateTurn"
-                android:text="@string/createbuttonturn"
+                android:text="@string/ButtonCreateTurnTextMain"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

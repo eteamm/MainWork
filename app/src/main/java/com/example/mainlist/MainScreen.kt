@@ -33,9 +33,9 @@ class MainScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainscreen)
         val UserName = findViewById<TextView>(R.id.userNameMain)
-        val Status = findViewById<TextView>(R.id.statusMain)
-        val Group = findViewById<TextView>(R.id.groupMain)
-        val bcreateturn = findViewById<Button>(R.id.bCreateTurn)
+        val Status = findViewById<TextView>(R.id.statusMainTxt)
+        val Group = findViewById<TextView>(R.id.groupMainTxt)
+        val bcreateturn = findViewById<Button>(R.id.CreateTurnBtn)
         bcreateturn.setOnClickListener {
             val intent = Intent(this, ListOfParticipants::class.java)
             startActivity(intent);
