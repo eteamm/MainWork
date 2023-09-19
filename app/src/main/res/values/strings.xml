@@ -44,17 +44,24 @@
     <string name="AdminsQuantity">2 администратора</string>
     <string name="StudentsQuantity">4 участника</string>
 
-    <string name="MainText">ОЧЕРЕДЬ</string>
-    <string name="Name_Turn">Зачетная неделя</string>
-    <string name="Name_teacher">Имя преподавателя</string>
-    <string name="Number_People">132</string>
-    <string name="PeopleBox">человека</string>
-    <string name="Description1">Подробнее</string>
-    <string name="About">Приходим в аудиторию 1123 в 15 00. С собой иметь тетрадь, ручку</string>
-    <string name="People_Turn">участники</string>
-    <string name="Exit_Turn">выйти из очереди</string>
-    <string name="Join_Turn">ВСТАТЬ В ОЧЕРЕДЬ</string>
-    <string name="Create_Turn">СОЗДАТЬ</string>
+    <string name="mainTextTurn">ОЧЕРЕДЬ</string>
+    <string name="nameTurnTurn">Зачетная неделя</string>
+    <string name="nameTeacherTurn">Имя преподавателя</string>
+    <string name="numberPeopleTurn">132</string>
+    <string name="peopleBoxTurn">человека</string>
+    <string name="descriptionBoxTurn">Приходим в аудиторию 1123 в 15 00. С собой иметь тетрадь, ручку</string>
+    <string name="turnBtnTextTurn">участники</string>
+    <string name="exitBtnTextTurn">выйти из очереди</string>
+    <string name="joinBtnTextTurn">ВСТАТЬ В ОЧЕРЕДЬ</string>
+
+    <string name="mainTextCreate">СОЗДАТЬ</string>
+    <string name="nameTurnCreate">Название очереди</string>
+    <string name="descriptionTurnCreate">Описание очереди</string>
+    <string name="groupsCreate">Группы</string>
+    <string name="createBtnCreate">СОЗДАТЬ</string>
+    <string name="cancelBtnCreate">ОТМЕНА</string>
+
+
     <string name="go">Вперед!</string>
     <string name="etuid">ETU ID</string>
     <string name="nametxt">Имя Пользователя</string>
