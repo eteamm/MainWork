@@ -32,10 +32,7 @@ class MainScreen : AppCompatActivity() {
         var responseTurns = gson?.fromJson(myJson, Array<Turn>::class.java)?.toList()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainscreen)
-        val UserName = findViewById<TextView>(R.id.userNameMain)
-        val Status = findViewById<TextView>(R.id.statusMain)
-        val Group = findViewById<TextView>(R.id.groupMain)
-        val bcreateturn = findViewById<Button>(R.id.bCreateTurn)
+        val bcreateturn = findViewById<Button>(R.id.CreateTurnBtn)
         bcreateturn.setOnClickListener {
             val intent = Intent(this, ListOfParticipants::class.java)
             startActivity(intent);
@@ -43,7 +40,7 @@ class MainScreen : AppCompatActivity() {
 
         val bExit = findViewById<ImageButton>(R.id.exitBtn)
         bExit.setOnClickListener {
-            val intent = Intent(this, QueueEditing::class.java)
+            val intent = Intent(this, Activity_Mainqueue::class.java)
             startActivity(intent);
         }
 

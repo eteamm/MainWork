@@ -1,27 +1,18 @@
 <resources>
     <string name="app_name">MainList</string>
-    <string name="Main">ГЛАВНАЯ</string>
-    <string name="status">статус</string>
-    <string name="group">группа</string>
-    <string name="description">Описание</string>
-    <string name="firsttask">Авторизируйся через ETU ID</string>
-    <string name="secondtask">Выбери или создай список</string>
-    <string name="thirdtask">Жди своей очереди!</string>
-    <string-array name="cat_names">
-        <item>Рыжик</item>
-        <item>Барсик</item>
-        <item>Мурзик</item>
-        <item>Мурка</item>
-        <item>Васька</item>
-        <item>Томасина</item>
-        <item>Кристина</item>
-        <item>Пушок</item>
-        <item>Дымка</item>
-        <item>Кузя</item>
-        <item>Китти</item>
-        <item>Масяня</item>
-        <item>Симба</item>
-    </string-array>
+    <string name="MainMain">ГЛАВНАЯ</string>
+    <string name="StatusMain">статус</string>
+    <string name="GroupMain">группа</string>
+    <string name="ButtonExitTextMain">выйти</string>
+    <string name="ButtonMyTextMain">МОИ</string>
+    <string name="ButtonInDostupTextMain">ДОСТУПНЫЕ</string>
+    <string name="ButtonCreateTurnTextMain">СОЗДАТЬ ОЧЕРЕДЬ</string>
+    <string name="EtuIdMain">ETU ID</string>
+    <string name="FirstTaskEntry">Авторизируйся через ETU ID</string>
+    <string name="SecondTaskEntry">Выбери или создай список</string>
+    <string name="ThirdTaskEntry">Жди своей очереди!</string>
+    <string name="ThreeStepsEntry">Всего три простых шага!</string>
+
 
     <string name="EditingQueue">РЕДАКТИРОВАТЬ</string>
     <string name="editing1">Название очереди</string>
@@ -43,6 +34,7 @@
     <string name="StudentsText">УЧАСТНИКИ</string>
     <string name="AdminsQuantity">2 администратора</string>
     <string name="StudentsQuantity">4 участника</string>
+    <string name="search">Поиск</string>
 
     <string name="mainTextTurn">ОЧЕРЕДЬ</string>
     <string name="nameTurnTurn">Зачетная неделя</string>
@@ -70,7 +62,6 @@
     <string name="etuid">ETU ID</string>
     <string name="nametxt">Имя Пользователя</string>
     <string name="createbuttonturn">СОЗДАТЬ ОЧЕРЕДЬ</string>
-    <string name="three_steps">Всего три простых шага!</string>
     <string name="turnInfoName">Название очереди</string>
     <string name="turnInfoDesc">Подробнее: описание очереди</string>
     <string name="turnInfoAuthor">Автор очереди</string>

@@ -26,11 +26,11 @@
             android:src="@drawable/button_img_black" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/EntryScreenMainText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/three_steps"
+            android:text="@string/ThreeStepsEntry"
             android:textSize="18sp" />
     </FrameLayout>
 
@@ -50,12 +50,12 @@
             app:srcCompat="@drawable/one" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/EntryScreenFirstText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="20dp"
-            android:text="@string/firsttask"
+            android:text="@string/FirstTaskEntry"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -74,12 +74,12 @@
             app:srcCompat="@drawable/two" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/EntryScreenSecondText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="20dp"
-            android:text="@string/secondtask"
+            android:text="@string/SecondTaskEntry"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -98,12 +98,12 @@
             app:srcCompat="@drawable/three" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/EntryScreenThirdText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="20dp"
-            android:text="@string/thirdtask"
+            android:text="@string/ThirdTaskEntry"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -117,7 +117,7 @@
         android:paddingRight="20dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/ToMainScreenBtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:backgroundTint="@color/orange"
