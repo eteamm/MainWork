@@ -45,6 +45,10 @@
     <string name="turnBtnTextTurn">участники</string>
     <string name="exitBtnTextTurn">выйти из очереди</string>
     <string name="joinBtnTextTurn">ВСТАТЬ В ОЧЕРЕДЬ</string>
+    <string name="countPlacesTurn">145 позиций</string>
+    <string name="hintToPositionTurn">До твоей ближайшей очереди 3 позиции</string>
+    <string name="inviteTurn">поделиться</string>
+    <string name="deleteTurn">удалить очередь</string>
 
     <string name="mainTextCreate">СОЗДАТЬ</string>
     <string name="nameTurnCreate">Название очереди</string>
