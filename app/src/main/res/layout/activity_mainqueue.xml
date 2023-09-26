@@ -92,7 +92,6 @@
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
                                     android:background="@color/background"
-                                    android:src="@tools:sample/avatars"
                                     android:visibility="visible"
                                     app:srcCompat="@drawable/pencil_icon_png_11" />
                             </LinearLayout>

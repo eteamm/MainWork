@@ -13,8 +13,11 @@ import com.example.mainlist.data.Turn
 
 public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<TurnAdapter.turnHolder>() {
     private var turnList = ArrayList<Turn>();
+    private var Type : Boolean = false;
+
     class turnHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.turnNameElement);
+        
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): turnHolder {
@@ -36,7 +39,8 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
         notifyDataSetChanged()
     }
 
-    fun setItems(item: MutableList<Turn>) {
+    fun setItems(item: MutableList<Turn>, type: Boolean) {
+        Type = type;
         turnList.clear()
         turnList.addAll(item)
         notifyDataSetChanged()
