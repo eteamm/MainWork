@@ -24,11 +24,17 @@ class Activity_Mainqueue : AppCompatActivity() {
           groupNumber: 2391
         },
         {
+          id: 4, 
+          name: “evsvasdf”, 
+          groupNumber: 3242
+        },
+        {
           id: 2, 
           name: “example”, 
           groupNumber: 2391
         }]
         """.trimIndent()
+
 
 
         var gsonMainqueue = Gson()

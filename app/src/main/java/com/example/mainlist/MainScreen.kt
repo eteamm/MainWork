@@ -20,20 +20,41 @@ class MainScreen : AppCompatActivity() {
 
         val myJson = """
         [{
-          turnName: "Зачетная неделя",
+          turnName: "MY TURNS!!!!!!",
           turnDesc: "Конкретно четко"
         },
         {
-          turnName: "Хуйня",
+          turnName: "Eptaaaaaa",
           turnDesc: "вау"
         }]
         """.trimIndent()
+
+        val dostupJson = """
+        [{
+          turnName: "TURNS IN DOSTUP!!!!!",
+          turnDesc: "Конкретно четко"
+        },
+        {
+          turnName: "UntiEptaaaaaa",
+          turnDesc: "вау"
+        }]
+        """.trimIndent()
+
         var gson = Gson()
-        var responseTurns = gson?.fromJson(myJson, Array<Turn>::class.java)?.toList()
+        var MyTurns = gson?.fromJson(myJson, Array<Turn>::class.java)?.toList()
+        var InDostupTurns = gson?.fromJson(dostupJson, Array<Turn>::class.java)?.toList()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainscreen)
         val bcreateturn = findViewById<Button>(R.id.CreateTurnBtn)
-        bcreateturn.setOnClickListener {
+        val MyTurnsBtn = findViewById<Button>(R.id.bMy)
+        val InDostupBtn = findViewById<Button>(R.id.MainScreenInDostupBtn)
+
+        MyTurnsBtn.setOnClickListener {
+            val intent = Intent(this, ListOfParticipants::class.java)
+            startActivity(intent);
+        }
+
+        InDostupBtn.setOnClickListener {
             val intent = Intent(this, ListOfParticipants::class.java)
             startActivity(intent);
         }
@@ -48,18 +69,32 @@ class MainScreen : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         val turnAdapter = TurnAdapter(this)
         val turnList = mutableListOf<Turn>()
-        responseTurns?.forEach{
-            var turn = Turn(it.turnName, it.turnDesc)
-            turnList.add(0,turn)
+        bcreateturn.setOnClickListener {
+            val intent = Intent(this, ListOfParticipants::class.java)
+            startActivity(intent);
         }
-        recyclerView.adapter = turnAdapter
-        turnAdapter.setItems(turnList)
+        MyTurnsBtn.setOnClickListener {
+            turnList.clear()
+            MyTurns?.forEach{
+                var turn = Turn(it.turnName, it.turnDesc)
+                turnList.add(0,turn)
+            }
+            recyclerView.adapter = turnAdapter
+            turnAdapter.setItems(turnList, true)
+        }
+
+        InDostupBtn.setOnClickListener {
+            turnList.clear()
+            InDostupTurns?.forEach{
+                var turn = Turn(it.turnName, it.turnDesc)
+                turnList.add(0,turn)
+            }
+            recyclerView.adapter = turnAdapter
+            turnAdapter.setItems(turnList, true)
+        }
+
 
     }
-
-
-
-
 
 
     fun CreateTurn(view : View){
