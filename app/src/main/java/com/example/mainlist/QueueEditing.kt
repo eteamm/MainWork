@@ -19,13 +19,13 @@ class QueueEditing : AppCompatActivity() {
         binding = ActivityQueueEditingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val noName = findViewById<TextView>(R.id.noNameTxt)
-        val noGroups = findViewById<TextView>(R.id.noGroupTxt)
-        val saveButton = findViewById<Button>(R.id.saveTurnBtn)
-        val cancelButton = findViewById<Button>(R.id.cancelCreateTurnBtn)
-        val nameMassage = findViewById<EditText>(R.id.nameTurnInput)
-        val listOfGroups = findViewById<RecyclerView>(R.id.allowGroupsRec)
-        val nameGroups = findViewById<EditText>(R.id.groupCreateInput)
+        val noName = findViewById<TextView>(R.id.noName)
+        val noGroups = findViewById<TextView>(R.id.noGroups)
+        val saveButton = findViewById<Button>(R.id.saveButton)
+        val cancelButton = findViewById<Button>(R.id.cancelButton)
+        val nameMassage = findViewById<EditText>(R.id.queueNameBlock)
+        val listOfGroups = findViewById<RecyclerView>(R.id.listOfGroups)
+        val nameGroups = findViewById<EditText>(R.id.queueGroupsBlock)
         noName.visibility = TextView.GONE
         noGroups.visibility = TextView.GONE
         saveButton.setOnClickListener {
@@ -42,8 +42,15 @@ class QueueEditing : AppCompatActivity() {
             startActivity(intent)
         }
 
+        init()
     }
 
+    private fun init(){
+        binding.apply{
+            listOfGroups.layoutManager = LinearLayoutManager(this@QueueEditing)
+            listOfGroups.adapter = adapter
 
+        }
+    }
 
 }
