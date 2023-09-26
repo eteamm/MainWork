@@ -19,7 +19,7 @@
             android:name=".Yuri.Activity_queue_create"
             android:exported="false" />
         <activity
-            android:name=".EntryScreen"
+            android:name=".MainScreen"
             android:exported="false" />
         <activity
             android:name=".QueueEditing"
@@ -28,8 +28,10 @@
             android:name=".ListOfParticipants"
             android:exported="false" />
         <activity
-            android:name=".MainScreen"
+
+            android:name=".EntryScreen"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
