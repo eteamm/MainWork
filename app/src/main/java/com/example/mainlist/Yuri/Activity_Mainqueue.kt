@@ -1,9 +1,13 @@
 package com.example.mainlist.Yuri
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mainlist.MainScreen
+import com.example.mainlist.QueueEditing
 import com.example.mainlist.R
 import com.example.mainlist.adapter.PositionsAdapter
 import com.example.mainlist.adapter.TurnAdapter
@@ -43,7 +47,15 @@ class Activity_Mainqueue : AppCompatActivity() {
         }
         recyclerView.adapter = turnAdapterMainqueue
         turnAdapterMainqueue.setItems(turnListMainqueue)
+    }
 
+    fun ToEditTurn(view: View){
+        val intent = Intent(this, QueueEditing::class.java)
+        startActivity(intent)
+    }
+    fun ExitfromTurn(view: View){
+        val intent = Intent(this, MainScreen::class.java)
+        startActivity(intent)
     }
 
 
