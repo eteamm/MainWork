@@ -15,16 +15,14 @@ class Activity_queue_create : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_queue_create)
-
-//        val allowGroupsRec = findViewById<RecyclerView>(R.id.allowRec)
-//        allowGroupsRec.layoutManager = LinearLayoutManager(this)
-//        val allowGroupList = mutableListOf<AllowGroup>()
-//        val group = AllowGroup(0, 2391)
-//        allowGroupList.add(group)
-//
-//        val allowgroupAdapter = AllowGroupAdapter(this)
-//        allowGroupsRec.adapter = allowgroupAdapter
-//        allowgroupAdapter.setItems(allowGroupList)
+        val allowGroupsRec = findViewById<RecyclerView>(R.id.allowRec)
+        allowGroupsRec.layoutManager = LinearLayoutManager(this)
+        val allowGroupList = mutableListOf<AllowGroup>()
+        val group = AllowGroup(0, 2391)
+        allowGroupList.add(group)
+        val allowgroupAdapter = AllowGroupAdapter(this)
+        allowGroupsRec.adapter = allowgroupAdapter
+        allowgroupAdapter.setItems(allowGroupList)
     }
 
 

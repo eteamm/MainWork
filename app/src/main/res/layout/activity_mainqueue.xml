@@ -93,7 +93,6 @@
                                     android:layout_weight="1"
                                     android:background="@color/background"
                                     android:onClick="ToEditTurn"
-                                    android:src="@tools:sample/avatars"
                                     android:visibility="visible"
                                     app:srcCompat="@drawable/pencil_icon_png_11" />
                             </LinearLayout>
@@ -295,13 +294,12 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/imageView15"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@tools:sample/avatars"
                     app:srcCompat="@drawable/rectangle_105__1_" />
 
                 <TextView
@@ -332,13 +330,13 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@tools:sample/avatars"
                 app:srcCompat="@drawable/rectangle_136" />
 
             <TextView
