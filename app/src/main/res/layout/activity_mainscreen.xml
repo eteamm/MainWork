@@ -41,6 +41,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="3dp"
                         android:text="@string/MainMain"
+                        android:textColor="@color/mainColorText"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.017"
@@ -72,13 +73,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Имя пользователя"
+                                android:textColor="@color/titleText"
                                 android:textSize="10sp" />
 
                             <TextView
                                 android:id="@+id/userNameMainTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:paddingBottom="10dp"
                                 android:text="@string/nametxt"
+                                android:textColor="@color/titleText"
                                 android:textSize="20sp" />
 
                             <LinearLayout
@@ -88,8 +92,9 @@
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingRight="15dp">
 
                                     <TextView
                                         android:id="@+id/statusTxt"
@@ -98,6 +103,7 @@
                                         android:layout_marginLeft="0dp"
                                         android:layout_marginTop="0dp"
                                         android:text="@string/StatusMain"
+                                        android:textColor="@color/titleText"
                                         android:textSize="10sp"
                                         app:layout_constraintEnd_toEndOf="@+id/usernameTxt"
                                         app:layout_constraintHorizontal_bias="0.0"
@@ -106,20 +112,19 @@
 
                                     <TextView
                                         android:id="@+id/statusMainTxt"
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="0dp"
                                         android:layout_marginTop="0dp"
-                                        android:text="СТАТУС"
-                                        app:layout_constraintEnd_toEndOf="@+id/statusTxt"
+                                        android:text="@string/status"
+                                        android:textColor="@color/titleText"
                                         app:layout_constraintHorizontal_bias="0.0"
-                                        app:layout_constraintStart_toStartOf="@+id/statusTxt"
-                                        app:layout_constraintTop_toTopOf="@+id/statusTxt" />
+                                        app:layout_constraintStart_toStartOf="@+id/statusTxt" />
                                 </LinearLayout>
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:orientation="vertical">
 
                                     <TextView
@@ -128,6 +133,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="0dp"
                                         android:text="@string/GroupMain"
+                                        android:textColor="@color/titleText"
                                         android:textSize="10sp"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintHorizontal_bias="0.166"
@@ -140,7 +146,8 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="0dp"
                                         android:layout_marginTop="0dp"
-                                        android:text="ГРУППА"
+                                        android:text="@string/groupNumber"
+                                        android:textColor="@color/titleText"
                                         app:layout_constraintEnd_toEndOf="@+id/groupTxt"
                                         app:layout_constraintHorizontal_bias="0.0"
                                         app:layout_constraintStart_toStartOf="@+id/groupTxt"
@@ -192,42 +199,28 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp">
 
                         <Button
                             android:id="@+id/bMy"
-                            android:layout_width="68dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="20dp"
                             android:layout_weight="1"
                             android:backgroundTint="@color/background"
                             android:text="@string/ButtonMyTextMain"
-                            android:textColor="#F4694D"
-                            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.275"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textColor="@color/mainColor" />
 
                         <Button
                             android:id="@+id/MainScreenInDostupBtn"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginTop="20dp"
                             android:layout_weight="1"
                             android:backgroundTint="@color/background"
                             android:backgroundTintMode="add"
                             android:text="@string/ButtonInDostupTextMain"
                             android:textAllCaps="false"
-                            android:textColor="@color/orange"
-                            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.85"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:strokeColor="#673AB7" />
+                            android:textColor="@color/mainColor" />
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -255,9 +248,10 @@
                 android:id="@+id/CreateTurnBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/mainButton"
                 android:onClick="CreateTurn"
                 android:text="@string/ButtonCreateTurnTextMain"
+                android:textColor="@color/mainButtonText"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

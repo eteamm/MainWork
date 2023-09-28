@@ -58,12 +58,13 @@
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="@string/nameTurnCreate"
-                    android:textColor="#868686"
+                    android:textColor="@color/editLabel"
                     android:textSize="11sp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/editBlock"
                     app:cardCornerRadius="30dp">
 
                     <EditText
@@ -73,6 +74,7 @@
                         android:background="@null"
                         android:fontFamily="@font/interproba"
                         android:gravity="center_vertical"
+                        android:hint="@string/nameTurn"
                         android:inputType="text"
                         android:paddingStart="20dp"
                         android:paddingLeft="20dp"
@@ -80,6 +82,8 @@
                         android:paddingEnd="10dp"
                         android:paddingRight="20dp"
                         android:paddingBottom="20dp"
+                        android:textColor="@color/editText"
+                        android:textColorHint="@color/editTextHint"
                         android:textSize="20sp" />
                 </androidx.cardview.widget.CardView>
 
@@ -91,12 +95,13 @@
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="@string/descriptionTurnCreate"
-                    android:textColor="#868686"
+                    android:textColor="@color/editLabel"
                     android:textSize="11sp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/editBlock"
                     app:cardCornerRadius="30dp">
 
                     <EditText
@@ -115,6 +120,8 @@
                         android:paddingEnd="10dp"
                         android:paddingRight="20dp"
                         android:paddingBottom="20dp"
+                        android:textColor="@color/editText"
+                        android:textColorHint="@color/editTextHint"
                         android:textSize="20sp" />
                 </androidx.cardview.widget.CardView>
 
@@ -126,12 +133,13 @@
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="@string/groupsCreate"
-                    android:textColor="#868686"
+                    android:textColor="@color/editLabel"
                     android:textSize="11sp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/editBlock"
                     app:cardCornerRadius="30dp">
 
                     <EditText
@@ -142,6 +150,7 @@
                         android:ems="10"
                         android:fontFamily="@font/interproba"
                         android:gravity="center_vertical"
+                        android:hint="@string/allowgroupsTurn"
                         android:inputType="text"
                         android:paddingStart="20dp"
                         android:paddingLeft="20dp"
@@ -149,6 +158,8 @@
                         android:paddingEnd="10dp"
                         android:paddingRight="20dp"
                         android:paddingBottom="20dp"
+                        android:textColor="@color/editText"
+                        android:textColorHint="@color/editTextHint"
                         android:textSize="20sp" />
 
                 </androidx.cardview.widget.CardView>
@@ -175,8 +186,9 @@
                     android:id="@+id/createBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#F4694D"
+                    android:backgroundTint="@color/mainButton"
                     android:text="@string/createBtnCreate"
+                    android:textColor="@color/mainButtonText"
                     android:textSize="16sp" />
 
                 <Button
@@ -184,10 +196,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00E9EFF2"
-                    android:backgroundTint="#80E9EFF2"
+                    android:backgroundTint="@color/background"
                     android:onClick="ExitfromCreateTurn"
                     android:text="@string/cancelBtnCreate"
-                    android:textColor="#F4694D"
+                    android:textColor="@color/mainColor"
                     android:textSize="16sp" />
 
             </LinearLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical"
     android:paddingLeft="53dp"
     android:paddingRight="53dp"
@@ -31,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/ThreeStepsEntry"
+            android:textColor="@color/allText"
             android:textSize="18sp" />
     </FrameLayout>
 
@@ -40,14 +42,30 @@
         android:orientation="horizontal"
         android:paddingTop="20dp">
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="62dp"
-            android:layout_height="62dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/one" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="@color/mainColor"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="@string/one"
+                    android:textAlignment="center"
+                    android:textColor="@color/mainColorText2"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/EntryScreenFirstText"
@@ -56,6 +74,7 @@
             android:layout_weight="1"
             android:paddingLeft="20dp"
             android:text="@string/FirstTaskEntry"
+            android:textColor="@color/allText"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -66,12 +85,30 @@
         android:orientation="horizontal"
         android:paddingTop="20dp">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="62dp"
-            android:layout_height="62dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/two" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/mainColor"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="@string/two"
+                    android:textAlignment="center"
+                    android:textColor="@color/mainColorText2"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/EntryScreenSecondText"
@@ -80,6 +117,7 @@
             android:layout_weight="1"
             android:paddingLeft="20dp"
             android:text="@string/SecondTaskEntry"
+            android:textColor="@color/allText"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -90,12 +128,29 @@
         android:orientation="horizontal"
         android:paddingTop="20dp">
 
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="62dp"
-            android:layout_height="62dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/three" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="@color/mainColor"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="@string/three"
+                    android:textAlignment="center"
+                    android:textColor="@color/mainColorText2"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/EntryScreenThirdText"
@@ -104,6 +159,7 @@
             android:layout_weight="1"
             android:paddingLeft="20dp"
             android:text="@string/ThirdTaskEntry"
+            android:textColor="@color/allText"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -120,8 +176,9 @@
             android:id="@+id/ToMainScreenBtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:backgroundTint="@color/orange"
+            android:backgroundTint="@color/mainButton"
             android:text="@string/go"
+            android:textColor="@color/mainButtonText"
             android:textSize="16sp" />
     </LinearLayout>
 

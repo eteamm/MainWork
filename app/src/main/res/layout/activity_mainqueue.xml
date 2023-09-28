@@ -44,7 +44,7 @@
                         android:fontFamily="@font/inter"
                         android:gravity="left"
                         android:text="@string/mainTextTurn"
-                        android:textColor="#000000"
+                        android:textColor="@color/mainColorText"
                         android:textSize="14sp" />
 
                 </FrameLayout>
@@ -81,7 +81,7 @@
                                     android:shadowDy="0"
                                     android:shadowRadius="0"
                                     android:text="@string/nameTurnTurn"
-                                    android:textColor="#040404"
+                                    android:textColor="@color/titleText"
                                     android:textSize="20sp"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -93,7 +93,6 @@
                                     android:layout_weight="1"
                                     android:background="@color/background"
                                     android:onClick="ToEditTurn"
-                                    android:src="@tools:sample/avatars"
                                     android:visibility="visible"
                                     app:srcCompat="@drawable/pencil_icon_png_11" />
                             </LinearLayout>
@@ -104,7 +103,7 @@
                                 android:layout_height="wrap_content"
                                 android:paddingTop="5dp"
                                 android:text="@string/nameTeacherTurn"
-                                android:textColor="#000000"
+                                android:textColor="@color/titleText"
                                 android:textSize="12sp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/mainText" />
@@ -126,7 +125,7 @@
                                 android:shadowDy="0"
                                 android:shadowRadius="0"
                                 android:text="@string/numberPeopleTurn"
-                                android:textColor="#0B0B0B"
+                                android:textColor="@color/titleText"
                                 android:textSize="20sp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -137,7 +136,7 @@
                                 android:layout_height="wrap_content"
                                 android:paddingTop="5dp"
                                 android:text="@string/peopleBoxTurn"
-                                android:textColor="#000000"
+                                android:textColor="@color/titleText"
                                 android:textSize="12sp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/numberpeople" />
@@ -155,7 +154,7 @@
                         android:maxWidth="300dp"
                         android:paddingTop="10dp"
                         android:text="@string/descriptionBoxTurn"
-                        android:textColor="#000000"
+                        android:textColor="@color/titleText"
                         android:textSize="12sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/AboutBox" />
@@ -183,9 +182,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/orange"
+                                android:backgroundTint="@color/mainButton"
                                 android:text="@string/turnBtnTextTurn"
-                                android:textColor="@color/block"
+                                android:textColor="@color/mainButtonText"
                                 android:textSize="12sp"
                                 tools:layout_editor_absoluteX="26dp"
                                 tools:layout_editor_absoluteY="182dp" />
@@ -208,7 +207,7 @@
                                 android:layout_height="match_parent"
                                 android:backgroundTint="@color/orange"
                                 android:text="@string/inviteTurn"
-                                android:textColor="@color/block"
+                                android:textColor="@color/mainButtonText"
                                 android:textSize="12sp"
                                 android:visibility="visible"
                                 tools:layout_editor_absoluteX="26dp"
@@ -239,7 +238,7 @@
                                 android:backgroundTintMode="add"
                                 android:onClick="ExitfromTurn"
                                 android:text="@string/exitBtnTextTurn"
-                                android:textColor="@color/orange"
+                                android:textColor="@color/mainColor"
                                 android:textSize="12sp"
                                 tools:layout_editor_absoluteX="211dp"
                                 tools:layout_editor_absoluteY="182dp" />
@@ -261,14 +260,14 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="@string/countPlacesTurn"
-                            android:textColor="@color/orange" />
+                            android:textColor="@color/mainColor" />
 
                         <TextView
                             android:id="@+id/hintToPositiontxt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/hintToPositionTurn"
-                            android:textColor="@color/orange" />
+                            android:textColor="@color/mainColor" />
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -292,28 +291,29 @@
             android:paddingRight="40dp"
             android:paddingBottom="25dp">
 
-            <FrameLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="visible">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/blockColor"
+                app:cardCornerRadius="15dp">
 
-                <ImageView
-                    android:id="@+id/imageView15"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@tools:sample/avatars"
-                    app:srcCompat="@drawable/rectangle_105__1_" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="25dp"
-                    android:paddingTop="10dp"
-                    android:text="@string/warningTxtTurn"
-                    android:textColor="@color/orange"
-                    android:textSize="10sp" />
-            </FrameLayout>
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/warningTxtTurn"
+                        android:textColor="@color/mainColor"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <Button
                 android:id="@+id/createTurnBtn"
@@ -332,13 +332,13 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@tools:sample/avatars"
                 app:srcCompat="@drawable/rectangle_136" />
 
             <TextView

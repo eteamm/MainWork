@@ -40,7 +40,7 @@
                     android:gravity="left"
                     android:lines="2"
                     android:text="@string/ListOfParticipants"
-                    android:textColor="#000000"
+                    android:textColor="@color/mainColorText"
                     android:textSize="11sp"
                     android:textStyle="italic" />
             </FrameLayout>
@@ -60,7 +60,7 @@
                     android:fontFamily="@font/interproba"
                     android:gravity="center"
                     android:text="@string/editing3"
-                    android:textColor="#1A212F"
+                    android:textColor="@color/allText"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -79,7 +79,7 @@
                         android:fontFamily="@font/interproba"
                         android:gravity="center"
                         android:text="@string/AdminsQuantity"
-                        android:textColor="#000000"
+                        android:textColor="@color/allText"
                         android:textSize="15sp"
                         android:textStyle="italic" />
 
@@ -92,7 +92,7 @@
                         android:fontFamily="@font/interproba"
                         android:gravity="center"
                         android:text="@string/StudentsQuantity"
-                        android:textColor="#000000"
+                        android:textColor="@color/allText"
                         android:textSize="15sp"
                         android:textStyle="italic" />
 
@@ -101,6 +101,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/block"
                     app:cardCornerRadius="30dp">
 
                     <LinearLayout
@@ -127,7 +128,7 @@
                                 android:paddingBottom="10dp"
                                 android:soundEffectsEnabled="false"
                                 android:text="@string/AdminsText"
-                                android:textColor="@color/ultra_black"
+                                android:textColor="@color/allText"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:visibility="visible" />
@@ -193,6 +194,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/block"
                     app:cardCornerRadius="30dp">
 
                     <LinearLayout
@@ -217,7 +219,7 @@
                                 android:paddingBottom="10dp"
                                 android:soundEffectsEnabled="false"
                                 android:text="@string/StudentsText"
-                                android:textColor="@color/ultra_black"
+                                android:textColor="@color/allText"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:visibility="visible" />
