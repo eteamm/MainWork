@@ -93,7 +93,6 @@
                                     android:layout_weight="1"
                                     android:background="@color/background"
                                     android:onClick="ToEditTurn"
-                                    android:src="@tools:sample/avatars"
                                     android:visibility="visible"
                                     app:srcCompat="@drawable/pencil_icon_png_11" />
                             </LinearLayout>
@@ -340,7 +339,6 @@
                 android:id="@+id/imageView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@tools:sample/avatars"
                 app:srcCompat="@drawable/rectangle_136" />
 
             <TextView

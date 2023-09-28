@@ -37,6 +37,7 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         holder.UserGroupTextView.text = positions.groupNumber
         holder.Deletedtn.setOnClickListener(){
             val deleted = ListPositions.removeAt(position);
+            notifyDataSetChanged()
         }
 
     }
