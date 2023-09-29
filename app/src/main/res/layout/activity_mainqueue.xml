@@ -24,7 +24,8 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <ImageView
                         android:id="@+id/imageView2"
@@ -56,6 +57,33 @@
                     android:paddingLeft="20dp"
                     android:paddingTop="20dp"
                     android:paddingRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/logo_header" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/inter"
+                            android:letterSpacing="0.1"
+                            android:paddingStart="5dp"
+                            android:text="@string/mainTextTurn"
+                            android:textColor="@color/mainColor"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -205,7 +233,7 @@
                             <Button
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:backgroundTint="@color/orange"
+                                android:backgroundTint="@color/mainButton"
                                 android:text="@string/inviteTurn"
                                 android:textColor="@color/mainButtonText"
                                 android:textSize="12sp"
@@ -234,7 +262,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="2dp"
                                 android:layout_marginRight="2dp"
-                                android:backgroundTint="@color/block"
+                                android:backgroundTint="@color/blockColor"
                                 android:backgroundTintMode="add"
                                 android:onClick="ExitfromTurn"
                                 android:text="@string/exitBtnTextTurn"
@@ -319,12 +347,12 @@
                 android:id="@+id/createTurnBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/mainButton"
                 android:onClick="CreateTurn"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="@string/joinBtnTextTurn"
-                android:textColor="@color/block"
+                android:textColor="@color/mainButtonText"
                 app:iconSize="16sp" />
 
         </LinearLayout>
@@ -347,7 +375,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/ExitTxtTurn"
-                android:textColor="@color/orange"
+                android:textColor="@color/mainColor"
                 android:textSize="16sp" />
 
         </FrameLayout>

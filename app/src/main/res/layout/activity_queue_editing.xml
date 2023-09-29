@@ -97,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/noName"
-                    android:textColor="@color/red"
+                    android:textColor="@color/warningText"
                     tools:visibility="gone" />
 
                 <TextView
@@ -289,7 +289,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/noGroups"
-                    android:textColor="@color/red"
+                    android:textColor="@color/warningText"
                     tools:visibility="gone" />
 
                 <androidx.recyclerview.widget.RecyclerView

@@ -174,7 +174,7 @@
                                     android:layout_marginTop="0dp"
                                     android:backgroundTint="#F4694D"
                                     android:text="@string/etuid"
-                                    android:textColor="@color/orange"
+                                    android:textColor="@color/mainColor"
                                     android:textIsSelectable="false"
                                     android:textSize="20sp"
                                     app:layout_constraintEnd_toEndOf="parent"

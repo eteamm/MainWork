@@ -3,12 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingBottom="20dp">
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="15dp"
+        app:cardBackgroundColor="@color/blockColor"
         app:cardCornerRadius="25dp">
 
         <LinearLayout
@@ -35,6 +38,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/inter"
                         android:text="@string/turnInfoName"
+                        android:textColor="@color/titleText"
                         android:textSize="20sp" />
 
                     <LinearLayout
@@ -50,6 +54,7 @@
                             android:fontFamily="@font/inter"
                             android:paddingRight="8dp"
                             android:text="@string/turnInfoAuthor"
+                            android:textColor="@color/descText"
                             android:textSize="12sp" />
 
                         <TextView
@@ -58,6 +63,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/inter"
                             android:text="@string/turnInfoSize"
+                            android:textColor="@color/descText"
                             android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -73,10 +79,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="35sp"
                         android:layout_gravity="right"
-                        android:backgroundTint="@color/orange"
+                        android:backgroundTint="@color/mainButton"
                         android:paddingLeft="38dp"
                         android:paddingRight="38dp"
                         android:text="@string/turnInfoJoin"
+                        android:textColor="@color/mainButtonText"
                         android:textSize="13sp" />
 
                 </LinearLayout>
@@ -91,6 +98,7 @@
                 android:paddingTop="5dp"
                 android:paddingBottom="15dp"
                 android:text="@string/turnInfoDesc"
+                android:textColor="@color/descText"
                 android:textSize="12sp" />
 
         </LinearLayout>
