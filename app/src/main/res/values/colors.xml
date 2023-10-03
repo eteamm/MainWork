@@ -22,7 +22,6 @@
     <color name="exitButtonText">#FFF</color>
     <color name="cancelBlack">#000</color>
     <color name="cancelMain">#F4694D</color>
-    <color name="background">#E9EFF2</color>
     <color name="editTextHint">#C6CED1</color>
     <color name="warningText">#FF0000</color>
     <color name="allText">#000</color>
@@ -49,5 +48,13 @@
 <!--    <color name="allText">#000</color>-->
 <!--    <color name="editBlock">#FFF</color>-->
 <!--    <color name="editText">#000</color>-->
+
+    <color name="colorMain">#9ADBFF</color>
+    <color name="colorText">#181818</color>
+    <color name="colorTextSecond">#E2E2E2</color>
+    <color name="colorBlock">#393939</color>
+    <color name="notImportant">#909090</color>
+    <color name="white">#FFF</color>
+    <color name="background">#20232A</color>
 
 </resources>

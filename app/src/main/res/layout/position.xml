@@ -9,14 +9,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="@color/blockColor"
-        app:cardCornerRadius="20dp">
+        app:cardBackgroundColor="@color/colorBlock"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:paddingLeft="10dp"
+            android:paddingTop="12dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="13dp">
+
+            <TextView
+                android:id="@+id/positionIdTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/exoregular"
+                android:gravity="center_vertical"
+                android:paddingStart="0dp"
+                android:paddingEnd="7dp"
+                android:text="@string/justId"
+                android:textColor="@color/notImportant"
+                android:textSize="12sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,19 +44,21 @@
                     android:id="@+id/positionNameTxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/exoregular"
                     android:text="@string/positionName"
                     android:textAlignment="center"
-                    android:textColor="@color/titleText"
-                    android:textSize="20sp" />
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/positionNumberTxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/exoregular"
                     android:text="@string/positionNumber"
                     android:textAlignment="center"
                     android:textColor="@color/descText"
-                    android:textSize="14sp" />
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <ImageButton
@@ -49,8 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@color/blockColor"
-                android:backgroundTint="@color/blockColor"
+                android:background="@null"
                 android:foregroundGravity="center"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"

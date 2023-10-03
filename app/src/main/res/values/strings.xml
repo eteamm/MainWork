@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Eturn</string>
-    <string name="MainMain">ГЛАВНАЯ</string>
+    <string name="MainMain">Главная</string>
+    <string name="MainMainDesc">список очередей</string>
     <string name="StatusMain">статус</string>
     <string name="GroupMain">группа</string>
     <string name="ButtonExitTextMain">выйти</string>
@@ -36,15 +37,17 @@
     <string name="StudentsQuantity">4 участника</string>
     <string name="search">Поиск</string>
 
-    <string name="mainTextTurn">очередь</string>
+    <string name="mainTextTurn">Очередь</string>
+    <string name="justId">#1</string>
+    <string name="mainTextTurnDesc">основная информация</string>
     <string name="nameTurnTurn">Зачетная неделя</string>
     <string name="nameTeacherTurn">Имя преподавателя</string>
     <string name="numberPeopleTurn">132</string>
     <string name="peopleBoxTurn">человека</string>
     <string name="descriptionBoxTurn">Приходим в аудиторию 1123 в 15 00. С собой иметь тетрадь, ручку</string>
     <string name="turnBtnTextTurn">участники</string>
-    <string name="exitBtnTextTurn">выйти из очереди</string>
-    <string name="joinBtnTextTurn">ВСТАТЬ В ОЧЕРЕДЬ</string>
+    <string name="exitBtnTextTurn">выйти</string>
+    <string name="joinBtnTextTurn">встать в очередь</string>
     <string name="countPlacesTurn">145 позиций</string>
     <string name="hintToPositionTurn">До твоей ближайшей очереди 3 позиции</string>
     <string name="inviteTurn">поделиться</string>

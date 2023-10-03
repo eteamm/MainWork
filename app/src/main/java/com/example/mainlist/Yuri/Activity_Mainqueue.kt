@@ -22,19 +22,19 @@ class Activity_Mainqueue : AppCompatActivity() {
         val myJson = """
         [{
           id: 1, 
-          name: “example”, 
+          name: "Глоба Валерия Владимировна", 
           groupNumber: 2391,
           id_user: 1
         },
         {
           id: 4, 
-          name: “evsvasdf”, 
+          name: "Ненарокова Маргарита Олеговна", 
           groupNumber: 3242,
           id_user: 3
         },
         {
           id: 2, 
-          name: “example”, 
+          name: "Васильев Андрей Антонович", 
           groupNumber: 2391,
           id_user: 2
         }]

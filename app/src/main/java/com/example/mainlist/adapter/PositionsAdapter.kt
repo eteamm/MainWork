@@ -20,6 +20,7 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         val UserNameTextView: TextView = itemView.findViewById(R.id.positionNameTxt)
         val UserGroupTextView: TextView = itemView.findViewById(R.id.positionNumberTxt)
         val Deletedtn = itemView.findViewById<ImageButton>(R.id.deletePositionImgBtn)
+        val numberTextView = itemView.findViewById<TextView>(R.id.positionIdTxt)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PositionsAdapter.HolderPositions {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.position, parent, false)
@@ -34,6 +35,8 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
     override fun onBindViewHolder(holder: HolderPositions, position: Int) {
         val positions : Positions = ListPositions[position] //заполнение данных в эл списка
         holder.UserNameTextView.text = positions.name
+        var i = position+1
+        holder.numberTextView.text="#"+i;
         holder.UserGroupTextView.text = positions.groupNumber
         holder.Deletedtn.setOnClickListener(){
             val deleted = ListPositions.removeAt(position)
