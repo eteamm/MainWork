@@ -40,6 +40,8 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
     override fun onBindViewHolder(holder: turnHolder, position: Int) {
         val turn : Turn = turnList[position] //заполнение данных в эл списка
         holder.nameTextView.text = turn.name
+        holder.Description.text ="Подробнее " + turn.description
+
         if (Type){
             holder.ClickonCW.setOnClickListener(){
                 val intent = Intent(context, Activity_Mainqueue::class.java)
