@@ -7,7 +7,7 @@
     <string name="ButtonExitTextMain">выйти</string>
     <string name="ButtonMyTextMain">МОИ</string>
     <string name="ButtonInDostupTextMain">ДОСТУПНЫЕ</string>
-    <string name="ButtonCreateTurnTextMain">СОЗДАТЬ ОЧЕРЕДЬ</string>
+    <string name="ButtonCreateTurnTextMain">cоздать очередь</string>
     <string name="EtuIdMain">ETU ID</string>
     <string name="FirstTaskEntry">Авторизируйся через ETU ID</string>
     <string name="SecondTaskEntry">Выбери или создай список</string>
@@ -63,24 +63,25 @@
     <string name="ExitTxtTurn">Вы уверены, что хотите выйти из этой очереди?</string>
 
 
-    <string name="go">Вперед!</string>
-    <string name="etuid">ETU ID</string>
-    <string name="nametxt">Имя Пользователя</string>
+    <string name="go">вперёд</string>
+    <string name="etuid">ВЫЙТИ</string>
+    <string name="nametxt">имя пользователя</string>
+    <string name="nametxtex">Иванов Иван Иванович</string>
     <string name="createbuttonturn">СОЗДАТЬ ОЧЕРЕДЬ</string>
     <string name="turnInfoName">Название очереди</string>
     <string name="turnInfoDesc">Подробнее: описание очереди</string>
     <string name="turnInfoAuthor">Автор очереди</string>
     <string name="turnInfoSize">0 человек</string>
     <string name="turnInfoJoin">вступить</string>
-    <string name="turnInfoNumber">0000</string>
+    <string name="turnInfoNumber">2391</string>
     <string name="positionName">Имя Фамилия Отчество</string>
-    <string name="positionNumber">0000</string>
+    <string name="positionNumber">2391</string>
 
     <string name="one">1</string>
     <string name="two">2</string>
     <string name="three">3</string>
     <string name="status">студент</string>
-    <string name="groupNumber">0000</string>
+    <string name="groupNumber">2391</string>
     <string name="nameTurn">Название очереди</string>
     <string name="allowgroupsTurn">Введите допустимые очереди</string>
 </resources>

@@ -9,17 +9,19 @@
         android:id="@+id/TurnCV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginBottom="15dp"
-        app:cardBackgroundColor="@color/blockColor"
-        app:cardCornerRadius="25dp">
+        app:cardBackgroundColor="@color/colorBlock"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="25dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -37,9 +39,9 @@
                         android:id="@+id/turnNameElement"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter"
+                        android:fontFamily="@font/exobold"
                         android:text="@string/turnInfoName"
-                        android:textColor="@color/titleText"
+                        android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <LinearLayout
@@ -52,24 +54,25 @@
                             android:id="@+id/TurnAuthorElement"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/inter"
+                            android:fontFamily="@font/exoregular"
                             android:paddingRight="8dp"
                             android:text="@string/turnInfoAuthor"
-                            android:textColor="@color/descText"
+                            android:textColor="@color/colorTextSecond"
                             android:textSize="12sp" />
 
                         <TextView
                             android:id="@+id/turnSizeElement"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/inter"
+                            android:fontFamily="@font/exoregular"
                             android:text="@string/turnInfoSize"
-                            android:textColor="@color/descText"
+                            android:textColor="@color/colorTextSecond"
                             android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/joinLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
@@ -78,13 +81,16 @@
                     <Button
                         android:id="@+id/JoinBtn"
                         android:layout_width="wrap_content"
-                        android:layout_height="35sp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="right"
-                        android:backgroundTint="@color/mainButton"
-                        android:paddingLeft="38dp"
-                        android:paddingRight="38dp"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/colorMain"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="1dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="1dp"
                         android:text="@string/turnInfoJoin"
-                        android:textColor="@color/mainButtonText"
+                        android:textColor="@color/colorText"
                         android:textSize="13sp" />
 
                 </LinearLayout>
@@ -95,11 +101,10 @@
                 android:id="@+id/turnDescElement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/inter"
+                android:fontFamily="@font/exoregular"
                 android:paddingTop="5dp"
-                android:paddingBottom="15dp"
                 android:text="@string/turnInfoDesc"
-                android:textColor="@color/descText"
+                android:textColor="@color/notImportant"
                 android:textSize="12sp" />
 
         </LinearLayout>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.startActivity
@@ -26,6 +27,7 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
         val ButtonTextView: Button = itemView.findViewById(R.id.JoinBtn)
         val Description : TextView = itemView.findViewById(R.id.turnDescElement)
         val ClickonCW:CardView = itemView.findViewById(R.id.TurnCV)
+        val Join = itemView.findViewById<LinearLayout>(R.id.joinLayout)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): turnHolder {
@@ -47,11 +49,13 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
                 val intent = Intent(context, Activity_Mainqueue::class.java)
                 context.startActivity(intent)
             }
+            holder.Join.visibility = View.GONE
             holder.ButtonTextView.visibility = View.GONE
             holder.Description.visibility = View.GONE
         }
         else{
             holder.ClickonCW.isClickable = false
+            holder.Join.visibility = View.VISIBLE
             holder.ButtonTextView.visibility = View.VISIBLE
             holder.Description.visibility = View.VISIBLE
             holder.ButtonTextView.setOnClickListener(){

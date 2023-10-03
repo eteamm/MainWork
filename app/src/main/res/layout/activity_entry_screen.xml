@@ -32,8 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/exoregular"
             android:text="@string/ThreeStepsEntry"
-            android:textColor="@color/allText"
+            android:textColor="@color/colorMain"
             android:textSize="18sp" />
     </FrameLayout>
 
@@ -46,7 +47,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            app:cardBackgroundColor="@color/mainColor"
+            app:cardBackgroundColor="@color/colorMain"
             app:cardCornerRadius="20dp">
 
             <LinearLayout
@@ -60,9 +61,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
+                    android:fontFamily="@font/exobold"
                     android:text="@string/one"
                     android:textAlignment="center"
-                    android:textColor="@color/mainColorText2"
+                    android:textColor="@color/colorText"
                     android:textSize="24sp" />
             </LinearLayout>
 
@@ -73,9 +75,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/exosemibold"
             android:paddingLeft="20dp"
             android:text="@string/FirstTaskEntry"
-            android:textColor="@color/allText"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -89,7 +92,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            app:cardBackgroundColor="@color/mainColor"
+            app:cardBackgroundColor="@color/colorMain"
             app:cardCornerRadius="20dp">
 
             <LinearLayout
@@ -102,9 +105,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
+                    android:fontFamily="@font/exobold"
                     android:text="@string/two"
                     android:textAlignment="center"
-                    android:textColor="@color/mainColorText2"
+                    android:textColor="@color/colorText"
                     android:textSize="24sp" />
             </LinearLayout>
 
@@ -115,9 +119,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/exosemibold"
             android:paddingLeft="20dp"
             android:text="@string/SecondTaskEntry"
-            android:textColor="@color/allText"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -131,7 +136,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            app:cardBackgroundColor="@color/mainColor"
+            app:cardBackgroundColor="@color/colorMain"
             app:cardCornerRadius="20dp">
 
             <LinearLayout
@@ -144,9 +149,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
+                    android:fontFamily="@font/exobold"
                     android:text="@string/three"
                     android:textAlignment="center"
-                    android:textColor="@color/mainColorText2"
+                    android:textColor="@color/colorText"
                     android:textSize="24sp" />
             </LinearLayout>
 
@@ -157,9 +163,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/exosemibold"
             android:paddingLeft="20dp"
             android:text="@string/ThirdTaskEntry"
-            android:textColor="@color/allText"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -174,12 +181,13 @@
             android:id="@+id/ToMainScreenBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="@color/mainButton"
+            android:backgroundTint="@color/colorMain"
+            android:fontFamily="@font/exosemibold"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/go"
-            android:textColor="@color/mainButtonText"
-            android:textSize="24sp" />
+            android:textColor="@color/colorText"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </LinearLayout>
