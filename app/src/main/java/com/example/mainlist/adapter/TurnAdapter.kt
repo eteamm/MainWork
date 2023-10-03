@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.MainScreen
@@ -24,6 +25,7 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
         val nameTextView: TextView = itemView.findViewById(R.id.turnNameElement)
         val ButtonTextView: Button = itemView.findViewById(R.id.JoinBtn)
         val Description : TextView = itemView.findViewById(R.id.turnDescElement)
+        val ClickonCW:CardView = itemView.findViewById(R.id.TurnCV)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): turnHolder {
@@ -37,12 +39,17 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
 
     override fun onBindViewHolder(holder: turnHolder, position: Int) {
         val turn : Turn = turnList[position] //заполнение данных в эл списка
-        holder.nameTextView.text = turn.turnName
+        holder.nameTextView.text = turn.name
         if (Type){
+            holder.ClickonCW.setOnClickListener(){
+                val intent = Intent(context, Activity_Mainqueue::class.java)
+                context.startActivity(intent)
+            }
             holder.ButtonTextView.visibility = View.GONE
             holder.Description.visibility = View.GONE
         }
         else{
+            holder.ClickonCW.isClickable = false
             holder.ButtonTextView.visibility = View.VISIBLE
             holder.Description.visibility = View.VISIBLE
             holder.ButtonTextView.setOnClickListener(){
