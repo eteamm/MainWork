@@ -21,21 +21,25 @@ class Activity_Mainqueue : AppCompatActivity() {
         [{
           id: 1, 
           name: “example”, 
-          groupNumber: 2391
+          groupNumber: 2391,
+          id_user: 2
         },
         {
           id: 4, 
           name: “evsvasdf”, 
-          groupNumber: 3242
+          groupNumber: 3242,
+          id_user: 3
         },
         {
           id: 2, 
           name: “example”, 
-          groupNumber: 2391
+          groupNumber: 2391,
+          id_user: 2
         }]
         """.trimIndent()
 
-
+        val logged_user_id = 4;
+        val creator_user_id = 1;
 
         var gsonMainqueue = Gson()
         var responseMainqueue = gsonMainqueue?.fromJson(myJson, Array<Positions>::class.java)?.toList()
@@ -45,14 +49,18 @@ class Activity_Mainqueue : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val turnAdapterMainqueue = PositionsAdapter(this)
-        val turnListMainqueue = mutableListOf<Positions>()
+        val positionsAdapter = PositionsAdapter(this)
+        val positionsList = mutableListOf<Positions>()
         responseMainqueue?.forEach{
-            var position= Positions(it.id, it.name,it.groupNumber)
-            turnListMainqueue.add(0,position)
+            var position= Positions(it.id, it.name,it.groupNumber, it.idUser)
+            positionsList.add(0,position)
         }
-        recyclerView.adapter = turnAdapterMainqueue
-        turnAdapterMainqueue.setItems(turnListMainqueue)
+        recyclerView.adapter = positionsAdapter
+        positionsAdapter.setItems(positionsList)
+
+//        onClick
+//        var positionNew = Positions();
+//        positionsAdapter.addPosition(positionNew)
     }
 
     fun ToEditTurn(view: View){

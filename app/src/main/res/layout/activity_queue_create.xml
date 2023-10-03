@@ -4,220 +4,215 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".Yuri.Activity_queue_create">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ellipse_14" />
-
-                <TextView
-                    android:id="@+id/createTurntxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="9dp"
-                    android:fontFamily="@font/interproba"
-                    android:gravity="left"
-                    android:text="@string/mainTextCreate"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-
-            </FrameLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp">
-
-                <TextView
-                    android:id="@+id/nameTurnCreatetxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/interproba"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="@string/nameTurnCreate"
-                    android:textColor="@color/editLabel"
-                    android:textSize="11sp" />
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/editBlock"
-                    app:cardCornerRadius="30dp">
-
-                    <EditText
-                        android:id="@+id/editText2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:fontFamily="@font/interproba"
-                        android:gravity="center_vertical"
-                        android:hint="@string/nameTurn"
-                        android:inputType="text"
-                        android:paddingStart="20dp"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
-                        android:paddingEnd="10dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="20dp"
-                        android:textColor="@color/editText"
-                        android:textColorHint="@color/editTextHint"
-                        android:textSize="20sp" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/descriptionBoxCreatetxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/interproba"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="@string/descriptionTurnCreate"
-                    android:textColor="@color/editLabel"
-                    android:textSize="11sp" />
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/editBlock"
-                    app:cardCornerRadius="30dp">
-
-                    <EditText
-                        android:id="@+id/editText3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:ems="10"
-                        android:fontFamily="sans-serif"
-                        android:gravity="start|center_vertical"
-                        android:hint="@string/editing2"
-                        android:inputType="text"
-                        android:paddingStart="20dp"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
-                        android:paddingEnd="10dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="20dp"
-                        android:textColor="@color/editText"
-                        android:textColorHint="@color/editTextHint"
-                        android:textSize="20sp" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/groupstxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/interproba"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="@string/groupsCreate"
-                    android:textColor="@color/editLabel"
-                    android:textSize="11sp" />
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/editBlock"
-                    app:cardCornerRadius="30dp">
-
-                    <EditText
-                        android:id="@+id/editText4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:ems="10"
-                        android:fontFamily="@font/interproba"
-                        android:gravity="center_vertical"
-                        android:hint="@string/allowgroupsTurn"
-                        android:inputType="text"
-                        android:paddingStart="20dp"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
-                        android:paddingEnd="10dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="20dp"
-                        android:textColor="@color/editText"
-                        android:textColorHint="@color/editTextHint"
-                        android:textSize="20sp" />
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/allowRec"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="bottom"
-                android:gravity="bottom"
-                android:orientation="vertical"
-                android:paddingLeft="40dp"
-                android:paddingTop="20dp"
-                android:paddingRight="40dp"
-                android:paddingBottom="20dp">
-
-                <Button
-                    android:id="@+id/createBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/mainButton"
-                    android:text="@string/createBtnCreate"
-                    android:textColor="@color/mainButtonText"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/backBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#00E9EFF2"
-                    android:backgroundTint="@color/background"
-                    android:onClick="ExitfromCreateTurn"
-                    android:text="@string/cancelBtnCreate"
-                    android:textColor="@color/mainColor"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ellipse_14" />
+
+                    <TextView
+                        android:id="@+id/createTurntxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="9dp"
+                        android:fontFamily="@font/interproba"
+                        android:gravity="left"
+                        android:text="@string/mainTextCreate"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/nameTurnCreatetxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/interproba"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/nameTurnCreate"
+                        android:textColor="@color/editLabel"
+                        android:textSize="11sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/editBlock"
+                        app:cardCornerRadius="30dp">
+
+                        <EditText
+                            android:id="@+id/editText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:fontFamily="@font/interproba"
+                            android:gravity="center_vertical"
+                            android:hint="@string/nameTurn"
+                            android:inputType="text"
+                            android:paddingStart="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="20dp"
+                            android:textColor="@color/editText"
+                            android:textColorHint="@color/editTextHint"
+                            android:textSize="20sp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/descriptionBoxCreatetxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/interproba"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/descriptionTurnCreate"
+                        android:textColor="@color/editLabel"
+                        android:textSize="11sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/editBlock"
+                        app:cardCornerRadius="30dp">
+
+                        <EditText
+                            android:id="@+id/editText3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:ems="10"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start|center_vertical"
+                            android:hint="@string/editing2"
+                            android:inputType="text"
+                            android:paddingStart="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="20dp"
+                            android:textColor="@color/editText"
+                            android:textColorHint="@color/editTextHint"
+                            android:textSize="20sp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/groupstxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/interproba"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/groupsCreate"
+                        android:textColor="@color/editLabel"
+                        android:textSize="11sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/editBlock"
+                        app:cardCornerRadius="30dp">
+
+                        <EditText
+                            android:id="@+id/editText4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:ems="10"
+                            android:fontFamily="@font/interproba"
+                            android:gravity="center_vertical"
+                            android:hint="@string/allowgroupsTurn"
+                            android:inputType="text"
+                            android:paddingStart="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="20dp"
+                            android:textColor="@color/editText"
+                            android:textColorHint="@color/editTextHint"
+                            android:textSize="20sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/allowRec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="@color/mainColor"
+            android:background="@drawable/gradient_background"
+            android:gravity="bottom"
             android:orientation="vertical"
-            android:visibility="gone"></LinearLayout>
+            android:paddingLeft="40dp"
+            android:paddingTop="20dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:id="@+id/createBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/mainButton"
+                android:text="@string/createBtnCreate"
+                android:textColor="@color/mainButtonText"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00E9EFF2"
+                android:backgroundTint="@color/background"
+                android:onClick="ExitfromCreateTurn"
+                android:text="@string/cancelBtnCreate"
+                android:textColor="@color/mainColor"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
     </FrameLayout>
 

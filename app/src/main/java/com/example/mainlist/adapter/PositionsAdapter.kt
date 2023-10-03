@@ -17,8 +17,8 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
     private var ListPositions = ArrayList<Positions>();
 
     class HolderPositions(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val UserNameTextView: TextView = itemView.findViewById(R.id.positionNameTxt);
-        val UserGroupTextView: TextView = itemView.findViewById(R.id.positionNumberTxt);
+        val UserNameTextView: TextView = itemView.findViewById(R.id.positionNameTxt)
+        val UserGroupTextView: TextView = itemView.findViewById(R.id.positionNumberTxt)
         val Deletedtn = itemView.findViewById<ImageButton>(R.id.deletePositionImgBtn)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PositionsAdapter.HolderPositions {
@@ -42,9 +42,21 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
 
     }
 
-    fun addTurn(position: Positions){
-        ListPositions.add(position)
-        notifyDataSetChanged()
+    fun addPosition(position: Positions) : Int{
+        var count = ListPositions.size
+        var last = 0
+        for(i in 0..count){
+            if (ListPositions[i].idUser==position.idUser) {
+                last = i + 1
+            }
+        }
+        last = count - last
+        if (last > 20){
+            ListPositions.add(position)
+            notifyDataSetChanged()
+            return 1
+        }
+        return 0
     }
 
     fun setItems(item: MutableList<Positions>) {

@@ -69,6 +69,7 @@ class MainScreen : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.turnsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
         val turnAdapter = TurnAdapter(this)
+        recyclerView.adapter = turnAdapter
         val turnList = mutableListOf<Turn>()
         bcreateturn.setOnClickListener {
             val intent = Intent(this, Activity_queue_create::class.java)
@@ -76,11 +77,10 @@ class MainScreen : AppCompatActivity() {
         }
         MyTurnsBtn.setOnClickListener {
             turnList.clear()
-            MyTurns?.forEach{
+            MyTurns?.forEach {
                 var turn = Turn(it.turnName, it.turnDesc)
-                turnList.add(0,turn)
+                turnList.add(0, turn)
             }
-            recyclerView.adapter = turnAdapter
             turnAdapter.setItems(turnList, true)
         }
 
@@ -90,7 +90,6 @@ class MainScreen : AppCompatActivity() {
                 var turn = Turn(it.turnName, it.turnDesc)
                 turnList.add(0,turn)
             }
-            recyclerView.adapter = turnAdapter
             turnAdapter.setItems(turnList, false)
         }
 

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.R
 import com.example.mainlist.data.AllowGroup
@@ -14,8 +15,8 @@ import com.example.mainlist.data.Positions
 class AllowGroupAdapter(private val context: Context) : RecyclerView.Adapter<AllowGroupAdapter.allowGroupHolder>(){
     private var allowGroupList = ArrayList<AllowGroup>()
     class allowGroupHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val TextGroup : TextView = itemView.findViewById(R.id.group)
-        val CancelImage : ImageView = itemView.findViewById(R.id.cancel)
+        val TextGroup : TextView = itemView.findViewById(R.id.NumberAllowGroupTxt)
+        val CancelImage : ImageView = itemView.findViewById(R.id.deleteAllowGroupImgBtn)
     }
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -31,7 +32,12 @@ class AllowGroupAdapter(private val context: Context) : RecyclerView.Adapter<All
     }
 
     override fun getItemCount(): Int {
-        return 0
+        return allowGroupList.size
+    }
+
+    fun addAllowGroup(item: AllowGroup){
+        allowGroupList.add(item)
+        notifyDataSetChanged()
     }
 
     fun setItems(items: MutableList<AllowGroup>){

@@ -208,7 +208,7 @@
                             <Button
                                 android:id="@+id/turnPeopleBtn"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:backgroundTint="@color/mainButton"
                                 android:text="@string/turnBtnTextTurn"
@@ -232,7 +232,7 @@
 
                             <Button
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:backgroundTint="@color/mainButton"
                                 android:text="@string/inviteTurn"
                                 android:textColor="@color/mainButtonText"
@@ -259,7 +259,7 @@
                             <Button
                                 android:id="@+id/exitTurnBtn"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:layout_marginLeft="2dp"
                                 android:layout_marginRight="2dp"
                                 android:backgroundTint="@color/blockColor"
@@ -352,8 +352,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="@string/joinBtnTextTurn"
-                android:textColor="@color/mainButtonText"
-                app:iconSize="16sp" />
+                android:textColor="@color/mainButtonText" />
 
         </LinearLayout>
 
