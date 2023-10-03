@@ -183,6 +183,7 @@
                         </FrameLayout>
 
                         <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/AdminsRec"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:paddingTop="20dp" />
@@ -271,6 +272,7 @@
                         </FrameLayout>
 
                         <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/UsersRec"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:paddingTop="20dp" />

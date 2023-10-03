@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mainlist.ListOfParticipants
 import com.example.mainlist.MainScreen
 import com.example.mainlist.QueueEditing
 import com.example.mainlist.R
@@ -41,12 +42,11 @@ class Activity_Mainqueue : AppCompatActivity() {
 
         val logged_user_id = 4;
         val creator_user_id = 1;
-
         var gsonMainqueue = Gson()
         var responseMainqueue = gsonMainqueue?.fromJson(myJson, Array<Positions>::class.java)?.toList()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainqueue)
-
+        val ButtonToPeople:Button = findViewById(R.id.turnPeopleBtn)
         val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -65,6 +65,11 @@ class Activity_Mainqueue : AppCompatActivity() {
         JoinBtn.setOnClickListener() {
             var positionNew = Positions(9, "Yuri", "2391", 1) // idUser для каждого пользователя свой
             positionsAdapter.addPosition(positionNew)
+
+        }
+        ButtonToPeople.setOnClickListener() {
+            val intent = Intent(this, ListOfParticipants::class.java)
+            startActivity(intent);
 
         }
 
