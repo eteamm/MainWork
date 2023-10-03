@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.MainScreen
@@ -22,7 +23,7 @@ class Activity_Mainqueue : AppCompatActivity() {
           id: 1, 
           name: “example”, 
           groupNumber: 2391,
-          id_user: 2
+          id_user: 1
         },
         {
           id: 4, 
@@ -58,9 +59,15 @@ class Activity_Mainqueue : AppCompatActivity() {
         recyclerView.adapter = positionsAdapter
         positionsAdapter.setItems(positionsList)
 
-//        onClick
-//        var positionNew = Positions();
-//        positionsAdapter.addPosition(positionNew)
+
+        val JoinBtn : Button = findViewById(R.id.createTurnBtn)
+
+        JoinBtn.setOnClickListener() {
+            var positionNew = Positions(9, "Yuri", "2391", 1) // idUser для каждого пользователя свой
+            positionsAdapter.addPosition(positionNew)
+
+        }
+
     }
 
     fun ToEditTurn(view: View){

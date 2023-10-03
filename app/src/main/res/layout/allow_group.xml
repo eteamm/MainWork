@@ -20,7 +20,7 @@
 
             <TextView
                 android:id="@+id/NumberAllowGroupTxt"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter"
                 android:paddingLeft="25dp"
@@ -37,7 +37,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@color/background"
             android:backgroundTint="@color/background"
             android:paddingLeft="10dp"
             android:src="@drawable/cancel" />

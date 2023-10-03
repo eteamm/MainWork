@@ -338,7 +338,8 @@
                         android:padding="10dp"
                         android:text="@string/warningTxtTurn"
                         android:textColor="@color/mainColor"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        android:visibility="gone" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

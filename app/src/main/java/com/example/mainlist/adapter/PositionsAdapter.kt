@@ -36,7 +36,7 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         holder.UserNameTextView.text = positions.name
         holder.UserGroupTextView.text = positions.groupNumber
         holder.Deletedtn.setOnClickListener(){
-            val deleted = ListPositions.removeAt(position);
+            val deleted = ListPositions.removeAt(position)
             notifyDataSetChanged()
         }
 
@@ -45,13 +45,15 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
     fun addPosition(position: Positions) : Int{
         var count = ListPositions.size
         var last = 0
-        for(i in 0..count){
-            if (ListPositions[i].idUser==position.idUser) {
-                last = i + 1
-            }
+        var Type = -1
+            for(i in 0..count-1){
+                if (ListPositions[i].idUser==position.idUser) {
+                    last = i + 1
+                    Type = 0
+                }
         }
         last = count - last
-        if (last > 20){
+        if (last > 20 || Type != 0){
             ListPositions.add(position)
             notifyDataSetChanged()
             return 1

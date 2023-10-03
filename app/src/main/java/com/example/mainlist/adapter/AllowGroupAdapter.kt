@@ -16,7 +16,7 @@ class AllowGroupAdapter(private val context: Context) : RecyclerView.Adapter<All
     private var allowGroupList = ArrayList<AllowGroup>()
     class allowGroupHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val TextGroup : TextView = itemView.findViewById(R.id.NumberAllowGroupTxt)
-        val CancelImage : ImageView = itemView.findViewById(R.id.deleteAllowGroupImgBtn)
+        val DeleteImage : ImageView = itemView.findViewById(R.id.deleteAllowGroupImgBtn)
     }
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -29,6 +29,10 @@ class AllowGroupAdapter(private val context: Context) : RecyclerView.Adapter<All
     override fun onBindViewHolder(holder: allowGroupHolder, position: Int) {
         val allowGroup : AllowGroup = allowGroupList[position]
         holder.TextGroup.text = allowGroup.number.toString()
+        holder.DeleteImage.setOnClickListener(){
+            val deleted = allowGroupList.removeAt(position)
+            notifyDataSetChanged()
+        }
     }
 
     override fun getItemCount(): Int {
