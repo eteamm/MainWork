@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -68,28 +69,24 @@ class MainScreen : AppCompatActivity() {
             turnList.add(0, turn)
         }
         turnAdapter.setItems(turnList, true)
-        MyTurnsBtn.setOnClickListener {
-            val intent = Intent(this, ListOfParticipants::class.java)
-            startActivity(intent);
-        }
 
-        InDostupBtn.setOnClickListener {
-            val intent = Intent(this, ListOfParticipants::class.java)
-            startActivity(intent);
-        }
 
-        val bExit = findViewById<CardView>(R.id.exitCardView)
+        val bExit = findViewById<ImageView>(R.id.exitImageView)
         bExit.setOnClickListener {
             val intent = Intent(this, EntryScreen::class.java)
             startActivity(intent)
+            finish()
         }
 
 
         bcreateturn.setOnClickListener {
             val intent = Intent(this, Activity_queue_create::class.java)
             startActivity(intent);
+            finish()
         }
         MyTurnsBtn.setOnClickListener {
+            MyTurnsBtn.setTextColor(application.resources.getColor(R.color.colorMain))
+            InDostupBtn.setTextColor(application.resources.getColor(R.color.onButton))
             turnList.clear()
             MyTurns?.forEach {
                 var turn = Turn(it.id, it.name, it.description, it.nameCreator, it.idUser)
@@ -99,6 +96,8 @@ class MainScreen : AppCompatActivity() {
         }
 
         InDostupBtn.setOnClickListener {
+            MyTurnsBtn.setTextColor(application.resources.getColor(R.color.onButton))
+            InDostupBtn.setTextColor(application.resources.getColor(R.color.colorMain))
             turnList.clear()
             InDostupTurns?.forEach{
                 var turn = Turn(it.id, it.name, it.description, it.nameCreator, it.idUser)

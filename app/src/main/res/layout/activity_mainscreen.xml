@@ -29,14 +29,34 @@
                     android:paddingTop="30dp"
                     android:paddingRight="25dp">
 
-                    <TextView
-                        android:id="@+id/textView6"
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/exobold"
-                        android:text="@string/MainMain"
-                        android:textColor="@color/white"
-                        android:textSize="30sp" />
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/exobold"
+                                android:text="@string/MainMain"
+                                android:textColor="@color/white"
+                                android:textSize="30sp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/exitImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:src="@drawable/exitbutton" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/textView7"
@@ -67,7 +87,6 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="10dp"
-                                    android:layout_weight="1"
                                     app:cardBackgroundColor="@color/colorMain"
                                     app:cardCornerRadius="20dp">
 
@@ -100,47 +119,6 @@
                                     </LinearLayout>
                                 </androidx.cardview.widget.CardView>
 
-                                <androidx.cardview.widget.CardView
-                                    android:id="@+id/exitCardView"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginBottom="10dp"
-                                    android:layout_weight="3"
-                                    app:cardBackgroundColor="@color/colorBlock"
-                                    app:cardCornerRadius="20dp">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="vertical"
-                                        android:paddingLeft="5dp"
-                                        android:paddingRight="5dp">
-
-                                        <TextView
-                                            android:id="@+id/bETU"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:fontFamily="@font/exobold"
-                                            android:gravity="center"
-                                            android:text="@string/etuid"
-                                            android:textAlignment="center"
-                                            android:textColor="@color/colorMain"
-                                            android:textIsSelectable="false"
-                                            android:textSize="15sp" />
-
-                                        <ImageButton
-                                            android:id="@+id/exitBtn"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="right"
-                                            android:background="@color/background"
-                                            android:backgroundTint="@color/background"
-                                            android:src="@drawable/exit"
-                                            android:visibility="gone" />
-                                    </LinearLayout>
-                                </androidx.cardview.widget.CardView>
-
                             </LinearLayout>
 
                             <LinearLayout
@@ -153,7 +131,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginRight="5dp"
                                     android:layout_weight="1"
-                                    app:cardBackgroundColor="@color/colorMain"
+                                    app:cardBackgroundColor="@color/colorBlock"
                                     app:cardCornerRadius="20dp">
 
                                     <LinearLayout
@@ -173,7 +151,7 @@
                                             android:layout_marginTop="0dp"
                                             android:fontFamily="@font/exoregular"
                                             android:text="@string/StatusMain"
-                                            android:textColor="@color/colorText"
+                                            android:textColor="@color/colorTextSecond"
                                             android:textSize="12sp"
                                             app:layout_constraintEnd_toEndOf="@+id/usernameTxt"
                                             app:layout_constraintHorizontal_bias="0.0"
@@ -188,7 +166,7 @@
                                             android:layout_marginTop="0dp"
                                             android:fontFamily="@font/exosemibold"
                                             android:text="@string/status"
-                                            android:textColor="@color/colorText"
+                                            android:textColor="@color/white"
                                             android:textSize="18sp"
                                             app:layout_constraintHorizontal_bias="0.0"
                                             app:layout_constraintStart_toStartOf="@+id/statusTxt" />
@@ -200,7 +178,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="5dp"
                                     android:layout_weight="1"
-                                    app:cardBackgroundColor="@color/colorMain"
+                                    app:cardBackgroundColor="@color/colorBlock"
                                     app:cardCornerRadius="20dp">
 
                                     <LinearLayout
@@ -219,7 +197,7 @@
                                             android:layout_marginTop="0dp"
                                             android:fontFamily="@font/exoregular"
                                             android:text="@string/GroupMain"
-                                            android:textColor="@color/colorText"
+                                            android:textColor="@color/colorTextSecond"
                                             android:textSize="12sp"
                                             app:layout_constraintEnd_toEndOf="parent"
                                             app:layout_constraintHorizontal_bias="0.166"
@@ -234,7 +212,7 @@
                                             android:layout_marginTop="0dp"
                                             android:fontFamily="@font/exobold"
                                             android:text="@string/groupNumber"
-                                            android:textColor="@color/colorText"
+                                            android:textColor="@color/white"
                                             android:textSize="18sp"
                                             app:layout_constraintEnd_toEndOf="@+id/groupTxt"
                                             app:layout_constraintHorizontal_bias="0.0"
@@ -260,22 +238,30 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:backgroundTint="@color/background"
+                            android:backgroundTint="@null"
                             android:fontFamily="@font/exosemibold"
                             android:text="@string/ButtonMyTextMain"
-                            android:textColor="@color/colorMain" />
+                            android:textColor="@color/colorMain"
+                            android:textColorHighlight="@color/colorMain"
+                            android:textColorHint="@color/colorMain"
+                            android:textColorLink="@color/colorMain"
+                            app:rippleColor="@color/onButton" />
 
                         <Button
                             android:id="@+id/MainScreenInDostupBtn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:backgroundTint="@color/background"
+                            android:backgroundTint="@null"
                             android:backgroundTintMode="add"
                             android:fontFamily="@font/exosemibold"
                             android:text="@string/ButtonInDostupTextMain"
                             android:textAllCaps="false"
-                            android:textColor="@color/colorMain" />
+                            android:textColor="@color/onButton"
+                            android:textColorHighlight="@color/colorMain"
+                            android:textColorHint="@color/colorMain"
+                            android:textColorLink="@color/colorMain"
+                            app:rippleColor="@color/onButton" />
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -308,9 +294,11 @@
                 android:onClick="CreateTurn"
                 android:text="@string/ButtonCreateTurnTextMain"
                 android:textColor="@color/colorText"
+                android:textColorHighlight="@color/onButton"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:rippleColor="@color/onButton" />
         </LinearLayout>
 
     </FrameLayout>

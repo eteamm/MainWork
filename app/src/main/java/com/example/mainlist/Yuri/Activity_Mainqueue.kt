@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.ListOfParticipants
@@ -72,7 +73,12 @@ class Activity_Mainqueue : AppCompatActivity() {
             startActivity(intent);
 
         }
-
+        val goback : ImageView = findViewById(R.id.backTurnImageView)
+        goback.setOnClickListener(){
+            val intent = Intent(this, MainScreen::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     fun ToEditTurn(view: View){

@@ -59,14 +59,26 @@
                     android:paddingTop="30dp"
                     android:paddingRight="25dp">
 
-                    <TextView
-                        android:id="@+id/textView3"
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/exobold"
-                        android:text="@string/mainTextTurn"
-                        android:textColor="@color/white"
-                        android:textSize="30sp" />
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/exobold"
+                            android:text="@string/mainTextTurn"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+
+                        <ImageView
+                            android:id="@+id/backTurnImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:src="@drawable/goback" />
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/textView4"
@@ -242,7 +254,9 @@
                             android:paddingBottom="0dp"
                             android:text="@string/turnBtnTextTurn"
                             android:textColor="@color/colorText"
+                            android:textColorHighlight="@color/onButton"
                             android:textSize="12sp"
+                            app:rippleColor="@color/onButton"
                             tools:layout_editor_absoluteX="26dp"
                             tools:layout_editor_absoluteY="182dp" />
 
@@ -258,8 +272,10 @@
                             android:paddingBottom="1dp"
                             android:text="@string/inviteTurn"
                             android:textColor="@color/colorText"
+                            android:textColorHighlight="@color/onButton"
                             android:textSize="12sp"
                             android:visibility="visible"
+                            app:rippleColor="@color/onButton"
                             tools:layout_editor_absoluteX="26dp"
                             tools:layout_editor_absoluteY="182dp" />
 
@@ -278,7 +294,9 @@
                             android:paddingRight="10dp"
                             android:text="@string/exitBtnTextTurn"
                             android:textColor="@color/colorMain"
+                            android:textColorHighlight="@color/onButton"
                             android:textSize="12sp"
+                            app:rippleColor="@color/onButton"
                             tools:layout_editor_absoluteX="211dp"
                             tools:layout_editor_absoluteY="182dp" />
 
@@ -367,7 +385,9 @@
                 android:paddingBottom="5sp"
                 android:text="@string/joinBtnTextTurn"
                 android:textColor="@color/colorText"
-                android:textSize="20sp" />
+                android:textColorHighlight="@color/onButton"
+                android:textSize="20sp"
+                app:rippleColor="@color/onButton" />
 
         </LinearLayout>
 

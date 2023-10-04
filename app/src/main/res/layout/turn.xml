@@ -91,7 +91,9 @@
                         android:paddingBottom="1dp"
                         android:text="@string/turnInfoJoin"
                         android:textColor="@color/colorText"
-                        android:textSize="13sp" />
+                        android:textColorHighlight="@color/onButton"
+                        android:textSize="13sp"
+                        app:rippleColor="@color/onButton" />
 
                 </LinearLayout>
 

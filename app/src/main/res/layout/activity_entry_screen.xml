@@ -187,7 +187,9 @@
             android:paddingBottom="10dp"
             android:text="@string/go"
             android:textColor="@color/colorText"
-            android:textSize="20sp" />
+            android:textColorHighlight="@color/onButton"
+            android:textSize="20sp"
+            app:rippleColor="@color/onButton" />
     </LinearLayout>
 
 </LinearLayout>

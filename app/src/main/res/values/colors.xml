@@ -56,5 +56,6 @@
     <color name="notImportant">#909090</color>
     <color name="white">#FFF</color>
     <color name="background">#20232A</color>
+    <color name="onButton">#6F9BDBFF</color>
 
 </resources>
