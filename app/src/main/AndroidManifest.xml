@@ -30,6 +30,7 @@
         <activity
 
             android:name=".EntryScreen"
+            android:noHistory="true"
             android:exported="true">
 
             <intent-filter>
