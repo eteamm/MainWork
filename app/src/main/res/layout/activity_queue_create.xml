@@ -21,39 +21,37 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ellipse_14" />
-
-                    <TextView
-                        android:id="@+id/createTurntxt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginTop="9dp"
-                        android:fontFamily="@font/interproba"
-                        android:gravity="left"
-                        android:text="@string/mainTextCreate"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
-
-                </FrameLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp">
+                    android:paddingLeft="25dp"
+                    android:paddingTop="30dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="120dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/exobold"
+                            android:text="@string/mainTextCreate"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:text="@string/mainTextCreatedesc"
+                        android:textColor="@color/colorTextSecond"
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/nameTurnCreatetxt"
@@ -63,7 +61,7 @@
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:text="@string/nameTurnCreate"
-                        android:textColor="@color/editLabel"
+                        android:textColor="@color/colorTextSecond"
                         android:textSize="11sp" />
 
                     <androidx.cardview.widget.CardView
@@ -88,8 +86,8 @@
                             android:paddingEnd="10dp"
                             android:paddingRight="20dp"
                             android:paddingBottom="20dp"
-                            android:textColor="@color/editText"
-                            android:textColorHint="@color/editTextHint"
+                            android:textColor="@color/colorTextSecond"
+                            android:textColorHint="@color/notImportant"
                             android:textSize="20sp" />
                     </androidx.cardview.widget.CardView>
 
@@ -101,7 +99,7 @@
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:text="@string/descriptionTurnCreate"
-                        android:textColor="@color/editLabel"
+                        android:textColor="@color/colorTextSecond"
                         android:textSize="11sp" />
 
                     <androidx.cardview.widget.CardView
@@ -127,8 +125,8 @@
                             android:paddingEnd="10dp"
                             android:paddingRight="20dp"
                             android:paddingBottom="20dp"
-                            android:textColor="@color/editText"
-                            android:textColorHint="@color/editTextHint"
+                            android:textColor="@color/colorTextSecond"
+                            android:textColorHint="@color/notImportant"
                             android:textSize="20sp" />
                     </androidx.cardview.widget.CardView>
 
@@ -140,7 +138,7 @@
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:text="@string/groupsCreate"
-                        android:textColor="@color/editLabel"
+                        android:textColor="@color/colorTextSecond"
                         android:textSize="11sp" />
 
                     <androidx.cardview.widget.CardView
@@ -166,8 +164,8 @@
                             android:paddingEnd="10dp"
                             android:paddingRight="20dp"
                             android:paddingBottom="20dp"
-                            android:textColor="@color/editText"
-                            android:textColorHint="@color/editTextHint"
+                            android:textColor="@color/colorTextSecond"
+                            android:textColorHint="@color/notImportant"
                             android:textSize="20sp" />
 
                     </androidx.cardview.widget.CardView>
@@ -175,7 +173,7 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/allowRec"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:paddingTop="10dp" />
 
                 </LinearLayout>
@@ -199,10 +197,13 @@
                 android:id="@+id/createBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/mainButton"
+                android:backgroundTint="@color/colorMain"
+                android:fontFamily="@font/exosemibold"
                 android:text="@string/createBtnCreate"
-                android:textColor="@color/mainButtonText"
-                android:textSize="16sp" />
+                android:textColor="@color/colorText"
+                android:textColorHighlight="@color/colorMain"
+                android:textSize="16sp"
+                app:rippleColor="@color/colorMain" />
 
             <Button
                 android:id="@+id/backBtn"
@@ -210,10 +211,13 @@
                 android:layout_height="wrap_content"
                 android:background="#00E9EFF2"
                 android:backgroundTint="@color/background"
+                android:fontFamily="@font/exosemibold"
                 android:onClick="ExitfromCreateTurn"
                 android:text="@string/cancelBtnCreate"
-                android:textColor="@color/mainColor"
-                android:textSize="16sp" />
+                android:textColor="@color/colorMain"
+                android:textColorHighlight="@color/colorMain"
+                android:textSize="16sp"
+                app:rippleColor="@color/colorMain" />
 
         </LinearLayout>
 

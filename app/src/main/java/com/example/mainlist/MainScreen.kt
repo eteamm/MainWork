@@ -5,10 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout.VERTICAL
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.core.view.ViewCompat.canScrollVertically
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.mainlist.Yuri.Activity_Mainqueue
 import com.example.mainlist.Yuri.Activity_queue_create
 import com.example.mainlist.adapter.TurnAdapter
@@ -47,7 +50,42 @@ class MainScreen : AppCompatActivity() {
             name: "Физика Экзамен",
             description: "Зачетки не забудьте.",
             nameCreator: "Леднев Михаил Георгиевич",
+            idUser: 2
+            },
+            {
+            id: 2, 
+            name: "Здравпункт",
+            description: "Приносите форму М-54, справку о прививках и остальные документы.",
+            nameCreator: "Сергеева Анна Анатольевна",
+            idUser: 3
+            },
+            {
+            id: 3, 
+            name: "Помощь по ТОЭ",
+            description: "Подходите в коворкинг, помогаю с задачками по ТОЭ",
+            nameCreator: "Кадун Никита Андреевич",
+            idUser: 5
+            },
+            {
+            id: 4, 
+            name: "Экзамен ТОЭ",
+            description: "Те, кто не выполнил ИДЗ, на экзамен не допускаются",
+            nameCreator: "Самоваров Иван Кириллович",
             idUser: 1 
+            },
+            {
+            id: 5, 
+            name: "Зачет по физре",
+            description: "Жду всех с зачетками",
+            nameCreator: "Комилов Виктор Матвеевич",
+            idUser: 1 
+            },
+            {
+            id: 6, 
+            name: "Пропуски",
+            description: "Если уже сходили в здравпункт и подтвердили справку, приходите в деканат",
+            nameCreator: "Горин Николай Олегович",
+            idUser: 5
             }
         ]
         """.trimIndent()
@@ -60,7 +98,10 @@ class MainScreen : AppCompatActivity() {
         val MyTurnsBtn = findViewById<Button>(R.id.bMy)
         val InDostupBtn = findViewById<Button>(R.id.MainScreenInDostupBtn)
         val recyclerView: RecyclerView = findViewById(R.id.turnsRec)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+//        val customLinearLayout = CustomLinearLayout(this,VERTICAL,false);
+//        recyclerView.layoutManager = customLinearLayout
+        val layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager =layoutManager;
         val turnAdapter = TurnAdapter(this)
         recyclerView.adapter = turnAdapter
         val turnList = mutableListOf<Turn>()

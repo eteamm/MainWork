@@ -29,13 +29,14 @@
         новых пользователей через ссылку, или указав другие группы.</string>
     <string name="noName">Нельзя сохранить очередь, пока поле пустое.</string>
 
-    <string name="ListOfParticipants">СПИСОК УЧАСТНИКОВ</string>
+    <string name="ListOfParticipants">Участники</string>
+    <string name="ListOfParticipantsDesc">изменение прав</string>
     <string name="TitileListOfParticipants">Зачётная неделя</string>
     <string name="AdminsText">АДМИНИСТРАТОРЫ</string>
     <string name="StudentsText">УЧАСТНИКИ</string>
     <string name="AdminsQuantity">2 администратора</string>
     <string name="StudentsQuantity">4 участника</string>
-    <string name="search">Поиск</string>
+    <string name="search">введите нужное имя...</string>
 
     <string name="mainTextTurn">Очередь</string>
     <string name="justId">#1</string>
@@ -53,12 +54,13 @@
     <string name="inviteTurn">поделиться</string>
     <string name="deleteTurn">удалить очередь</string>
 
-    <string name="mainTextCreate">СОЗДАТЬ</string>
-    <string name="nameTurnCreate">Название очереди</string>
-    <string name="descriptionTurnCreate">Описание очереди</string>
-    <string name="groupsCreate">Группы</string>
-    <string name="createBtnCreate">СОЗДАТЬ</string>
-    <string name="cancelBtnCreate">ОТМЕНА</string>
+    <string name="mainTextCreate">Создать</string>
+    <string name="mainTextCreatedesc">новая очередь</string>
+    <string name="nameTurnCreate">название очереди</string>
+    <string name="descriptionTurnCreate">описание очереди</string>
+    <string name="groupsCreate">допустимые группы</string>
+    <string name="createBtnCreate">создать</string>
+    <string name="cancelBtnCreate">отмена</string>
     <string name="warningTxtTurn">Вы уже вставали в очередь недавно. Через 5 позиций вы сможете сделать это снова!</string>
     <string name="ExitTxtTurn">Вы уверены, что хотите выйти из этой очереди?</string>
 

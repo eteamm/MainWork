@@ -2,9 +2,11 @@ package com.example.mainlist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.adapter.MemberAdapter
@@ -54,37 +56,37 @@ class ListOfParticipants : AppCompatActivity() {
         val SearchButton2 = findViewById<ImageButton>(R.id.searchButton2)
         val AdminsTitle = findViewById<TextView>(R.id.adminss)
         val StudentsTitle = findViewById<TextView>(R.id.members)
-        val SearchAdmins = findViewById<EditText>(R.id.searchAdmins)
-        val SearchStudents = findViewById<EditText>(R.id.searchStudents)
+        val SearchAdmins = findViewById<CardView>(R.id.adminsCardView)
+        val SearchStudents = findViewById<CardView>(R.id.membersCardView)
         val CancelAdmins = findViewById<ImageButton>(R.id.cancelButton1)
         val CancelStudents = findViewById<ImageButton>(R.id.cancelButton2)
 
         SearchButton1.setOnClickListener {
-            AdminsTitle.visibility = TextView.GONE
-            SearchAdmins.visibility = EditText.VISIBLE
-            SearchButton1.visibility = ImageButton.GONE
-            CancelAdmins.visibility = ImageButton.VISIBLE
+            AdminsTitle.visibility = View.GONE
+            SearchAdmins.visibility = View.VISIBLE
+            SearchButton1.visibility = View.GONE
+            CancelAdmins.visibility = View.VISIBLE
         }
 
         SearchButton2.setOnClickListener {
-            StudentsTitle.visibility = TextView.GONE
-            SearchStudents.visibility = EditText.VISIBLE
-            SearchButton2.visibility = ImageButton.GONE
-            CancelStudents.visibility = ImageButton.VISIBLE
+            StudentsTitle.visibility = View.GONE
+            SearchStudents.visibility = View.VISIBLE
+            SearchButton2.visibility = View.GONE
+            CancelStudents.visibility = View.VISIBLE
         }
 
         CancelAdmins.setOnClickListener {
-            SearchAdmins.visibility = EditText.GONE
-            CancelAdmins.visibility = ImageButton.GONE
-            AdminsTitle.visibility = TextView.VISIBLE
-            SearchButton1.visibility = ImageButton.VISIBLE
+            SearchAdmins.visibility = View.GONE
+            CancelAdmins.visibility = View.GONE
+            AdminsTitle.visibility = View.VISIBLE
+            SearchButton1.visibility = View.VISIBLE
         }
 
-        CancelAdmins.setOnClickListener {
-            SearchStudents.visibility = EditText.GONE
-            CancelStudents.visibility = ImageButton.GONE
-            StudentsTitle.visibility = TextView.VISIBLE
-            SearchButton2.visibility = ImageButton.VISIBLE
+        CancelStudents.setOnClickListener {
+            SearchStudents.visibility = View.GONE
+            CancelStudents.visibility = View.GONE
+            StudentsTitle.visibility = View.VISIBLE
+            SearchButton2.visibility = View.VISIBLE
         }
     }
 }

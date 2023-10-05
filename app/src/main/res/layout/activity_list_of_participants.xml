@@ -17,52 +17,34 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/oval"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ellipse_14" />
-
-                <TextView
-                    android:id="@+id/editingTitle"
-                    android:layout_width="83dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/interproba"
-                    android:gravity="left"
-                    android:lines="2"
-                    android:text="@string/ListOfParticipants"
-                    android:textColor="@color/mainColorText"
-                    android:textSize="11sp"
-                    android:textStyle="italic" />
-            </FrameLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="30dp"
+                android:paddingRight="25dp"
                 android:paddingBottom="10dp">
 
                 <TextView
                     android:id="@+id/titleQueue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/interproba"
-                    android:gravity="center"
-                    android:text="@string/editing3"
-                    android:textColor="@color/allText"
-                    android:textSize="24sp"
+                    android:fontFamily="@font/exobold"
+                    android:text="@string/ListOfParticipants"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/exoregular"
+                    android:paddingBottom="20dp"
+                    android:text="@string/ListOfParticipantsDesc"
+                    android:textColor="@color/colorTextSecond"
+                    android:textSize="13sp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -76,12 +58,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="45dp"
                         android:layout_marginTop="3dp"
-                        android:fontFamily="@font/interproba"
+                        android:fontFamily="@font/exoregular"
                         android:gravity="center"
                         android:text="@string/AdminsQuantity"
-                        android:textColor="@color/allText"
-                        android:textSize="15sp"
-                        android:textStyle="italic" />
+                        android:textColor="@color/colorMain"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/students"
@@ -92,23 +73,26 @@
                         android:fontFamily="@font/interproba"
                         android:gravity="center"
                         android:text="@string/StudentsQuantity"
-                        android:textColor="@color/allText"
-                        android:textSize="15sp"
-                        android:textStyle="italic" />
+                        android:textColor="@color/colorMain"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/blockColor"
-                    app:cardCornerRadius="30dp">
+                    app:cardBackgroundColor="@color/colorBlock"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:padding="13dp">
+                        android:paddingLeft="13dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="13dp"
+                        android:paddingBottom="16dp">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -119,27 +103,27 @@
                                 android:id="@+id/adminss"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/interproba"
+                                android:fontFamily="@font/exobold"
                                 android:gravity="center"
                                 android:hapticFeedbackEnabled="false"
-                                android:outlineProvider="none"
                                 android:paddingTop="10dp"
                                 android:paddingBottom="10dp"
-                                android:soundEffectsEnabled="false"
                                 android:text="@string/AdminsText"
-                                android:textColor="@color/allText"
+                                android:textColor="@color/colorTextSecond"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:visibility="visible" />
 
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/adminsCardView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="40dp"
                                 android:visibility="gone"
+                                app:cardBackgroundColor="@color/colorMain"
                                 app:cardCornerRadius="40dp"
-                                tools:visibility="gone">
+                                app:cardElevation="0dp"
+                                tools:visibility="visible">
 
                                 <EditText
                                     android:id="@+id/searchAdmins"
@@ -147,38 +131,36 @@
                                     android:layout_height="wrap_content"
                                     android:background="@null"
                                     android:ems="10"
+                                    android:fontFamily="@font/exoregular"
                                     android:hint="@string/search"
                                     android:inputType="text"
                                     android:paddingStart="30dp"
                                     android:paddingTop="10dp"
                                     android:paddingEnd="10dp"
                                     android:paddingBottom="10dp"
-                                    tools:visibility="visible" />
+                                    android:textColor="@color/colorText"
+                                    android:textColorHint="@color/colorMainNot"
+                                    android:textSize="14sp" />
                             </androidx.cardview.widget.CardView>
 
                             <ImageButton
                                 android:id="@+id/searchButton1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_gravity="right"
                                 android:background="@null"
                                 android:padding="6dp"
-                                android:src="@drawable/search"
-                                app:srcCompat="@drawable/search"
-                                tools:ignore="TouchTargetSizeCheck"
-                                tools:visibility="visible" />
+                                android:src="@drawable/search" />
 
                             <ImageButton
                                 android:id="@+id/cancelButton1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_gravity="right"
-                                android:layout_weight="0"
                                 android:background="@null"
                                 android:padding="6dp"
-                                android:src="@drawable/search"
-                                app:srcCompat="@drawable/cancel1"
-                                tools:visibility="gone" />
+                                android:src="@drawable/cancel1"
+                                android:visibility="gone" />
 
                         </FrameLayout>
 
@@ -195,14 +177,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    app:cardBackgroundColor="@color/blockColor"
-                    app:cardCornerRadius="30dp">
+                    app:cardBackgroundColor="@color/colorBlock"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:padding="13dp">
+                        android:paddingLeft="13dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="13dp"
+                        android:paddingBottom="16dp">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -212,39 +198,42 @@
                                 android:id="@+id/members"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/interproba"
+                                android:fontFamily="@font/exobold"
                                 android:gravity="center"
-                                android:hapticFeedbackEnabled="false"
-                                android:outlineProvider="none"
                                 android:paddingTop="10dp"
                                 android:paddingBottom="10dp"
-                                android:soundEffectsEnabled="false"
                                 android:text="@string/StudentsText"
-                                android:textColor="@color/allText"
+                                android:textColor="@color/colorTextSecond"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:visibility="visible" />
 
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/membersCardView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="40dp"
-                                android:layout_weight="1"
                                 android:visibility="gone"
-                                app:cardCornerRadius="40dp">
+                                app:cardBackgroundColor="@color/colorMain"
+                                app:cardCornerRadius="40dp"
+                                app:cardElevation="0dp"
+                                tools:visibility="visible">
 
                                 <EditText
                                     android:id="@+id/searchStudents"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@null"
+                                    android:fontFamily="@font/exoregular"
                                     android:hint="@string/search"
                                     android:inputType="text"
                                     android:paddingStart="30dp"
                                     android:paddingTop="10dp"
                                     android:paddingEnd="10dp"
                                     android:paddingBottom="10dp"
-                                    tools:visibility="visible" />
+                                    android:textColor="@color/colorText"
+                                    android:textColorHint="@color/colorMainNot"
+                                    android:textSize="14sp" />
                             </androidx.cardview.widget.CardView>
 
                             <ImageButton
@@ -254,21 +243,18 @@
                                 android:layout_gravity="right"
                                 android:background="@null"
                                 android:padding="6dp"
-                                android:src="@drawable/search"
-                                app:srcCompat="@drawable/search"
-                                tools:ignore="TouchTargetSizeCheck" />
+                                android:src="@drawable/search" />
 
                             <ImageButton
                                 android:id="@+id/cancelButton2"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_gravity="right"
                                 android:layout_weight="0"
                                 android:background="@null"
                                 android:padding="6dp"
-                                android:src="@drawable/search"
-                                app:srcCompat="@drawable/cancel1"
-                                tools:visibility="gone" />
+                                android:src="@drawable/cancel1"
+                                android:visibility="gone" />
                         </FrameLayout>
 
                         <androidx.recyclerview.widget.RecyclerView

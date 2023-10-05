@@ -50,6 +50,7 @@
 <!--    <color name="editText">#000</color>-->
 
     <color name="colorMain">#9ADBFF</color>
+    <color name="colorMainNot">#527385</color>
     <color name="colorText">#181818</color>
     <color name="colorTextSecond">#E2E2E2</color>
     <color name="colorBlock">#393939</color>
