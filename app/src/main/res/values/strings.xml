@@ -15,16 +15,17 @@
     <string name="ThreeStepsEntry">Всего три простых шага!</string>
 
 
-    <string name="EditingQueue">РЕДАКТИРОВАТЬ</string>
-    <string name="editing1">Название очереди</string>
+    <string name="EditingQueue">Редактировать</string>
+    <string name="EditingQueueDesc">изменить параметры</string>
+    <string name="editing1">название очереди</string>
     <string name="editing1Hint">Очередь в деканат</string>
-    <string name="editing2">Описание очереди</string>
+    <string name="editing2">описание очереди</string>
     <string name="editing2Hint">Очередь в деканат длинной 100м</string>
-    <string name="editing3">Участники</string>
-    <string name="editing4">Группы</string>
+    <string name="editing3">участники</string>
+    <string name="editing4">группы</string>
     <string name="editing4Hint">Введите допустимые группы</string>
-    <string name="saveButton">СОХРАНИТЬ</string>
-    <string name="cancelButton">ОТМЕНА</string>
+    <string name="saveButton">сохранить</string>
+    <string name="cancelButton">отмена</string>
     <string name="noGroups">Вы удалили все допустимые группы. Все участники, состоящие в этих группах, будут удалены из очереди. Вы сможете добавить
         новых пользователей через ссылку, или указав другие группы.</string>
     <string name="noName">Нельзя сохранить очередь, пока поле пустое.</string>
