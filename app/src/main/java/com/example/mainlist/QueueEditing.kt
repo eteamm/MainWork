@@ -1,10 +1,12 @@
 package com.example.mainlist
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.annotation.ColorInt
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +15,6 @@ import com.example.mainlist.databinding.ActivityQueueEditingBinding
 
 class QueueEditing : AppCompatActivity() {
     lateinit var binding: ActivityQueueEditingBinding
-    private val adapter = groupsAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQueueEditingBinding.inflate(layoutInflater)
@@ -41,16 +42,8 @@ class QueueEditing : AppCompatActivity() {
             val intent = Intent(this, MainScreen::class.java)
             startActivity(intent)
         }
-
-        init()
     }
 
-    private fun init(){
-        binding.apply{
-            listOfGroups.layoutManager = LinearLayoutManager(this@QueueEditing)
-            listOfGroups.adapter = adapter
 
-        }
-    }
 
 }

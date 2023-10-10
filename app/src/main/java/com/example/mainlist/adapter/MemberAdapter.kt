@@ -36,7 +36,7 @@ public class MemberAdapter(private val context: Context) : RecyclerView.Adapter<
 
     }
 
-    fun addTurn(member: Member){
+    fun addMember(member: Member){
         memberList.add(member)
         notifyDataSetChanged()
     }
