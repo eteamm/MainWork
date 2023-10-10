@@ -5,13 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.LinearLayout.VERTICAL
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
-import androidx.core.view.ViewCompat.canScrollVertically
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.mainlist.Yuri.Activity_Mainqueue
 import com.example.mainlist.Yuri.Activity_queue_create
 import com.example.mainlist.adapter.TurnAdapter
@@ -44,7 +40,6 @@ class MainScreen : AppCompatActivity() {
             }
         ]
         """.trimIndent()
-
         val dostupJson = """
        [
            {
