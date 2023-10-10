@@ -261,6 +261,7 @@
                             tools:layout_editor_absoluteY="182dp" />
 
                         <Button
+                            android:id="@+id/ShareBtn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -348,10 +349,12 @@
             android:paddingBottom="25dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/WarningJoinTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="@color/blockColor"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/colorMainNot"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -365,9 +368,9 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="@string/warningTxtTurn"
-                        android:textColor="@color/mainColor"
+                        android:textColor="@color/mainColorText"
                         android:textSize="10sp"
-                        android:visibility="gone" />
+                        android:visibility="visible" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.ListOfParticipants
@@ -41,8 +43,10 @@ class Activity_Mainqueue : AppCompatActivity() {
         }]
         """.trimIndent()
 
-        val logged_user_id = 4;
-        val creator_user_id = 1;
+        val logged_user_id = 4
+        val creator_user_id = 1
+        val admin = 2 // модератор!!!
+
         var gsonMainqueue = Gson()
         var responseMainqueue = gsonMainqueue?.fromJson(myJson, Array<Positions>::class.java)?.toList()
         super.onCreate(savedInstanceState)
@@ -50,6 +54,9 @@ class Activity_Mainqueue : AppCompatActivity() {
         val ButtonToPeople:Button = findViewById(R.id.turnPeopleBtn)
         val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        val WarningTxt : CardView = findViewById(R.id.WarningJoinTxt)
+        val ShareBtn1 : Button = findViewById(R.id.ShareBtn)
 
         val positionsAdapter = PositionsAdapter(this)
         val positionsList = mutableListOf<Positions>()
@@ -61,11 +68,21 @@ class Activity_Mainqueue : AppCompatActivity() {
         positionsAdapter.setItems(positionsList)
 
 
+        if(logged_user_id == 4){
+            ShareBtn1.visibility = View.GONE
+
+        }
+
         val JoinBtn : Button = findViewById(R.id.createTurnBtn)
 
         JoinBtn.setOnClickListener() {
-            var positionNew = Positions(9, "Yuri", "2391", 1) // idUser для каждого пользователя свой
-            positionsAdapter.addPosition(positionNew)
+
+            var positionNew = Positions(9, "Yuri", "2391", 4) // idUser для каждого пользователя свой
+            var temp = positionsAdapter.addPosition(positionNew)
+
+            if(temp == 0 ) {
+                WarningTxt.visibility = View.VISIBLE
+            }
 
         }
         ButtonToPeople.setOnClickListener() {
@@ -79,8 +96,9 @@ class Activity_Mainqueue : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-    }
 
+
+    }
     fun ToEditTurn(view: View){
         val intent = Intent(this, QueueEditing::class.java)
         startActivity(intent)
