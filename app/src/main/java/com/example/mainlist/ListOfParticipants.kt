@@ -21,9 +21,9 @@ class ListOfParticipants : AppCompatActivity() {
         setContentView(R.layout.activity_list_of_participants)
 
         val Admins = """
-        [ {id: 1, Name: "example", idGroup: 2391, status: 1},  {id: 2, Name: "example", idGroup: 2391, status: 1}]
+        [ {id: 1, Name: "Маргарита Ненарокова Олеговна", idGroup: 2391, status: 1},  {id: 2, Name: "Сергей Блохин Олегович", idGroup: 2391, status: 1}]
         """.trimIndent()
-        val Users = """[ {id: 1, Name: "example", idGroup: 2391, status: 1},  {id: 2, Name: "example", idGroup: 2391, status: 1}]
+        val Users = """[ {id: 1, Name: "Иван Самоваров Юрьевич", idGroup: 2391, status: 1},  {id: 2, Name: "Никита Кадун Андреевич", idGroup: 2391, status: 1}]
          """.trimIndent()
 
         var gson = Gson()

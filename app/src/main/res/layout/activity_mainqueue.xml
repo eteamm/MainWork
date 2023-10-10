@@ -147,8 +147,9 @@
                                 <TextView
                                     android:id="@+id/nameTeachertxt"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:fontFamily="@font/exoregular"
+                                    android:gravity="bottom"
                                     android:paddingTop="5dp"
                                     android:text="@string/nameTeacherTurn"
                                     android:textColor="@color/colorText"
@@ -186,14 +187,13 @@
                                 <TextView
                                     android:id="@+id/peopleBoxtxt"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:fontFamily="@font/exoregular"
+                                    android:gravity="bottom"
                                     android:paddingTop="5dp"
                                     android:text="@string/peopleBoxTurn"
                                     android:textColor="@color/titleText"
-                                    android:textSize="12sp"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/numberpeople" />
+                                    android:textSize="12sp" />
 
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>

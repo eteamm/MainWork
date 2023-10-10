@@ -57,7 +57,7 @@ class Activity_Mainqueue : AppCompatActivity() {
         val dataNumberOfPeople = intent.getIntExtra("NumberOfPeople",0)
         MyTurnName.text = dataName
         MyTurnAuthor.text = dataAuthor
-        MyTurnDescription.text = dataDescription
+        MyTurnDescription.text = "Подробнее: " + dataDescription
         MyTurnNumberofPeople.text = dataNumberOfPeople.toString()
         MyTurnPeopleTextView.text = People[dataNumberOfPeople % 10]
         var gsonMainqueue = Gson()
