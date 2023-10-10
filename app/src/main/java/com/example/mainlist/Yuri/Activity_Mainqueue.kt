@@ -1,11 +1,12 @@
 package com.example.mainlist.Yuri
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.ListOfParticipants
@@ -13,13 +14,13 @@ import com.example.mainlist.MainScreen
 import com.example.mainlist.QueueEditing
 import com.example.mainlist.R
 import com.example.mainlist.adapter.PositionsAdapter
-import com.example.mainlist.adapter.TurnAdapter
 import com.example.mainlist.data.Positions
-import com.example.mainlist.data.Turn
 import com.google.gson.Gson
 
 class Activity_Mainqueue : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_mainqueue)
         val myJson = """
         [{
           id: 1, 
@@ -43,10 +44,23 @@ class Activity_Mainqueue : AppCompatActivity() {
 
         val logged_user_id = 4;
         val creator_user_id = 1;
+        val People: Array<String> = arrayOf("человек","человек","человека","человека","человека","человек","человек","человек","человек","человек")
+        val MyTurnName:TextView = findViewById(R.id.nameTurntxt)
+        val MyTurnAuthor:TextView = findViewById(R.id.nameTeachertxt)
+        val MyTurnDescription:TextView = findViewById(R.id.descriptionBoxtxt)
+        val MyTurnNumberofPeople:TextView = findViewById(R.id.numberPeopletxt)
+        val MyTurnPeopleTextView:TextView = findViewById(R.id.peopleBoxtxt)
+        val dataName = intent.getStringExtra("Name")
+        val dataAuthor = intent.getStringExtra("Author")
+        val dataDescription = intent.getStringExtra("Description")
+        val dataNumberOfPeople = intent.getIntExtra("NumberOfPeople",0)
+        MyTurnName.text = dataName
+        MyTurnAuthor.text = dataAuthor
+        MyTurnDescription.text = dataDescription
+        MyTurnNumberofPeople.text = dataNumberOfPeople.toString()
+        MyTurnPeopleTextView.text = People[dataNumberOfPeople % 10]
         var gsonMainqueue = Gson()
         var responseMainqueue = gsonMainqueue?.fromJson(myJson, Array<Positions>::class.java)?.toList()
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mainqueue)
         val ButtonToPeople:Button = findViewById(R.id.turnPeopleBtn)
         val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
