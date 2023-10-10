@@ -31,14 +31,16 @@ class MainScreen : AppCompatActivity() {
                 name: "Зачетная неделя",
                 description: "Берите с собой ручки!",
                 nameCreator: "Железняк Александр Владимирович",
-                idUser: 1
+                idUser: 1,
+                numberOfPeople: 46
             }, 
             {
                 id: 2, 
                 name: "Деканат Отчисления",
                 description: "Стучитесь и будьте культурными!", 
                 nameCreator: "Холод Иван Иванович", 
-                idUser: 4
+                idUser: 4,
+                numberOfPeople: 36
             }
         ]
         """.trimIndent()
@@ -50,42 +52,48 @@ class MainScreen : AppCompatActivity() {
             name: "Физика Экзамен",
             description: "Зачетки не забудьте.",
             nameCreator: "Леднев Михаил Георгиевич",
-            idUser: 2
+            idUser: 2,
+            numberOfPeople: 49
             },
             {
             id: 2, 
             name: "Здравпункт",
             description: "Приносите форму М-54, справку о прививках и остальные документы.",
             nameCreator: "Сергеева Анна Анатольевна",
-            idUser: 3
+            idUser: 3,
+            numberOfPeople: 32
             },
             {
             id: 3, 
             name: "Помощь по ТОЭ",
             description: "Подходите в коворкинг, помогаю с задачками по ТОЭ",
             nameCreator: "Кадун Никита Андреевич",
-            idUser: 5
+            idUser: 5,
+            numberOfPeople: 77
             },
             {
             id: 4, 
             name: "Экзамен ТОЭ",
             description: "Те, кто не выполнил ИДЗ, на экзамен не допускаются",
             nameCreator: "Самоваров Иван Кириллович",
-            idUser: 1 
+            idUser: 1,
+            numberOfPeople: 61
             },
             {
             id: 5, 
             name: "Зачет по физре",
             description: "Жду всех с зачетками",
             nameCreator: "Комилов Виктор Матвеевич",
-            idUser: 1 
+            idUser: 1,
+            numberOfPeople: 101
             },
             {
             id: 6, 
             name: "Пропуски",
             description: "Если уже сходили в здравпункт и подтвердили справку, приходите в деканат",
             nameCreator: "Горин Николай Олегович",
-            idUser: 5
+            idUser: 5,
+            numberOfPeople: 55
             }
         ]
         """.trimIndent()
@@ -98,6 +106,8 @@ class MainScreen : AppCompatActivity() {
         val MyTurnsBtn = findViewById<Button>(R.id.bMy)
         val InDostupBtn = findViewById<Button>(R.id.MainScreenInDostupBtn)
         val recyclerView: RecyclerView = findViewById(R.id.turnsRec)
+
+
 //        val customLinearLayout = CustomLinearLayout(this,VERTICAL,false);
 //        recyclerView.layoutManager = customLinearLayout
         val layoutManager = LinearLayoutManager(this)
@@ -106,7 +116,7 @@ class MainScreen : AppCompatActivity() {
         recyclerView.adapter = turnAdapter
         val turnList = mutableListOf<Turn>()
         MyTurns?.forEach {
-            var turn = Turn(it.id, it.name, it.description, it.nameCreator, it.idUser)
+            var turn = Turn(it.id, it.name, it.description, it.nameCreator, it.idUser, it.numberOfPeople)
             turnList.add(0, turn)
         }
         turnAdapter.setItems(turnList, true)
@@ -130,10 +140,11 @@ class MainScreen : AppCompatActivity() {
             InDostupBtn.setTextColor(application.resources.getColor(R.color.onButton))
             turnList.clear()
             MyTurns?.forEach {
-                var turn = Turn(it.id, it.name, it.description, it.nameCreator, it.idUser)
+                var turn = Turn(it.id, it.name, it.description, it.nameCreator, it.idUser, it.numberOfPeople)
                 turnList.add(0, turn)
             }
             turnAdapter.setItems(turnList, true)
+
         }
 
         InDostupBtn.setOnClickListener {
@@ -141,7 +152,7 @@ class MainScreen : AppCompatActivity() {
             InDostupBtn.setTextColor(application.resources.getColor(R.color.colorMain))
             turnList.clear()
             InDostupTurns?.forEach{
-                var turn = Turn(it.id, it.name, it.description, it.nameCreator, it.idUser)
+                var turn = Turn(it.id, it.name, it.description, it.nameCreator, it.idUser,it.numberOfPeople)
                 turnList.add(0,turn)
             }
             turnAdapter.setItems(turnList, false)

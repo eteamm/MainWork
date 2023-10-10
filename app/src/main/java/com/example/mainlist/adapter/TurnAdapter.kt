@@ -24,8 +24,10 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
 
     class turnHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.turnNameElement)
+        val Author:TextView = itemView.findViewById(R.id.TurnAuthorElement)
         val ButtonTextView: Button = itemView.findViewById(R.id.JoinBtn)
         val Description : TextView = itemView.findViewById(R.id.turnDescElement)
+        val Number : TextView = itemView.findViewById(R.id.turnSizeElement)
         val ClickonCW:CardView = itemView.findViewById(R.id.TurnCV)
         val Join = itemView.findViewById<LinearLayout>(R.id.joinLayout)
     }
@@ -43,10 +45,15 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
         val turn : Turn = turnList[position] //заполнение данных в эл списка
         holder.nameTextView.text = turn.name
         holder.Description.text ="Подробнее " + turn.description
-
+        holder.Author.text = turn.nameCreator
+        holder.Number.text = turn.numberOfPeople.toString()
         if (Type){
             holder.ClickonCW.setOnClickListener(){
                 val intent = Intent(context, Activity_Mainqueue::class.java)
+                intent.putExtra("Name",turn.name)
+                intent.putExtra("Author",turn.nameCreator)
+                intent.putExtra("Description",turn.description)
+                intent.putExtra("NumberOfPeople",turn.numberOfPeople)
                 context.startActivity(intent)
             }
             holder.Join.visibility = View.GONE
@@ -60,7 +67,12 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
             holder.Description.visibility = View.VISIBLE
             holder.ButtonTextView.setOnClickListener(){
                 val intent = Intent(context, Activity_Mainqueue::class.java)
+                intent.putExtra("Name",turn.name)
+                intent.putExtra("Author",turn.nameCreator)
+                intent.putExtra("Description",turn.description)
+                intent.putExtra("NumberOfPeople",turn.numberOfPeople)
                 context.startActivity(intent)
+
             }
 
         }
