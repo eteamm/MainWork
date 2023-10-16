@@ -37,6 +37,54 @@ class MainScreen : AppCompatActivity() {
                 nameCreator: "Холод Иван Иванович", 
                 idUser: 4,
                 numberOfPeople: 36
+            },
+            {
+            id: 1, 
+            name: "Физика Экзамен",
+            description: "Зачетки не забудьте.",
+            nameCreator: "Леднев Михаил Георгиевич",
+            idUser: 2,
+            numberOfPeople: 49
+            },
+            {
+            id: 2, 
+            name: "Здравпункт",
+            description: "Приносите форму М-54, справку о прививках и остальные документы.",
+            nameCreator: "Сергеева Анна Анатольевна",
+            idUser: 3,
+            numberOfPeople: 32
+            },
+            {
+            id: 3, 
+            name: "Помощь по ТОЭ",
+            description: "Подходите в коворкинг, помогаю с задачками по ТОЭ",
+            nameCreator: "Кадун Никита Андреевич",
+            idUser: 5,
+            numberOfPeople: 77
+            },
+            {
+            id: 4, 
+            name: "Экзамен ТОЭ",
+            description: "Те, кто не выполнил ИДЗ, на экзамен не допускаются",
+            nameCreator: "Самоваров Иван Кириллович",
+            idUser: 1,
+            numberOfPeople: 61
+            },
+            {
+            id: 5, 
+            name: "Зачет по физре",
+            description: "Жду всех с зачетками",
+            nameCreator: "Комилов Виктор Матвеевич",
+            idUser: 1,
+            numberOfPeople: 101
+            },
+            {
+            id: 6, 
+            name: "Пропуски",
+            description: "Если уже сходили в здравпункт и подтвердили справку, приходите в деканат",
+            nameCreator: "Горин Николай Олегович",
+            idUser: 5,
+            numberOfPeople: 55
             }
         ]
         """.trimIndent()
@@ -115,6 +163,7 @@ class MainScreen : AppCompatActivity() {
             turnList.add(0, turn)
         }
         turnAdapter.setItems(turnList, true)
+        recyclerView.setNestedScrollingEnabled(false);
 
 
         val bExit = findViewById<ImageView>(R.id.exitImageView)

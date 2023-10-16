@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".MainScreen">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/background">
+        android:layout_height="match_parent">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="25dp"
+                android:paddingTop="30dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="120dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingLeft="25dp"
-                    android:paddingTop="30dp"
-                    android:paddingRight="25dp"
-                    android:paddingBottom="120dp">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <FrameLayout
                         android:layout_width="match_parent"
@@ -264,44 +265,56 @@
                             android:textColorLink="@color/colorMain"
                             app:rippleColor="@color/onButton" />
                     </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/turnsRec"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
 
             </LinearLayout>
-        </ScrollView>
 
-        <LinearLayout
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_background"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingTop="70dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/CreateTurnBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@drawable/gradient_background"
-            android:orientation="vertical"
-            android:paddingLeft="40dp"
-            android:paddingTop="30dp"
-            android:paddingRight="40dp"
-            android:paddingBottom="20dp">
+            android:backgroundTint="@color/colorMain"
+            android:fontFamily="@font/exosemibold"
+            android:onClick="CreateTurn"
+            android:text="@string/ButtonCreateTurnTextMain"
+            android:textColor="@color/colorText"
+            android:textColorHighlight="@color/onButton"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/onButton" />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/CreateTurnBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorMain"
-                android:fontFamily="@font/exosemibold"
-                android:onClick="CreateTurn"
-                android:text="@string/ButtonCreateTurnTextMain"
-                android:textColor="@color/colorText"
-                android:textColorHighlight="@color/onButton"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:rippleColor="@color/onButton" />
-        </LinearLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
 
     </FrameLayout>
 
-</LinearLayout>
+</RelativeLayout>
