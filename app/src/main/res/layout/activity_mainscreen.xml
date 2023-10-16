@@ -310,11 +310,4 @@
             app:rippleColor="@color/onButton" />
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/background">
-
-    </FrameLayout>
-
 </RelativeLayout>
