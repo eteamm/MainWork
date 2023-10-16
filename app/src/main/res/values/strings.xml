@@ -89,4 +89,6 @@
     <string name="allowgroupsTurn">Введите допустимые очереди</string>
 
     <string name="memberName">Ненарокова Маргарита Олеговна</string>
+    <string name="memberAct1">Разжаловать</string>
+    <string name="memberAct2">Удалить из очереди</string>
 </resources>
