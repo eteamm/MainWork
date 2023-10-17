@@ -7,7 +7,7 @@
     android:layout_weight="1"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".Yuri.Activity_Mainqueue">
+    tools:context=".Activity_Mainqueue">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -139,7 +139,6 @@
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
-                                        android:onClick="ToEditTurn"
                                         android:visibility="visible"
                                         app:srcCompat="@drawable/pencil_icon_png_11" />
                                 </LinearLayout>
@@ -381,7 +380,6 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorMain"
                 android:fontFamily="@font/exosemibold"
-                android:onClick="CreateTurn"
                 android:paddingLeft="20dp"
                 android:paddingTop="5sp"
                 android:paddingRight="20dp"

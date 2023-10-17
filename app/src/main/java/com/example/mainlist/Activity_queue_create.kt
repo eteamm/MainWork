@@ -1,4 +1,4 @@
-package com.example.mainlist.Yuri
+package com.example.mainlist
 import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
@@ -9,8 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mainlist.MainScreen
-import com.example.mainlist.R
 import com.example.mainlist.adapter.AllowGroupAdapter
 import com.example.mainlist.data.AllowGroup
 class Activity_queue_create : AppCompatActivity() {

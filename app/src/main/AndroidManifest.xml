@@ -16,10 +16,10 @@
             android:name=".memberItem"
             android:exported="false" />
         <activity
-            android:name=".Yuri.Activity_Mainqueue"
+            android:name=".Activity_Mainqueue"
             android:exported="false" />
         <activity
-            android:name=".Yuri.Activity_queue_create"
+            android:name=".Activity_queue_create"
             android:exported="false" />
         <activity
             android:name=".MainScreen"

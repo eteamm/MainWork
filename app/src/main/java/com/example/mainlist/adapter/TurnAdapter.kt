@@ -10,10 +10,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mainlist.MainScreen
 import com.example.mainlist.R
-import com.example.mainlist.Yuri.Activity_Mainqueue
-import com.example.mainlist.Yuri.Activity_queue_create
+import com.example.mainlist.Activity_Mainqueue
 import com.example.mainlist.data.Turn
 
 

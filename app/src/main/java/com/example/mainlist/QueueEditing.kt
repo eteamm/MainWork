@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mainlist.Yuri.Activity_Mainqueue
 import com.example.mainlist.adapter.AllowGroupAdapter
 import com.example.mainlist.data.AllowGroup
 import com.example.mainlist.databinding.ActivityQueueEditingBinding

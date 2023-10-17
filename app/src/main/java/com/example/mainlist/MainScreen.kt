@@ -8,15 +8,9 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mainlist.Yuri.Activity_Mainqueue
-import com.example.mainlist.Yuri.Activity_queue_create
 import com.example.mainlist.adapter.TurnAdapter
 import com.example.mainlist.data.Turn
 import com.google.gson.Gson
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.net.HttpURLConnection
-import java.net.URL
 
 class MainScreen : AppCompatActivity() {
 
