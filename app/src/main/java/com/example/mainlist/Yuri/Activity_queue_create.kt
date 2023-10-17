@@ -1,7 +1,10 @@
 package com.example.mainlist.Yuri
 import android.content.Intent
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,19 +20,33 @@ class Activity_queue_create : AppCompatActivity() {
         val allowGroupsRec = findViewById<RecyclerView>(R.id.allowRec)
         allowGroupsRec.layoutManager = LinearLayoutManager(this)
         val allowGroupList = mutableListOf<AllowGroup>()
-        val group = AllowGroup(0, 2391)
-        val group2 = AllowGroup(1, 2392)
-        val group3 = AllowGroup(2, 2393)
-
-        allowGroupList.add(group)
-        allowGroupList.add(group2)
-        allowGroupList.add(group3)
+        val TestEditText = findViewById<EditText>(R.id.editText4)
+        val TestTextView = findViewById<TextView>(R.id.textView9)
         val allowgroupAdapter = AllowGroupAdapter(this)
         allowGroupsRec.adapter = allowgroupAdapter
         allowgroupAdapter.setItems(allowGroupList)
         val text = allowgroupAdapter.itemCount.toString()
 
         val duration = Toast.LENGTH_SHORT
+
+        TestEditText.setOnKeyListener(object : View.OnKeyListener {
+            override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
+                if (event.action == KeyEvent.ACTION_DOWN &&
+                    keyCode == KeyEvent.KEYCODE_ENTER
+                ) {
+                    val s = TestEditText.text.toString()
+                    val g = AllowGroup(0, s.toInt())
+                    val created = allowgroupAdapter.addAllowGroup(g)
+
+                    TestEditText.setText("");
+//                    TestEditText.clearFocus()
+//                    TestEditText.isCursorVisible = false
+
+                    return true
+                }
+                return false
+            }
+        })
 
 
     }
