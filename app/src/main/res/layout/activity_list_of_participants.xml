@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -164,11 +164,17 @@
 
                         </FrameLayout>
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/AdminsRec"
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:paddingTop="20dp" />
+                            android:layout_height="match_parent">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/AdminsRec"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="20dp" />
+                        </RelativeLayout>
+
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -257,11 +263,16 @@
                                 android:visibility="gone" />
                         </FrameLayout>
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/UsersRec"
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:paddingTop="20dp" />
+                            android:layout_height="match_parent">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/UsersRec"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="20dp" />
+                        </RelativeLayout>
 
                     </LinearLayout>
 
@@ -273,7 +284,7 @@
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>
 
 
 

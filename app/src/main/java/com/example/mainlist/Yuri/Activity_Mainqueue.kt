@@ -16,6 +16,7 @@ import com.example.mainlist.R
 import com.example.mainlist.adapter.PositionsAdapter
 import com.example.mainlist.data.Positions
 import com.google.gson.Gson
+import android.content.Context
 class Activity_Mainqueue : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +52,7 @@ class Activity_Mainqueue : AppCompatActivity() {
         val MyTurnDescription: TextView = findViewById(R.id.descriptionBoxtxt)
         val MyTurnNumberofPeople:TextView = findViewById(R.id.numberPeopletxt)
         val MyTurnPeopleTextView:TextView = findViewById(R.id.peopleBoxtxt)
+        val GoToEdit:ImageView = findViewById(R.id.editTurnImg)
         val dataName = intent.getStringExtra("Name")
         val dataAuthor = intent.getStringExtra("Author")
         val dataDescription = intent.getStringExtra("Description")
@@ -78,6 +80,12 @@ class Activity_Mainqueue : AppCompatActivity() {
         }
         recyclerView.adapter = positionsAdapter
         positionsAdapter.setItems(positionsList)
+
+        GoToEdit.setOnClickListener {
+            val intent2 = Intent(this, QueueEditing::class.java)
+            intent2.putExtra("Top", MyTurnName.getText().toString())
+            startActivity(intent2)
+        }
 
 
         if(logged_user_id == 4){
