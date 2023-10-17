@@ -13,15 +13,14 @@ import com.example.mainlist.data.Positions
 
 public class PositionsAdapter(private val context: Context) : RecyclerView.Adapter<PositionsAdapter.HolderPositions>() {
 
-    private var ListPositions = ArrayList<Positions>();
-    private var
+    private var ListPositions = ArrayList<Positions>()
+    private var idCurrent = 0
 
     class HolderPositions(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val UserNameTextView: TextView = itemView.findViewById(R.id.positionNameTxt)
         val UserGroupTextView: TextView = itemView.findViewById(R.id.positionNumberTxt)
         val Deletedtn = itemView.findViewById<ImageButton>(R.id.deletePositionImgBtn)
         val numberTextView = itemView.findViewById<TextView>(R.id.positionIdTxt)
-
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PositionsAdapter.HolderPositions {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.position, parent, false)
@@ -37,14 +36,23 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         val positions : Positions = ListPositions[position] //заполнение данных в эл списка
         holder.UserNameTextView.text = positions.name
         var i = position+1
-        var Count = 0;
+        var Count = 0
+
+//        if(positions.id == idCurrent){
+//            holder.Deletedtn.visibility = View.GONE
+//        }
+        if(idCurrent == positions.idUser){
+            holder.Deletedtn.visibility = View.VISIBLE
+        }
+        else{
+            holder.Deletedtn.visibility = View.GONE
+        }
         holder.numberTextView.text="#"+i;
         holder.UserGroupTextView.text = positions.groupNumber
         holder.Deletedtn.setOnClickListener(){
             val deleted = ListPositions.removeAt(position)
             notifyDataSetChanged()
         }
-
     }
 
 
@@ -68,9 +76,10 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         return 0
     }
 
-    fun setItems(item: MutableList<Positions>) {
+    fun setItems(item: MutableList<Positions>, id : Int) {
         ListPositions.clear()
         ListPositions.addAll(item)
+        idCurrent = id
         notifyDataSetChanged()
     }
 }

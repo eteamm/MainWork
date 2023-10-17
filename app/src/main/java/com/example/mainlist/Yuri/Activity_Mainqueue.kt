@@ -54,8 +54,8 @@ class Activity_Mainqueue : AppCompatActivity() {
         """.trimIndent()
 
         var count = 0
-        val logged_user_id = 3
-        val creator_user_id = 1
+        val logged_user_id = 2
+        val creator_user_id = 2
         val admin = 1 // модератор!!!
 
         val Pencil: ImageView = findViewById(R.id.editTurnImg)
@@ -109,7 +109,7 @@ class Activity_Mainqueue : AppCompatActivity() {
             positionsList.add(position)
         }
         recyclerView.adapter = positionsAdapter
-        positionsAdapter.setItems(positionsList)
+        positionsAdapter.setItems(positionsList,logged_user_id)
         NumberToGoTextView.text = "До твоей ближайшей очереди " + count.toString() + " позиции"
 //        while (logged_user_id!= positionsList[count].idUser){
 //            count = count + 1
@@ -124,11 +124,7 @@ class Activity_Mainqueue : AppCompatActivity() {
         {
             Pencil.visibility = View.VISIBLE
         }
-        if((logged_user_id == creator_user_id) || (logged_user_id == admin)){
 
-        }
-        else {
-        }
 
 
         val JoinBtn : Button = findViewById(R.id.createTurnBtn)
@@ -136,7 +132,7 @@ class Activity_Mainqueue : AppCompatActivity() {
         JoinBtn.setOnClickListener() {
 
 
-            var positionNew = Positions(9, "Yuri", "2391", 4) // idUser для каждого пользователя свой
+            var positionNew = Positions(9, "Yuri", "2391", logged_user_id) // idUser для каждого пользователя свой
             var temp = positionsAdapter.addPosition(positionNew)
 
             if(temp == 0 ) {
