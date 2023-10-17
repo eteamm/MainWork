@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.R
 import com.example.mainlist.data.Positions
@@ -38,6 +37,7 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         val positions : Positions = ListPositions[position] //заполнение данных в эл списка
         holder.UserNameTextView.text = positions.name
         var i = position+1
+        var Count = 0;
         holder.numberTextView.text="#"+i;
         holder.UserGroupTextView.text = positions.groupNumber
         holder.Deletedtn.setOnClickListener(){
@@ -46,6 +46,8 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         }
 
     }
+
+
 
     fun addPosition(position: Positions) : Int{
         var count = ListPositions.size
