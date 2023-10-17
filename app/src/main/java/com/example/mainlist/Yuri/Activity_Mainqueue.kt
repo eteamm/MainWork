@@ -54,7 +54,7 @@ class Activity_Mainqueue : AppCompatActivity() {
         """.trimIndent()
 
         var count = 0
-        val logged_user_id = 2
+        val logged_user_id = 1
         val creator_user_id = 2
         val admin = 1 // модератор!!!
 
@@ -109,7 +109,7 @@ class Activity_Mainqueue : AppCompatActivity() {
             positionsList.add(position)
         }
         recyclerView.adapter = positionsAdapter
-        positionsAdapter.setItems(positionsList,logged_user_id)
+        positionsAdapter.setItems(positionsList,logged_user_id, admin)
         NumberToGoTextView.text = "До твоей ближайшей очереди " + count.toString() + " позиции"
 //        while (logged_user_id!= positionsList[count].idUser){
 //            count = count + 1

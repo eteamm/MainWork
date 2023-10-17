@@ -15,6 +15,7 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
 
     private var ListPositions = ArrayList<Positions>()
     private var idCurrent = 0
+    private var idAdmin = 0
 
     class HolderPositions(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val UserNameTextView: TextView = itemView.findViewById(R.id.positionNameTxt)
@@ -38,14 +39,12 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         var i = position+1
         var Count = 0
 
-//        if(positions.id == idCurrent){
-//            holder.Deletedtn.visibility = View.GONE
-//        }
-        if(idCurrent == positions.idUser){
-            holder.Deletedtn.visibility = View.VISIBLE
-        }
-        else{
-            holder.Deletedtn.visibility = View.GONE
+        if(idAdmin == 0) {
+            if (idCurrent == positions.idUser) {
+                holder.Deletedtn.visibility = View.VISIBLE
+            } else {
+                holder.Deletedtn.visibility = View.GONE
+            }
         }
         holder.numberTextView.text="#"+i;
         holder.UserGroupTextView.text = positions.groupNumber
@@ -76,10 +75,11 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         return 0
     }
 
-    fun setItems(item: MutableList<Positions>, id : Int) {
+    fun setItems(item: MutableList<Positions>, id : Int, id2 : Int) {
         ListPositions.clear()
         ListPositions.addAll(item)
         idCurrent = id
+        idAdmin = id2
         notifyDataSetChanged()
     }
 }
