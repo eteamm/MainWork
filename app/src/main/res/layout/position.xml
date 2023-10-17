@@ -71,7 +71,8 @@
                 android:foregroundGravity="center"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:src="@drawable/cancel" />
+                android:src="@drawable/cancel"
+                android:visibility="visible" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

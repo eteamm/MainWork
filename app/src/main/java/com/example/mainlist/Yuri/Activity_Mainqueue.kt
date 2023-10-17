@@ -1,8 +1,12 @@
 package com.example.mainlist.Yuri
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +20,15 @@ import com.example.mainlist.R
 import com.example.mainlist.adapter.PositionsAdapter
 import com.example.mainlist.data.Positions
 import com.google.gson.Gson
+import kotlin.concurrent.schedule
+import java.util.*
+import kotlin.concurrent.timerTask
+
 class Activity_Mainqueue : AppCompatActivity() {
+
+    private lateinit var inAnimation : Animation
+    private lateinit var outAnimation : Animation
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainqueue)
@@ -42,9 +54,13 @@ class Activity_Mainqueue : AppCompatActivity() {
         """.trimIndent()
 
 
-        val logged_user_id = 4
+        val logged_user_id = 1
         val creator_user_id = 1
-        val admin = 2 // модератор!!!
+        val admin = 1 // модератор!!!
+
+        val Pencil: ImageView = findViewById(R.id.editTurnImg)
+
+
         val People: Array<String> = arrayOf("человек","человек","человека","человека","человека","человек","человек","человек","человек","человек")
         val MyTurnName:TextView = findViewById(R.id.nameTurntxt)
         val MyTurnAuthor:TextView = findViewById(R.id.nameTeachertxt)
@@ -62,6 +78,14 @@ class Activity_Mainqueue : AppCompatActivity() {
         MyTurnPeopleTextView.text = People[dataNumberOfPeople % 10]
         var gsonMainqueue = Gson()
         var responseMainqueue = gsonMainqueue?.fromJson(myJson, Array<Positions>::class.java)?.toList()
+
+
+        inAnimation = AnimationUtils.loadAnimation(this,R.anim.alpha_in)
+        outAnimation = AnimationUtils.loadAnimation(this,R.anim.alpha_out)
+
+        val timer = Timer()
+
+
 
         val ButtonToPeople:Button = findViewById(R.id.turnPeopleBtn)
         val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
@@ -84,6 +108,16 @@ class Activity_Mainqueue : AppCompatActivity() {
             ShareBtn1.visibility = View.GONE
 
         }
+        if(logged_user_id == creator_user_id)
+        {
+            Pencil.visibility = View.VISIBLE
+        }
+        if((logged_user_id == creator_user_id) || (logged_user_id == admin)){
+
+        }
+        else {
+        }
+
 
         val JoinBtn : Button = findViewById(R.id.createTurnBtn)
 
@@ -95,6 +129,17 @@ class Activity_Mainqueue : AppCompatActivity() {
 
             if(temp == 0 ) {
                 WarningTxt.visibility = View.VISIBLE
+
+                Handler().postDelayed({
+                    WarningTxt.startAnimation(outAnimation)
+                    Handler().postDelayed({
+                        WarningTxt.visibility = View.GONE
+                    }, 2000)
+                }, 3000)
+
+//                timer.schedule(timerTask {  }, 10000)
+                //var warningtext = (WarningTxt.visibility = View.VISIBLE)
+                //WarningTxt.visibility = View.VISIBLE
             }
 
         }
