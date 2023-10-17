@@ -1,8 +1,12 @@
 package com.example.mainlist.Yuri
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -16,8 +20,16 @@ import com.example.mainlist.R
 import com.example.mainlist.adapter.PositionsAdapter
 import com.example.mainlist.data.Positions
 import com.google.gson.Gson
+import kotlin.concurrent.schedule
+import java.util.*
+import kotlin.concurrent.timerTask
+
 import android.content.Context
 class Activity_Mainqueue : AppCompatActivity() {
+
+    private lateinit var inAnimation : Animation
+    private lateinit var outAnimation : Animation
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainqueue)
@@ -26,32 +38,37 @@ class Activity_Mainqueue : AppCompatActivity() {
           id: 1, 
           name: "Глоба Валерия Владимировна", 
           groupNumber: 2391,
-          id_user: 1
+          idUser: 1
         },
         {
           id: 4, 
           name: "Ненарокова Маргарита Олеговна", 
           groupNumber: 3242,
-          id_user: 3
+          idUser: 2
         },
         {
           id: 2, 
           name: "Васильев Андрей Антонович", 
           groupNumber: 2391,
-          id_user: 2
+          idUser: 3
         }]
         """.trimIndent()
 
+        var count = 0
+        val logged_user_id = 1
+        val creator_user_id = 2
+        val admin = 1 // модератор!!!
 
-        val logged_user_id = 4
-        val creator_user_id = 1
-        val admin = 2 // модератор!!!
+        val Pencil: ImageView = findViewById(R.id.editTurnImg)
+
+
         val People: Array<String> = arrayOf("человек","человек","человека","человека","человека","человек","человек","человек","человек","человек")
         val MyTurnName:TextView = findViewById(R.id.nameTurntxt)
         val MyTurnAuthor:TextView = findViewById(R.id.nameTeachertxt)
         val MyTurnDescription: TextView = findViewById(R.id.descriptionBoxtxt)
         val MyTurnNumberofPeople:TextView = findViewById(R.id.numberPeopletxt)
         val MyTurnPeopleTextView:TextView = findViewById(R.id.peopleBoxtxt)
+        val NumberToGoTextView:TextView = findViewById(R.id.hintToPositiontxt)
         val GoToEdit:ImageView = findViewById(R.id.editTurnImg)
         val dataName = intent.getStringExtra("Name")
         val dataAuthor = intent.getStringExtra("Author")
@@ -65,6 +82,14 @@ class Activity_Mainqueue : AppCompatActivity() {
         var gsonMainqueue = Gson()
         var responseMainqueue = gsonMainqueue?.fromJson(myJson, Array<Positions>::class.java)?.toList()
 
+
+        inAnimation = AnimationUtils.loadAnimation(this,R.anim.alpha_in)
+        outAnimation = AnimationUtils.loadAnimation(this,R.anim.alpha_out)
+
+        val timer = Timer()
+
+
+
         val ButtonToPeople:Button = findViewById(R.id.turnPeopleBtn)
         val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -74,13 +99,26 @@ class Activity_Mainqueue : AppCompatActivity() {
 
         val positionsAdapter = PositionsAdapter(this)
         val positionsList = mutableListOf<Positions>()
+        var b = true
         responseMainqueue?.forEach{
-            var position= Positions(it.id, it.name,it.groupNumber, it.idUser)
-            positionsList.add(0,position)
+            if (logged_user_id!=it.idUser && b){
+                count++
+            }
+            else{
+                b = false
+            }
+            var position = Positions(it.id, it.name,it.groupNumber, it.idUser)
+            positionsList.add(position)
         }
         recyclerView.adapter = positionsAdapter
-        positionsAdapter.setItems(positionsList)
+        positionsAdapter.setItems(positionsList,logged_user_id, admin)
+        NumberToGoTextView.text = "До твоей ближайшей очереди " + count.toString() + " позиции"
+//        while (logged_user_id!= positionsList[count].idUser){
+//            count = count + 1
+//        }
+//        NumberToGoTextView.text = positionsList[2].name.toString()
 
+        if(logged_user_id == 3){
         GoToEdit.setOnClickListener {
             val intent2 = Intent(this, QueueEditing::class.java)
             intent2.putExtra("Top", MyTurnName.getText().toString())
@@ -92,17 +130,34 @@ class Activity_Mainqueue : AppCompatActivity() {
             ShareBtn1.visibility = View.GONE
 
         }
+        if(logged_user_id == creator_user_id)
+        {
+            Pencil.visibility = View.VISIBLE
+        }
+
+
 
         val JoinBtn : Button = findViewById(R.id.createTurnBtn)
 
         JoinBtn.setOnClickListener() {
 
 
-            var positionNew = Positions(9, "Yuri", "2391", 4) // idUser для каждого пользователя свой
+            var positionNew = Positions(9, "Yuri", "2391", logged_user_id) // idUser для каждого пользователя свой
             var temp = positionsAdapter.addPosition(positionNew)
 
             if(temp == 0 ) {
                 WarningTxt.visibility = View.VISIBLE
+
+                Handler().postDelayed({
+                    WarningTxt.startAnimation(outAnimation)
+                    Handler().postDelayed({
+                        WarningTxt.visibility = View.GONE
+                    }, 2000)
+                }, 3000)
+
+//                timer.schedule(timerTask {  }, 10000)
+                //var warningtext = (WarningTxt.visibility = View.VISIBLE)
+                //WarningTxt.visibility = View.VISIBLE
             }
 
         }

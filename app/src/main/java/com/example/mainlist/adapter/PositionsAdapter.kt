@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.R
 import com.example.mainlist.data.Positions
@@ -14,7 +13,9 @@ import com.example.mainlist.data.Positions
 
 public class PositionsAdapter(private val context: Context) : RecyclerView.Adapter<PositionsAdapter.HolderPositions>() {
 
-    private var ListPositions = ArrayList<Positions>();
+    private var ListPositions = ArrayList<Positions>()
+    private var idCurrent = 0
+    private var idAdmin = 0
 
     class HolderPositions(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val UserNameTextView: TextView = itemView.findViewById(R.id.positionNameTxt)
@@ -36,14 +37,24 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         val positions : Positions = ListPositions[position] //заполнение данных в эл списка
         holder.UserNameTextView.text = positions.name
         var i = position+1
+        var Count = 0
+
+        if(idAdmin == 0) {
+            if (idCurrent == positions.idUser) {
+                holder.Deletedtn.visibility = View.VISIBLE
+            } else {
+                holder.Deletedtn.visibility = View.GONE
+            }
+        }
         holder.numberTextView.text="#"+i;
         holder.UserGroupTextView.text = positions.groupNumber
         holder.Deletedtn.setOnClickListener(){
             val deleted = ListPositions.removeAt(position)
             notifyDataSetChanged()
         }
-
     }
+
+
 
     fun addPosition(position: Positions) : Int{
         var count = ListPositions.size
@@ -64,9 +75,11 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         return 0
     }
 
-    fun setItems(item: MutableList<Positions>) {
+    fun setItems(item: MutableList<Positions>, id : Int, id2 : Int) {
         ListPositions.clear()
         ListPositions.addAll(item)
+        idCurrent = id
+        idAdmin = id2
         notifyDataSetChanged()
     }
 }

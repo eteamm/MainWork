@@ -39,9 +39,15 @@ class AllowGroupAdapter(private val context: Context) : RecyclerView.Adapter<All
         return allowGroupList.size
     }
 
-    fun addAllowGroup(item: AllowGroup){
+    fun addAllowGroup(item: AllowGroup) : Int{
+        allowGroupList.forEach{
+            if (it.number==item.number){
+                return 0;
+            }
+        }
         allowGroupList.add(item)
         notifyDataSetChanged()
+        return 1;
     }
 
     fun setItems(items: MutableList<AllowGroup>){
