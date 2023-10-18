@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".Activity_queue_create">
+    tools:context=".CreateTurnActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -149,7 +149,7 @@
                         app:cardElevation="0dp">
 
                         <EditText
-                            android:id="@+id/editText4"
+                            android:id="@+id/createAllowGroup"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
@@ -194,7 +194,7 @@
             android:paddingBottom="20dp">
 
             <Button
-                android:id="@+id/createBtn"
+                android:id="@+id/createBtnCreate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorMain"
@@ -206,7 +206,7 @@
                 app:rippleColor="@color/colorMain" />
 
             <Button
-                android:id="@+id/backBtn"
+                android:id="@+id/backBtnCreate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00E9EFF2"

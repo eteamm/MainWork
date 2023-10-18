@@ -2,34 +2,29 @@ package com.example.mainlist
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.adapter.AllowGroupAdapter
 import com.example.mainlist.data.AllowGroup
-import com.example.mainlist.databinding.ActivityQueueEditingBinding
 
 
-class QueueEditing : AppCompatActivity() {
-    lateinit var binding: ActivityQueueEditingBinding
+class EditTurnActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityQueueEditingBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_turn_edit)
 
         val noName = findViewById<TextView>(R.id.noName)
         val noGroups = findViewById<TextView>(R.id.noGroups)
         val saveButton = findViewById<Button>(R.id.saveButton)
         val cancelButton = findViewById<Button>(R.id.cancelButton)
         val nameMassage = findViewById<EditText>(R.id.queueNameBlock)
-        val listOfGroups = findViewById<RecyclerView>(R.id.listOfGroups)
-        val nameGroups = findViewById<EditText>(R.id.queueGroupsBlock)
         val goToMembers = findViewById<ImageView>(R.id.goToMembersBtn)
         val aboutQueue = findViewById<EditText>(R.id.queueDescriptionBlock)
 
@@ -44,46 +39,52 @@ class QueueEditing : AppCompatActivity() {
 
         saveButton.setOnClickListener {
             val msg: String = nameMassage.text.toString()
-            if (msg.trim().length == 0) {
+            if (msg.trim().isEmpty()) {
                 noName.visibility = EditText.VISIBLE
             } else {
-                val intent = Intent(this, MainScreen::class.java)
+                val intent1 = Intent(this, TurnActivity::class.java)
                 intent.putExtra("About", sendAboutQueue)
-                startActivity(intent)
+                startActivity(intent1)
+                finish()
             }
         }
 
         cancelButton.setOnClickListener {
-            val intent = Intent(this, MainScreen::class.java)
-            startActivity(intent)
+            val intent2 = Intent(this, TurnActivity::class.java)
+            startActivity(intent2)
+            finish()
         }
 
         goToMembers.setOnClickListener {
-            val intent = Intent(this, ListOfParticipants::class.java)
-            startActivity(intent)
+            val intent3 = Intent(this, MembersActivity::class.java)
+            startActivity(intent3)
         }
 
+        val allowEdit = findViewById<EditText>(R.id.queueGroupsBlock)
         val allowGroupsRec = findViewById<RecyclerView>(R.id.listOfGroups)
         allowGroupsRec.layoutManager = LinearLayoutManager(this)
-        val allowGroupList = mutableListOf<AllowGroup>()
-        val group = AllowGroup(0, 2391)
-        val group2 = AllowGroup(1, 2392)
-        val group3 = AllowGroup(2, 2393)
+        val allowGroupAdapter = AllowGroupAdapter(this)
+        allowGroupsRec.adapter = allowGroupAdapter
 
-        allowGroupList.add(group)
-        allowGroupList.add(group2)
-        allowGroupList.add(group3)
-        val allowgroupAdapter = AllowGroupAdapter(this)
-        allowGroupsRec.adapter = allowgroupAdapter
-        allowgroupAdapter.setItems(allowGroupList)
-        val text = allowgroupAdapter.itemCount.toString()
+        allowEdit.setOnKeyListener(object : View.OnKeyListener {
+            override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
+                if (event.action == KeyEvent.ACTION_DOWN &&
+                    keyCode == KeyEvent.KEYCODE_ENTER
+                ) {
+                    val s = allowEdit.text.toString()
+                    val g = AllowGroup(0, s.toInt())
+                    val created = allowGroupAdapter.addAllowGroup(g)
 
-        val duration = Toast.LENGTH_SHORT
+                    allowEdit.setText("");
+//                    TestEditText.clearFocus()
+//                    TestEditText.isCursorVisible = false
+
+                    return true
+                }
+                return false
+            }
+        })
     }
 
-    fun ExitfromCreateTurn(view: View){
-        val intent = Intent(this, Activity_Mainqueue::class.java)
-        startActivity(intent)
-    }
 
 }

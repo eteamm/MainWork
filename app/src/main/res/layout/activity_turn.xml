@@ -7,7 +7,7 @@
     android:layout_weight="1"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".Activity_Mainqueue">
+    tools:context=".TurnActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -354,7 +354,8 @@
                 android:layout_marginBottom="10dp"
                 android:visibility="gone"
                 app:cardBackgroundColor="@color/colorMainNot"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                tools:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -368,7 +369,7 @@
                         android:padding="10dp"
                         android:text="@string/warningTxtTurn"
                         android:textColor="@color/mainColorText"
-                        android:textSize="10sp"
+                        android:textSize="14sp"
                         android:visibility="visible" />
                 </LinearLayout>
 

@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.R
-import com.example.mainlist.Activity_Mainqueue
+import com.example.mainlist.TurnActivity
 import com.example.mainlist.data.Turn
 
 
@@ -47,7 +47,7 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
         holder.Number.text = turn.numberOfPeople.toString()+" "+People[turn.numberOfPeople % 10]
         if (Type){
             holder.ClickonCW.setOnClickListener(){
-                val intent = Intent(context, Activity_Mainqueue::class.java)
+                val intent = Intent(context, TurnActivity::class.java)
                 intent.putExtra("Name",turn.name)
                 intent.putExtra("Author",turn.nameCreator)
                 intent.putExtra("Description",turn.description)
@@ -64,7 +64,7 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
             holder.ButtonTextView.visibility = View.VISIBLE
             holder.Description.visibility = View.VISIBLE
             holder.ButtonTextView.setOnClickListener(){
-                val intent = Intent(context, Activity_Mainqueue::class.java)
+                val intent = Intent(context, TurnActivity::class.java)
                 intent.putExtra("Name",turn.name)
                 intent.putExtra("Author",turn.nameCreator)
                 intent.putExtra("Description",turn.description)

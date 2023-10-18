@@ -12,11 +12,11 @@ import com.example.mainlist.adapter.TurnAdapter
 import com.example.mainlist.data.Turn
 import com.google.gson.Gson
 
-class MainScreen : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mainscreen)
+        setContentView(R.layout.activity_main)
 
         val myJson = """
         [ 
@@ -166,14 +166,14 @@ class MainScreen : AppCompatActivity() {
 
         val bExit = findViewById<ImageView>(R.id.exitImageView)
         bExit.setOnClickListener {
-            val intent = Intent(this, EntryScreen::class.java)
+            val intent = Intent(this, StartActivity::class.java)
             startActivity(intent)
             finish()
         }
 
 
         bcreateturn.setOnClickListener {
-            val intent = Intent(this, Activity_queue_create::class.java)
+            val intent = Intent(this, CreateTurnActivity::class.java)
             startActivity(intent);
             finish()
         }
@@ -204,10 +204,6 @@ class MainScreen : AppCompatActivity() {
     }
 
 
-    fun CreateTurn(view : View){
-        val intent = Intent(this, Activity_Mainqueue::class.java)
-        startActivity(intent)
-    }
 
 
 

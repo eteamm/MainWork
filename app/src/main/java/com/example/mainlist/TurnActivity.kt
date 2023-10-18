@@ -17,14 +17,14 @@ import com.example.mainlist.data.Positions
 import com.google.gson.Gson
 import java.util.*
 
-class Activity_Mainqueue : AppCompatActivity() {
+class TurnActivity : AppCompatActivity() {
 
     private lateinit var inAnimation: Animation
     private lateinit var outAnimation: Animation
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mainqueue)
+        setContentView(R.layout.activity_turn)
         val myJson = """
         [{
           id: 1, 
@@ -126,9 +126,10 @@ class Activity_Mainqueue : AppCompatActivity() {
 //        NumberToGoTextView.text = positionsList[2].name.toString()
 
         Pencil.setOnClickListener {
-            val intent2 = Intent(this, QueueEditing::class.java)
+            val intent2 = Intent(this, EditTurnActivity::class.java)
             intent2.putExtra("Top", myTurnName.getText().toString())
             startActivity(intent2)
+            finish()
         }
 
 
@@ -171,12 +172,13 @@ class Activity_Mainqueue : AppCompatActivity() {
 
         }
         ButtonToPeople.setOnClickListener() {
-            val intent = Intent(this, ListOfParticipants::class.java)
+            val intent = Intent(this, MembersActivity::class.java)
             startActivity(intent);
+            finish()
         }
         val goback: ImageView = findViewById(R.id.backTurnImageView)
         goback.setOnClickListener() {
-            val intent = Intent(this, MainScreen::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }

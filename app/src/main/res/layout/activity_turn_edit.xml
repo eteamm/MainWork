@@ -304,7 +304,7 @@
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:fontFamily="@font/exoregular"
-                            android:hint="@string/editing4"
+                            android:hint="@string/allowgroupsTurn"
                             android:paddingStart="20dp"
                             android:paddingLeft="20dp"
                             android:paddingTop="20dp"
