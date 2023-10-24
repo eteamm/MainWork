@@ -10,7 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.R
 import com.example.mainlist.data.Member
 
+
 public class MemberAdapter(private val context: Context) : RecyclerView.Adapter<MemberAdapter.Memberholder>()  {
+    val IDM_A = 101
+    val IDM_B = 102
     private var memberList = ArrayList<Member>();
 
     class Memberholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -31,8 +34,34 @@ public class MemberAdapter(private val context: Context) : RecyclerView.Adapter<
     override fun onBindViewHolder(holder: Memberholder, position: Int) {
         val member : Member = memberList[position] //заполнение данных в эл списка
         holder.membernameTextView.text = member.Name
+        val button = holder.imageContextMenuButton
+        val popupMenu = androidx.appcompat.widget.PopupMenu(context, button)
+        popupMenu.inflate(R.menu.member_item)
+//        popupMenu.setOnMenuItemClickListener {
+//            when (it.itemId) {
+//                R.id.menu1 -> {
+//                    textView.text = "Вы выбрали PopupMenu 1"
+//                    true
+//                }
+//                R.id.menu2 -> {
+//                    textView.text = "Вы выбрали PopupMenu 2"
+//                    true
+//                }
+//                R.id.menu3 -> {
+//                    textView.text = "Вы выбрали PopupMenu 3"
+//                    true
+//                }
+//                else -> false
+//            }
+//        }
+
+       button.setOnClickListener {
+            popupMenu.show()
+        }
+
 
     }
+
 
     fun addMember(member: Member){
         memberList.add(member)
