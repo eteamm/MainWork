@@ -28,6 +28,18 @@ class TurnActivity : AppCompatActivity() {
         val myJson = """
         [{
           id: 1, 
+          name: "Васильев Андрей Антонович", 
+          groupNumber: 2391,
+          idUser: 5
+        },
+        {
+          id: 4, 
+          name: "Ненарокова Маргарита Олеговна", 
+          groupNumber: 3242,
+          idUser: 2
+        },
+        {
+          id: 1, 
           name: "Глоба Валерия Владимировна", 
           groupNumber: 2391,
           idUser: 1
@@ -39,10 +51,46 @@ class TurnActivity : AppCompatActivity() {
           idUser: 2
         },
         {
-          id: 2, 
-          name: "Васильев Андрей Антонович", 
+          id: 1, 
+          name: "Глоба Валерия Владимировна", 
           groupNumber: 2391,
-          idUser: 3
+          idUser: 1
+        },
+        {
+          id: 4, 
+          name: "Ненарокова Маргарита Олеговна", 
+          groupNumber: 3242,
+          idUser: 2
+        },
+        {
+          id: 1, 
+          name: "Глоба Валерия Владимировна", 
+          groupNumber: 2391,
+          idUser: 1
+        },
+        {
+          id: 4, 
+          name: "Ненарокова Маргарита Олеговна", 
+          groupNumber: 3242,
+          idUser: 2
+        },
+        {
+          id: 1, 
+          name: "Глоба Валерия Владимировна", 
+          groupNumber: 2391,
+          idUser: 1
+        },
+        {
+          id: 4, 
+          name: "Ненарокова Маргарита Олеговна", 
+          groupNumber: 3242,
+          idUser: 2
+        },
+        {
+          id: 1, 
+          name: "Глоба Валерия Владимировна", 
+          groupNumber: 2391,
+          idUser: 1
         }]
         """.trimIndent()
 
@@ -157,15 +205,18 @@ class TurnActivity : AppCompatActivity() {
         JoinBtn.setOnClickListener() {
 
 
-            var positionNew = Positions(
+            val positionNew = Positions(
                 9,
                 "Yuri",
                 "2391",
                 loggedUserId
             ) // idUser для каждого пользователя свой
-            var temp = positionsAdapter.addPosition(positionNew)
+            val temp = positionsAdapter.addPosition(positionNew)
 
-            if (temp == 0) {
+            if (temp != 0) {
+                val str = String.format(getString(R.string.warningTxtTurn), temp);
+                val textWarn = findViewById<TextView>(R.id.textWarnTurn)
+                textWarn.text=str
                 WarningTxt.visibility = View.VISIBLE
 
                 Handler().postDelayed({
