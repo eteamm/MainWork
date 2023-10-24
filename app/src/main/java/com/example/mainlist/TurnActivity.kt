@@ -78,11 +78,15 @@ class TurnActivity : AppCompatActivity() {
 //
 //        }
 
+        val intent1 = Intent(this, EditTurnActivity::class.java)
+
         val dataName = intent.getStringExtra("Name")
+        val dataNameEdit = intent1.getStringExtra("Top")
         val dataAuthor = intent.getStringExtra("Author")
         val dataDescription = intent.getStringExtra("Description")
         val dataNumberOfPeople = intent.getIntExtra("NumberOfPeople", 0)
         myTurnName.text = dataName
+        //myTurnName.text = dataNameEdit
         myTurnAuthor.text = dataAuthor
         myTurnDescription.text = "Подробнее: " + dataDescription
         myTurnNumberOfPeople.text = dataNumberOfPeople.toString()
@@ -124,13 +128,6 @@ class TurnActivity : AppCompatActivity() {
 //            count = count + 1
 //        }
 //        NumberToGoTextView.text = positionsList[2].name.toString()
-
-        Pencil.setOnClickListener {
-            val intent2 = Intent(this, EditTurnActivity::class.java)
-            intent2.putExtra("Top", myTurnName.getText().toString())
-            startActivity(intent2)
-            finish()
-        }
 
 
         if (admin == 0) {

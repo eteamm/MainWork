@@ -29,7 +29,7 @@ class EditTurnActivity : AppCompatActivity() {
         val aboutQueue = findViewById<EditText>(R.id.queueDescriptionBlock)
 
         val intent = intent
-        val top = intent.getStringExtra("Top")
+        val top = intent.getStringExtra("Top") //появление названия очереди
         nameMassage.setText(top)
 
         val sendAboutQueue = aboutQueue.text.toString()
@@ -43,9 +43,12 @@ class EditTurnActivity : AppCompatActivity() {
                 noName.visibility = EditText.VISIBLE
             } else {
                 val intent1 = Intent(this, TurnActivity::class.java)
-                intent.putExtra("About", sendAboutQueue)
+                intent1.putExtra("About", sendAboutQueue)
+                intent1.putExtra("Top", sendAboutQueue)
                 startActivity(intent1)
                 finish()
+
+
             }
         }
 
