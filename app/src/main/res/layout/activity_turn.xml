@@ -348,53 +348,53 @@
         android:background="@drawable/gradient_background"
         android:orientation="vertical"
         android:paddingLeft="40dp"
-        android:paddingTop="10dp"
+        android:paddingTop="40dp"
         android:paddingRight="40dp"
         android:paddingBottom="25dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/WarningJoinTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:visibility="gone"
-                app:cardBackgroundColor="@color/colorMainNot"
-                app:cardCornerRadius="15dp"
-                tools:visibility="visible">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/WarningJoinTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/colorMainNot"
+            app:cardCornerRadius="15dp"
+            tools:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="@string/warningTxtTurn"
-                        android:textColor="@color/mainColorText"
-                        android:textSize="14sp"
-                        android:visibility="visible" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/textWarnTurn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/warningTxtTurn"
+                    android:textColor="@color/mainColorText"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/createTurnBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorMain"
-                android:fontFamily="@font/exosemibold"
-                android:paddingLeft="20dp"
-                android:paddingTop="5sp"
-                android:paddingRight="20dp"
-                android:paddingBottom="5sp"
-                android:text="@string/joinBtnTextTurn"
-                android:textColor="@color/colorText"
-                android:textColorHighlight="@color/onButton"
-                android:textSize="20sp"
-                app:rippleColor="@color/onButton" />
+        <Button
+            android:id="@+id/createTurnBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorMain"
+            android:fontFamily="@font/exosemibold"
+            android:paddingLeft="20dp"
+            android:paddingTop="5sp"
+            android:paddingRight="20dp"
+            android:paddingBottom="5sp"
+            android:text="@string/joinBtnTextTurn"
+            android:textColor="@color/colorText"
+            android:textColorHighlight="@color/onButton"
+            android:textSize="20sp"
+            app:rippleColor="@color/onButton" />
 
     </LinearLayout>
 

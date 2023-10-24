@@ -79,20 +79,20 @@ public class PositionsAdapter(private val context: Context, val admin : Int) : R
         var count = ListPositions.size
         var last = 0
         var Type = -1
-        for(i in 0..count-1){
-            if (Type==0) break
+        for(i in count-1 downTo 0 step 1){
+            last++
             if (ListPositions[i].idUser==position.idUser) {
-                last = i + 1
                 Type = 0
+                break
             }
         }
-        last = count - last
+//        last = count - last
         if (last > 20 || Type != 0){
             ListPositions.add(position)
             notifyDataSetChanged()
             return 0
         }
-        return last
+        return 20-last
     }
 
     fun setItems(item: MutableList<Positions>, idUser : Int) {
