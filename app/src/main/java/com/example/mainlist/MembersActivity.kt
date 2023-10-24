@@ -9,6 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.adapter.MemberAdapter
+import com.example.mainlist.adapter.MyFragment
 import com.example.mainlist.data.Member
 import com.google.gson.Gson
 
@@ -16,7 +17,8 @@ class MembersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_members)
-
+        val myfragment = MyFragment()
+        getFragmentManager().beginTransaction().add(R.id.containerMember,myfragment).commit()
         val Admins = """
         [ {id: 1, Name: "Маргарита Ненарокова Олеговна", idGroup: 2391, status: 1},  {id: 2, Name: "Сергей Блохин Олегович", idGroup: 2391, status: 1}]
         """.trimIndent()
