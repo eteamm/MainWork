@@ -8,21 +8,15 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mainlist.Yuri.Activity_Mainqueue
-import com.example.mainlist.Yuri.Activity_queue_create
 import com.example.mainlist.adapter.TurnAdapter
 import com.example.mainlist.data.Turn
 import com.google.gson.Gson
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.net.HttpURLConnection
-import java.net.URL
 
-class MainScreen : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mainscreen)
+        setContentView(R.layout.activity_main)
 
         val myJson = """
         [ 
@@ -172,14 +166,14 @@ class MainScreen : AppCompatActivity() {
 
         val bExit = findViewById<ImageView>(R.id.exitImageView)
         bExit.setOnClickListener {
-            val intent = Intent(this, EntryScreen::class.java)
+            val intent = Intent(this, StartActivity::class.java)
             startActivity(intent)
             finish()
         }
 
 
         bcreateturn.setOnClickListener {
-            val intent = Intent(this, Activity_queue_create::class.java)
+            val intent = Intent(this, CreateTurnActivity::class.java)
             startActivity(intent);
             finish()
         }
@@ -210,10 +204,6 @@ class MainScreen : AppCompatActivity() {
     }
 
 
-    fun CreateTurn(view : View){
-        val intent = Intent(this, Activity_Mainqueue::class.java)
-        startActivity(intent)
-    }
 
 
 

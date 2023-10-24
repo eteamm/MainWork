@@ -1,20 +1,13 @@
 package com.example.mainlist.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.R
-import com.example.mainlist.Yuri.Activity_Mainqueue
 import com.example.mainlist.data.Member
-import com.example.mainlist.data.Turn
 
 public class MemberAdapter(private val context: Context) : RecyclerView.Adapter<MemberAdapter.Memberholder>()  {
     private var memberList = ArrayList<Member>();

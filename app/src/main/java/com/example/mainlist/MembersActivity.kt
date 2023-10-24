@@ -3,10 +3,7 @@ package com.example.mainlist
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,10 +12,10 @@ import com.example.mainlist.adapter.MemberAdapter
 import com.example.mainlist.data.Member
 import com.google.gson.Gson
 
-class ListOfParticipants : AppCompatActivity() {
+class MembersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_of_participants)
+        setContentView(R.layout.activity_members)
 
         val Admins = """
         [ {id: 1, Name: "Маргарита Ненарокова Олеговна", idGroup: 2391, status: 1},  {id: 2, Name: "Сергей Блохин Олегович", idGroup: 2391, status: 1}]

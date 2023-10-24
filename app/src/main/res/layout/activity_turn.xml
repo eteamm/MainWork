@@ -7,7 +7,7 @@
     android:layout_weight="1"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".Yuri.Activity_Mainqueue">
+    tools:context=".TurnActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -135,15 +135,14 @@
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-                                <ImageView
-                                    android:id="@+id/editTurnImg"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:onClick="ToEditTurn"
-                                    android:visibility="gone"
-                                    app:srcCompat="@drawable/pencil_icon_png_11" />
-                            </LinearLayout>
+                                    <ImageView
+                                        android:id="@+id/editTurnImg"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:visibility="visible"
+                                        app:srcCompat="@drawable/pencil_icon_png_11" />
+                                </LinearLayout>
 
                             <TextView
                                 android:id="@+id/nameTeachertxt"
@@ -357,49 +356,49 @@
         android:paddingRight="40dp"
         android:paddingBottom="25dp">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/WarningJoinTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:visibility="gone"
-            app:cardBackgroundColor="@color/colorMainNot"
-            app:cardCornerRadius="15dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/WarningJoinTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/colorMainNot"
+                app:cardCornerRadius="15dp"
+                tools:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="@string/warningTxtTurn"
-                    android:textColor="@color/mainColorText"
-                    android:textSize="10sp"
-                    android:visibility="visible" />
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/warningTxtTurn"
+                        android:textColor="@color/mainColorText"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <Button
-            android:id="@+id/createTurnBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorMain"
-            android:fontFamily="@font/exosemibold"
-            android:onClick="CreateTurn"
-            android:paddingLeft="20dp"
-            android:paddingTop="5sp"
-            android:paddingRight="20dp"
-            android:paddingBottom="5sp"
-            android:text="@string/joinBtnTextTurn"
-            android:textColor="@color/colorText"
-            android:textColorHighlight="@color/onButton"
-            android:textSize="20sp"
-            app:rippleColor="@color/onButton" />
+            <Button
+                android:id="@+id/createTurnBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorMain"
+                android:fontFamily="@font/exosemibold"
+                android:paddingLeft="20dp"
+                android:paddingTop="5sp"
+                android:paddingRight="20dp"
+                android:paddingBottom="5sp"
+                android:text="@string/joinBtnTextTurn"
+                android:textColor="@color/colorText"
+                android:textColorHighlight="@color/onButton"
+                android:textSize="20sp"
+                app:rippleColor="@color/onButton" />
 
     </LinearLayout>
 
