@@ -1,5 +1,6 @@
 package com.example.mainlist.adapter
 
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -34,6 +35,7 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
 
 
     override fun onBindViewHolder(holder: HolderPositions, position: Int) {
+
         val positions : Positions = ListPositions[position] //заполнение данных в эл списка
         holder.UserNameTextView.text = positions.name
         var i = position+1

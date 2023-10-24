@@ -5,6 +5,7 @@ import android.view.KeyEvent
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,7 +25,7 @@ class CreateTurnActivity : AppCompatActivity() {
 
         val saveButton = findViewById<Button>(R.id.createBtnCreate)
         val cancelButton = findViewById<Button>(R.id.backBtnCreate)
-
+        val warningText1 : TextView = findViewById(R.id.textView14)
         saveButton.setOnClickListener {
 //            val msg: String = nameMassage.text.toString()
 //            if (msg.trim().isEmpty()) {
@@ -57,6 +58,12 @@ class CreateTurnActivity : AppCompatActivity() {
 //                    TestEditText.isCursorVisible = false
 
                     return true
+                }
+                if(allowEdit.length() < 4 && allowEdit.length() >= 1){
+                    warningText1.visibility = View.VISIBLE
+                }
+                else if(allowEdit.length() == 4 || allowEdit.length() == 0){
+                    warningText1.visibility = View.GONE
                 }
                 return false
             }

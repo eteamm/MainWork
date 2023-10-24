@@ -47,7 +47,7 @@ class TurnActivity : AppCompatActivity() {
         """.trimIndent()
 
         var count = 0
-        val logged_user_id = 3
+        val logged_user_id = 0
         val creator_user_id = 2
         val admin = 0 // модератор!!!
 
@@ -133,7 +133,7 @@ class TurnActivity : AppCompatActivity() {
 //        NumberToGoTextView.text = positionsList[2].name.toString()
 
 
-        if (admin == 0) {
+        if (logged_user_id == admin) {
             ShareBtn1.visibility = View.GONE
 
         }
@@ -187,6 +187,12 @@ class TurnActivity : AppCompatActivity() {
         val goback: ImageView = findViewById(R.id.backTurnImageView)
         goback.setOnClickListener() {
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        val cancelButton : Button = findViewById(R.id.exitTurnBtn)
+        cancelButton.setOnClickListener(){
+            val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
             finish()
         }
