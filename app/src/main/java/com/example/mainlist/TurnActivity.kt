@@ -85,8 +85,11 @@ class TurnActivity : AppCompatActivity() {
         val dataAuthor = intent.getStringExtra("Author")
         val dataDescription = intent.getStringExtra("Description")
         val dataNumberOfPeople = intent.getIntExtra("NumberOfPeople", 0)
-        myTurnName.text = dataName
-        //myTurnName.text = dataNameEdit
+        if (dataNameEdit.toString().isEmpty()) {
+           myTurnName.text = dataNameEdit
+        } else {
+            myTurnName.text = dataName
+        }
         myTurnAuthor.text = dataAuthor
         myTurnDescription.text = "Подробнее: " + dataDescription
         myTurnNumberOfPeople.text = dataNumberOfPeople.toString()
@@ -173,6 +176,14 @@ class TurnActivity : AppCompatActivity() {
             startActivity(intent);
             finish()
         }
+
+        Pencil.setOnClickListener {
+            val intent2 = Intent(this, EditTurnActivity::class.java)
+            intent2.putExtra("Top", myTurnName.getText().toString())
+            startActivity(intent2)
+            finish()
+        }
+
         val goback: ImageView = findViewById(R.id.backTurnImageView)
         goback.setOnClickListener() {
             val intent = Intent(this, MainActivity::class.java)

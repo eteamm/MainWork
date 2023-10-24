@@ -28,8 +28,8 @@ class EditTurnActivity : AppCompatActivity() {
         val goToMembers = findViewById<ImageView>(R.id.goToMembersBtn)
         val aboutQueue = findViewById<EditText>(R.id.queueDescriptionBlock)
 
-        val intent = intent
-        val top = intent.getStringExtra("Top") //появление названия очереди
+        val intent1 = intent
+        val top = intent1.getStringExtra("Top") //появление названия очереди
         nameMassage.setText(top)
 
         val sendAboutQueue = aboutQueue.text.toString()
@@ -44,7 +44,7 @@ class EditTurnActivity : AppCompatActivity() {
             } else {
                 val intent1 = Intent(this, TurnActivity::class.java)
                 intent1.putExtra("About", sendAboutQueue)
-                intent1.putExtra("Top", sendAboutQueue)
+                intent1.putExtra("Top", nameMassage.getText().toString())
                 startActivity(intent1)
                 finish()
 
