@@ -2,12 +2,11 @@ package com.example.mainlist.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.R
 import com.example.mainlist.data.Member
@@ -21,7 +20,7 @@ public class MemberAdapter(private val context: Context) : RecyclerView.Adapter<
     class MemberHolder(itemView: View, c : Context) : RecyclerView.ViewHolder(itemView){
         val memberNameTextView: TextView = itemView.findViewById(R.id.memberNameTxt)
         val imageContextMenuButton: ImageButton = itemView.findViewById(R.id.pointsMember)
-        val popupMenu = PopupMenu(c, imageContextMenuButton)
+        val imageView : ImageView = itemView.findViewById(R.id.pointsMember)
 
     }
 
@@ -37,9 +36,10 @@ public class MemberAdapter(private val context: Context) : RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: MemberHolder, position: Int) {
         val member : Member = memberList[position] //заполнение данных в эл списка
+        val popupMenu = androidx.appcompat.widget.PopupMenu(context, holder.imageView)
         holder.memberNameTextView.text = member.Name
         val button = holder.imageContextMenuButton
-        holder.popupMenu.inflate(R.menu.member_item)
+        popupMenu.inflate(R.menu.member_item)
 //        popupMenu.setOnMenuItemClickListener {
 //            when (it.itemId) {
 //                R.id.menu1 -> {
@@ -58,8 +58,8 @@ public class MemberAdapter(private val context: Context) : RecyclerView.Adapter<
 //            }
 //        }
 
-       button.setOnClickListener {
-           holder.popupMenu.show()
+       holder.imageView.setOnClickListener {
+           popupMenu.show()
         }
 
 

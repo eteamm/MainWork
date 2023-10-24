@@ -12,4 +12,6 @@
         android:title="@string/memberAct2"
         android:icon="@drawable/delete"
         app:showAsAction="never"/>
+
+
 </menu>
