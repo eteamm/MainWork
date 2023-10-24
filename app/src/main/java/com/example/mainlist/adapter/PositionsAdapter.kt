@@ -6,27 +6,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.R
 import com.example.mainlist.data.Positions
 
 
-public class PositionsAdapter(private val context: Context) : RecyclerView.Adapter<PositionsAdapter.HolderPositions>() {
+public class PositionsAdapter(private val context: Context, val admin : Int) : RecyclerView.Adapter<PositionsAdapter.HolderPositions>() {
 
     private var ListPositions = ArrayList<Positions>()
     private var idCurrent = 0
-    private var idAdmin = 0
 
     class HolderPositions(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val UserNameTextView: TextView = itemView.findViewById(R.id.positionNameTxt)
-        val UserGroupTextView: TextView = itemView.findViewById(R.id.positionNumberTxt)
-        val Deletedtn = itemView.findViewById<ImageButton>(R.id.deletePositionImgBtn)
-        val numberTextView = itemView.findViewById<TextView>(R.id.positionIdTxt)
+        val userNameTextView: TextView = itemView.findViewById(R.id.positionNameTxt)
+        val userGroupTextView: TextView = itemView.findViewById(R.id.positionNumberTxt)
+        val numberTextView: TextView = itemView.findViewById<TextView>(R.id.positionIdTxt)
+        val layout: LinearLayout = itemView.findViewById<LinearLayout>(R.id.contentLay)
+        fun getDeleteButton(status : Int) : ImageButton? {
+            return if (status>0){
+                itemView.findViewById<ImageButton>(R.id.deletePositionImgBtn)
+            } else null
+        }
     }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PositionsAdapter.HolderPositions {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.position, parent, false)
-        return PositionsAdapter.HolderPositions(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderPositions {
+        val view = if (admin>0){
+            LayoutInflater.from(parent.context).inflate(R.layout.position_admin, parent, false)
+        } else{
+            LayoutInflater.from(parent.context).inflate(R.layout.position, parent, false)
+        }
+        return HolderPositions(view)
     }
 
     override fun getItemCount(): Int {
@@ -37,23 +46,31 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
     override fun onBindViewHolder(holder: HolderPositions, position: Int) {
 
         val positions : Positions = ListPositions[position] //заполнение данных в эл списка
-        holder.UserNameTextView.text = positions.name
+        holder.userNameTextView.text = positions.name
         var i = position+1
-        var Count = 0
+        var count = 0
 
-        if(idAdmin == 0) {
+        if(admin == 0) {
             if (idCurrent == positions.idUser) {
-                holder.Deletedtn.visibility = View.VISIBLE
-            } else {
-                holder.Deletedtn.visibility = View.GONE
+                val exitPosition = ImageButton(context)
+                exitPosition.setOnClickListener{
+                    val deleted = ListPositions.removeAt(position)
+                    notifyDataSetChanged()
+                }
+                holder.layout.addView(exitPosition)
+            }
+        }
+        else{
+            val deletedBtn = holder.getDeleteButton(admin)
+            if (deletedBtn!=null){
+                deletedBtn.setOnClickListener{
+                    val deleted = ListPositions.removeAt(position)
+                    notifyDataSetChanged()
+                }
             }
         }
         holder.numberTextView.text="#"+i;
-        holder.UserGroupTextView.text = positions.groupNumber
-        holder.Deletedtn.setOnClickListener(){
-            val deleted = ListPositions.removeAt(position)
-            notifyDataSetChanged()
-        }
+        holder.userGroupTextView.text = positions.groupNumber
     }
 
 
@@ -62,26 +79,26 @@ public class PositionsAdapter(private val context: Context) : RecyclerView.Adapt
         var count = ListPositions.size
         var last = 0
         var Type = -1
-            for(i in 0..count-1){
-                if (ListPositions[i].idUser==position.idUser) {
-                    last = i + 1
-                    Type = 0
-                }
+        for(i in 0..count-1){
+            if (Type==0) break
+            if (ListPositions[i].idUser==position.idUser) {
+                last = i + 1
+                Type = 0
+            }
         }
         last = count - last
         if (last > 20 || Type != 0){
             ListPositions.add(position)
             notifyDataSetChanged()
-            return 1
+            return 0
         }
-        return 0
+        return last
     }
 
-    fun setItems(item: MutableList<Positions>, id : Int, id2 : Int) {
+    fun setItems(item: MutableList<Positions>, idUser : Int) {
         ListPositions.clear()
         ListPositions.addAll(item)
-        idCurrent = id
-        idAdmin = id2
+        idCurrent = idUser
         notifyDataSetChanged()
     }
 }

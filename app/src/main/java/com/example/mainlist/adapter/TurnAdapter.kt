@@ -15,7 +15,7 @@ import com.example.mainlist.TurnActivity
 import com.example.mainlist.data.Turn
 
 
-public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<TurnAdapter.turnHolder>() {
+public class TurnAdapter(private val context: Context, private val id_user : Int) : RecyclerView.Adapter<TurnAdapter.turnHolder>() {
     private var turnList = ArrayList<Turn>();
     private var Type : Boolean = false;
 
@@ -52,6 +52,8 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
                 intent.putExtra("Author",turn.nameCreator)
                 intent.putExtra("Description",turn.description)
                 intent.putExtra("NumberOfPeople",turn.numberOfPeople)
+                intent.putExtra("IdCreator",turn.idUser)
+                intent.putExtra("CurrentUser", id_user)
                 context.startActivity(intent)
             }
             holder.Join.visibility = View.GONE
@@ -69,6 +71,8 @@ public class TurnAdapter(private val context: Context) : RecyclerView.Adapter<Tu
                 intent.putExtra("Author",turn.nameCreator)
                 intent.putExtra("Description",turn.description)
                 intent.putExtra("NumberOfPeople",turn.numberOfPeople)
+                intent.putExtra("IdCreator",turn.idUser)
+                intent.putExtra("CurrentUser", id_user)
                 context.startActivity(intent)
 
             }

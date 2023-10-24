@@ -46,10 +46,7 @@ class TurnActivity : AppCompatActivity() {
         }]
         """.trimIndent()
 
-        var count = 0
-        val logged_user_id = 0
-        val creator_user_id = 2
-        val admin = 0 // модератор!!!
+
 
         val Pencil: ImageView = findViewById(R.id.editTurnImg)
 
@@ -85,6 +82,16 @@ class TurnActivity : AppCompatActivity() {
         val dataAuthor = intent.getStringExtra("Author")
         val dataDescription = intent.getStringExtra("Description")
         val dataNumberOfPeople = intent.getIntExtra("NumberOfPeople", 0)
+        var count = 0
+
+        val loggedUserId = intent.getIntExtra("CurrentUser",0)
+        val creatorUserId = intent.getIntExtra("IdCreator",0)
+
+
+        var admin = 0 // модератор!!!
+        if (loggedUserId==creatorUserId){
+            admin = 2
+        }
         if (dataNameEdit.toString().isEmpty()) {
            myTurnName.text = dataNameEdit
         } else {
@@ -112,11 +119,11 @@ class TurnActivity : AppCompatActivity() {
         val WarningTxt: CardView = findViewById(R.id.WarningJoinTxt)
         val ShareBtn1: Button = findViewById(R.id.ShareBtn)
 
-        val positionsAdapter = PositionsAdapter(this)
+        val positionsAdapter = PositionsAdapter(this, admin)
         val positionsList = mutableListOf<Positions>()
         var b = true
         responseMainqueue?.forEach {
-            if (logged_user_id != it.idUser && b) {
+            if (loggedUserId != it.idUser && b) {
                 count++
             } else {
                 b = false
@@ -125,7 +132,7 @@ class TurnActivity : AppCompatActivity() {
             positionsList.add(position)
         }
         recyclerView.adapter = positionsAdapter
-        positionsAdapter.setItems(positionsList, logged_user_id, admin)
+        positionsAdapter.setItems(positionsList, loggedUserId)
         numberToGoTextView.text = "До твоей ближайшей очереди " + count.toString() + " позиции"
 //        while (logged_user_id!= positionsList[count].idUser){
 //            count = count + 1
@@ -133,12 +140,15 @@ class TurnActivity : AppCompatActivity() {
 //        NumberToGoTextView.text = positionsList[2].name.toString()
 
 
-        if (logged_user_id == admin) {
+        if (loggedUserId == admin) {
             ShareBtn1.visibility = View.GONE
 
         }
-        if (logged_user_id == creator_user_id) {
+        if (loggedUserId == creatorUserId) {
             Pencil.visibility = View.VISIBLE
+        }
+        else{
+            Pencil.visibility = View.GONE
         }
 
 
@@ -151,7 +161,7 @@ class TurnActivity : AppCompatActivity() {
                 9,
                 "Yuri",
                 "2391",
-                logged_user_id
+                loggedUserId
             ) // idUser для каждого пользователя свой
             var temp = positionsAdapter.addPosition(positionNew)
 

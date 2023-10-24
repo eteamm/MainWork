@@ -139,10 +139,10 @@ class MainActivity : AppCompatActivity() {
             }
         ]
         """.trimIndent()
-
-        var gson = Gson()
-        var MyTurns = gson?.fromJson(myJson,Array<Turn>::class.java)?.toList()
-        var InDostupTurns = gson?.fromJson(dostupJson, Array<Turn>::class.java)?.toList()
+        val loggedUserId = 5
+        val gson = Gson()
+        val MyTurns = gson?.fromJson(myJson,Array<Turn>::class.java)?.toList()
+        val InDostupTurns = gson?.fromJson(dostupJson, Array<Turn>::class.java)?.toList()
 
         val bcreateturn = findViewById<Button>(R.id.CreateTurnBtn)
         val MyTurnsBtn = findViewById<Button>(R.id.bMy)
@@ -154,7 +154,7 @@ class MainActivity : AppCompatActivity() {
 //        recyclerView.layoutManager = customLinearLayout
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager =layoutManager;
-        val turnAdapter = TurnAdapter(this)
+        val turnAdapter = TurnAdapter(this,loggedUserId)
         recyclerView.adapter = turnAdapter
         val turnList = mutableListOf<Turn>()
         MyTurns?.forEach {
