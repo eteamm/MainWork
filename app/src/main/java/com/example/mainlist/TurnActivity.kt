@@ -124,31 +124,53 @@ class TurnActivity : AppCompatActivity() {
 //        }
 
         val intent1 = Intent(this, EditTurnActivity::class.java)
+        val category = intent.categories
+        val name : String?
+        val desc : String?
+        val author : String?
+        var loggedUserId = 1
+        var creatorUserId = 1
+        if (category.contains("CreateTurn")){
+            name = intent.getStringExtra("NameTurn")
+            desc = intent.getStringExtra("About")
+            val authorID = intent.getIntExtra("Author",0)
+            author = "Васильев Андрей Антонович"
+            myTurnName.text = name
+            myTurnAuthor.text = author
+            if (desc != null){
+                if (!desc.isEmpty()){
+                    val description = resources.getString(R.string.descriptionBoxTurnCurrent,desc)
+                    myTurnDescription.text = description
+                }
+            }
+            loggedUserId = authorID
+            creatorUserId = authorID
+            myTurnNumberOfPeople.text = "1"
+            myTurnPeopleTextView.text = People[1]
+        }
+        else if(category.contains("CurrentTurn")){
+            name = intent.getStringExtra("Name")
+            desc = intent.getStringExtra("Description")
+            author = intent.getStringExtra("Author")
+            myTurnName.text = name
+            myTurnAuthor.text = author
+            if (desc != null){
+                if (!desc.isEmpty()){
+                    val description = resources.getString(R.string.descriptionBoxTurnCurrent,desc)
+                    myTurnDescription.text = description
+                }
+            }
+            myTurnNumberOfPeople.text = intent.getIntExtra("NumberOfPeople",0).toString()
+            myTurnPeopleTextView.text = People[intent.getIntExtra("NumberOfPeople",0)%10]
+            loggedUserId = intent.getIntExtra("CurrentUser",0)
+            creatorUserId = intent.getIntExtra("IdCreator",0)
 
-        val dataName = intent.getStringExtra("Name")
-        val dataNameEdit = intent1.getStringExtra("Top")
-        val dataAuthor = intent.getStringExtra("Author")
-        val dataDescription = intent.getStringExtra("Description")
-        val dataNumberOfPeople = intent.getIntExtra("NumberOfPeople", 0)
+        }
         var count = 0
-
-        val loggedUserId = intent.getIntExtra("CurrentUser",0)
-        val creatorUserId = intent.getIntExtra("IdCreator",0)
-
-
         var admin = 0 // модератор!!!
         if (loggedUserId==creatorUserId){
             admin = 2
         }
-        if (dataNameEdit.toString().isEmpty()) {
-           myTurnName.text = dataNameEdit
-        } else {
-            myTurnName.text = dataName
-        }
-        myTurnAuthor.text = dataAuthor
-        myTurnDescription.text = "Подробнее: " + dataDescription
-        myTurnNumberOfPeople.text = dataNumberOfPeople.toString()
-        myTurnPeopleTextView.text = People[dataNumberOfPeople % 10]
         var gsonMainqueue = Gson()
         var responseMainqueue =
             gsonMainqueue?.fromJson(myJson, Array<Positions>::class.java)?.toList()
@@ -163,7 +185,7 @@ class TurnActivity : AppCompatActivity() {
         val ButtonToPeople: Button = findViewById(R.id.turnPeopleBtn)
         val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.isNestedScrollingEnabled = false;
+        recyclerView.isNestedScrollingEnabled = false
 
         val WarningTxt: CardView = findViewById(R.id.WarningJoinTxt)
         val ShareBtn1: Button = findViewById(R.id.ShareBtn)
@@ -216,7 +238,7 @@ class TurnActivity : AppCompatActivity() {
 
             if (temp != 0) {
                 temp++
-                val str = String.format(getString(R.string.warningTxtTurn), temp);
+                val str = String.format(getString(R.string.warningTxtTurn), temp)
                 val textWarn = findViewById<TextView>(R.id.textWarnTurn)
                 textWarn.text=str
                 WarningTxt.visibility = View.VISIBLE
@@ -237,7 +259,7 @@ class TurnActivity : AppCompatActivity() {
         }
         ButtonToPeople.setOnClickListener() {
             val intent = Intent(this, MembersActivity::class.java)
-            startActivity(intent);
+            startActivity(intent)
             finish()
         }
 

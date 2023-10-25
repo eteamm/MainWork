@@ -12,7 +12,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -32,25 +31,34 @@ class CreateTurnActivity : AppCompatActivity() {
         allowGroupAdapter.setItems(allowGroupList)
 
 
-        val nameTurn : EditText = findViewById(R.id.editText2)
+        val nameTurn : EditText = findViewById(R.id.createNameTurn)
+        val descTurn : EditText = findViewById(R.id.DescCreate)
         val warningText : TextView = findViewById(R.id.textView5)
 
         val saveButton = findViewById<Button>(R.id.createBtnCreate)
         val cancelButton = findViewById<Button>(R.id.backBtnCreate)
         val warningText1 : TextView = findViewById(R.id.textView14)
 
-
+        val idUser = intent.getIntExtra("idUser",-1);
 
         saveButton.setOnClickListener {
-//            val msg: String = nameMassage.text.toString()
-//            if (msg.trim().isEmpty()) {
-//                noName.visibility = EditText.VISIBLE
-//            } else {
+            val msg: String = nameTurn.text.toString()
+            if (msg.trim().isEmpty()) {
+                val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                if (Build.VERSION.SDK_INT >= 26) {
+                    vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE))
+                } else {
+                    vibrator.vibrate(200)
+                }
+            } else {
                 val intent1 = Intent(this, TurnActivity::class.java)
-//                intent.putExtra("About", sendAboutQueue)
+                intent1.addCategory("CreateTurn")
+                intent1.putExtra("NameTurn", nameTurn.text.toString())
+                intent1.putExtra("About", descTurn.text.toString())
+                intent1.putExtra("Author", idUser)
                 startActivity(intent1)
-            finish()
-//            }
+                finish()
+            }
         }
 
         cancelButton.setOnClickListener {
@@ -92,11 +100,6 @@ class CreateTurnActivity : AppCompatActivity() {
         allowEdit.setOnKeyListener(object : View.OnKeyListener {
             override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
                 if (keyCode == KeyEvent.KEYCODE_ENTER) {
-                    val text = allowEdit.text.toString()
-                    val duration = Toast.LENGTH_SHORT
-
-                    val toast = Toast.makeText(applicationContext, text, duration)
-                    toast.show()
                     val s = allowEdit.text.toString()
                     if (s.length == 4 && isNumeric(s)){
                         warningText1.visibility = View.GONE
@@ -108,7 +111,7 @@ class CreateTurnActivity : AppCompatActivity() {
                         allowEdit.requestFocus()
                         allowEdit.isCursorVisible = true
                     }
-                    else if (s.length<4 || !isNumeric(s)){
+                    else if ((event.action == KeyEvent.ACTION_DOWN)){
                         warningText1.visibility = View.VISIBLE
                         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                         if (Build.VERSION.SDK_INT >= 26) {

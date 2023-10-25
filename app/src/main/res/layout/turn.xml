@@ -43,6 +43,9 @@
                         android:paddingBottom="2dp"
                         android:text="@string/turnInfoName"
                         android:textColor="@color/white"
+                        android:textColorHighlight="@null"
+                        android:textColorHint="@null"
+                        android:textColorLink="@null"
                         android:textSize="20sp" />
 
                     <LinearLayout

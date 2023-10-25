@@ -68,7 +68,7 @@
                     app:cardElevation="0dp">
 
                     <EditText
-                        android:id="@+id/editText2"
+                        android:id="@+id/createNameTurn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -79,7 +79,7 @@
                         android:paddingStart="20dp"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"
-                        android:paddingEnd="10dp"
+                        android:paddingRight="20dp"
                         android:paddingBottom="20dp"
                         android:textColor="@color/colorTextSecond"
                         android:textColorHint="@color/notImportant"
@@ -117,15 +117,16 @@
                     app:cardElevation="0dp">
 
                     <EditText
-                        android:id="@+id/editText3"
+                        android:id="@+id/DescCreate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/exoregular"
                         android:gravity="start|center_vertical"
-                        android:hint="@string/editing2"
-                        android:inputType="text"
+                        android:hint="@string/descriptionTurnCreate1"
+                        android:inputType="text|textMultiLine"
+                        android:maxHeight="200dp"
                         android:paddingStart="20dp"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"

@@ -35,8 +35,8 @@
     <string name="TitileListOfParticipants">Зачётная неделя</string>
     <string name="AdminsText">АДМИНИСТРАТОРЫ</string>
     <string name="StudentsText">УЧАСТНИКИ</string>
-    <string name="AdminsQuantity">2 администратора</string>
-    <string name="StudentsQuantity">4 участника</string>
+    <string name="AdminsQuantity">%1$d администратора</string>
+    <string name="StudentsQuantity">%1$d участника</string>
     <string name="search">введите нужное имя...</string>
 
     <string name="mainTextTurn">Очередь</string>
@@ -46,7 +46,8 @@
     <string name="nameTeacherTurn">Имя преподавателя</string>
     <string name="numberPeopleTurn">132</string>
     <string name="peopleBoxTurn">человека</string>
-    <string name="descriptionBoxTurn">Приходим в аудиторию 1123 в 15 00. С собой иметь тетрадь, ручку</string>
+    <string name="descriptionBoxTurn">Описание отстутствует.</string>
+    <string name="descriptionBoxTurnCurrent">Подробнее: %1$s</string>
     <string name="turnBtnTextTurn">участники</string>
     <string name="exitBtnTextTurn">выйти</string>
     <string name="joinBtnTextTurn">встать в очередь</string>
@@ -59,6 +60,7 @@
     <string name="mainTextCreatedesc">новая очередь</string>
     <string name="nameTurnCreate">название очереди</string>
     <string name="descriptionTurnCreate">описание очереди</string>
+    <string name="descriptionTurnCreate1">Описание очереди</string>
     <string name="groupsCreate">допустимые группы</string>
     <string name="createBtnCreate">создать</string>
     <string name="cancelBtnCreate">отмена</string>

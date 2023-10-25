@@ -17,8 +17,6 @@ class MembersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_members)
-        val myfragment = MyFragment()
-        getFragmentManager().beginTransaction().add(R.id.containerMember,myfragment).commit()
         val Admins = """
         [ {id: 1, Name: "Маргарита Ненарокова Олеговна", idGroup: 2391, status: 1},  {id: 2, Name: "Сергей Блохин Олегович", idGroup: 2391, status: 1}]
         """.trimIndent()
@@ -52,6 +50,13 @@ class MembersActivity : AppCompatActivity() {
             turnList2.add(0, memberlist)
         }
         UsersAdapter.setItems(turnList2)
+
+        val adminsText = resources.getString(R.string.AdminsQuantity,AdminsAdapter.itemCount)
+        val admins : TextView = findViewById(R.id.admins)
+        admins.text = adminsText
+        val usersText = resources.getString(R.string.StudentsQuantity,UsersAdapter.itemCount)
+        val users : TextView = findViewById(R.id.students)
+        users.text = usersText
 
         val SearchButton1 = findViewById<ImageButton>(R.id.searchButton1)
         val SearchButton2 = findViewById<ImageButton>(R.id.searchButton2)

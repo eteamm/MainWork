@@ -27,6 +27,9 @@ public class TurnAdapter(private val context: Context, private val id_user : Int
         val Number : TextView = itemView.findViewById(R.id.turnSizeElement)
         val ClickonCW:CardView = itemView.findViewById(R.id.TurnCV)
         val Join = itemView.findViewById<LinearLayout>(R.id.joinLayout)
+        fun getThisColor(context : Context) : Int{
+            return context.resources.getColor(R.color.colorMain)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): turnHolder {
@@ -41,6 +44,9 @@ public class TurnAdapter(private val context: Context, private val id_user : Int
     override fun onBindViewHolder(holder: turnHolder, position: Int) {
         val turn : Turn = turnList[position] //заполнение данных в эл списка
         holder.nameTextView.text = turn.name
+        if (turn.idUser==id_user){
+            holder.nameTextView.setTextColor(holder.getThisColor(context))
+        }
         holder.Description.text ="Подробнее: " + turn.description
         holder.Author.text = turn.nameCreator
         val People: Array<String> = arrayOf("человек","человек","человека","человека","человека","человек","человек","человек","человек","человек")
@@ -48,6 +54,7 @@ public class TurnAdapter(private val context: Context, private val id_user : Int
         if (Type){
             holder.ClickonCW.setOnClickListener(){
                 val intent = Intent(context, TurnActivity::class.java)
+                intent.addCategory("CurrentTurn")
                 intent.putExtra("Name",turn.name)
                 intent.putExtra("Author",turn.nameCreator)
                 intent.putExtra("Description",turn.description)

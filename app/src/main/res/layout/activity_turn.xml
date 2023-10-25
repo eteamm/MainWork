@@ -135,9 +135,11 @@
                                         android:id="@+id/editTurnImg"
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
+                                        android:layout_gravity="center"
                                         android:layout_weight="1"
+                                        android:paddingLeft="10dp"
                                         android:visibility="gone"
-                                        app:srcCompat="@drawable/pencil_icon_png_11"
+                                        app:srcCompat="@drawable/settings"
                                         tools:visibility="visible" />
                                 </LinearLayout>
 

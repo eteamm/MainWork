@@ -175,6 +175,7 @@ class MainActivity : AppCompatActivity() {
 
         bcreateturn.setOnClickListener {
             val intent = Intent(this, CreateTurnActivity::class.java)
+            intent.putExtra("idUser", loggedUserId)
             startActivity(intent);
             finish()
         }

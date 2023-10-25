@@ -41,37 +41,38 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/exoregular"
-                    android:paddingBottom="20dp"
+                    android:paddingBottom="10dp"
                     android:text="@string/ListOfParticipantsDesc"
                     android:textColor="@color/colorTextSecond"
                     android:textSize="13sp" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/admins"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="45dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/exoregular"
                         android:gravity="center"
+                        android:padding="10dp"
                         android:text="@string/AdminsQuantity"
                         android:textColor="@color/colorMain"
                         android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/students"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="60dp"
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/interproba"
                         android:gravity="center"
+                        android:padding="10dp"
                         android:text="@string/StudentsQuantity"
                         android:textColor="@color/colorMain"
                         android:textSize="15sp" />
