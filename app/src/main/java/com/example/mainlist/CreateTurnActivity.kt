@@ -90,21 +90,19 @@ class CreateTurnActivity : AppCompatActivity() {
 
         allowEdit.setOnKeyListener(object : View.OnKeyListener {
             override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
-                val s = allowEdit.text.toString()
-                if (event.action == KeyEvent.ACTION_DOWN &&
-                    keyCode == KeyEvent.KEYCODE_ENTER
-                ) {
-                    if (allowEdit.length() == 4 && isNumeric(s)){
+                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                    val s = allowEdit.text.toString()
+                    if (s.length == 4 && isNumeric(s)){
                         warningText1.visibility = View.GONE
 
                         val g = AllowGroup(0, s.toInt())
-                        val created = allowGroupAdapter.addAllowGroup(g)
+                        allowGroupAdapter.addAllowGroup(g)
 
-                        allowEdit.setText("")
+
                         allowEdit.requestFocus()
                         allowEdit.isCursorVisible = true
                     }
-                    else{
+                    else if (s.length<4 || !isNumeric(s)){
                         warningText1.visibility = View.VISIBLE
                         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                         if (Build.VERSION.SDK_INT >= 26) {
@@ -112,13 +110,13 @@ class CreateTurnActivity : AppCompatActivity() {
                         } else {
                             vibrator.vibrate(200)
                         }
-                        allowEdit.requestFocus()
-                        allowEdit.isCursorVisible = true
+//                        allowEdit.requestFocus()
+//                        allowEdit.isCursorVisible = true
 
                     }
+                    allowEdit.setText("")
                     allowEdit.requestFocus()
                     allowEdit.isCursorVisible = true
-
                     return true
                 }
 
