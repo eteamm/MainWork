@@ -23,6 +23,7 @@ public class PositionsAdapter(private val context: Context, val admin : Int) : R
         val userGroupTextView: TextView = itemView.findViewById(R.id.positionNumberTxt)
         val numberTextView: TextView = itemView.findViewById<TextView>(R.id.positionIdTxt)
         val layout: LinearLayout = itemView.findViewById<LinearLayout>(R.id.contentLay)
+        val src = R.drawable.cancel
         fun getDeleteButton(status : Int) : ImageButton? {
             return if (status>0){
                 itemView.findViewById<ImageButton>(R.id.deletePositionImgBtn)
@@ -53,6 +54,8 @@ public class PositionsAdapter(private val context: Context, val admin : Int) : R
         if(admin == 0) {
             if (idCurrent == positions.idUser) {
                 val exitPosition = ImageButton(context)
+                exitPosition.setImageResource(holder.src)
+                exitPosition.background = null
                 exitPosition.setOnClickListener{
                     val deleted = ListPositions.removeAt(position)
                     notifyDataSetChanged()

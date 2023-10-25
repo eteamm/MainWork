@@ -68,6 +68,7 @@ class EditTurnActivity : AppCompatActivity() {
         allowGroupsRec.layoutManager = LinearLayoutManager(this)
         val allowGroupAdapter = AllowGroupAdapter(this)
         allowGroupsRec.adapter = allowGroupAdapter
+        allowGroupsRec.isNestedScrollingEnabled = false;
 
         allowEdit.setOnKeyListener(object : View.OnKeyListener {
             override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
@@ -79,6 +80,7 @@ class EditTurnActivity : AppCompatActivity() {
                     val created = allowGroupAdapter.addAllowGroup(g)
 
                     allowEdit.setText("");
+
 //                    TestEditText.clearFocus()
 //                    TestEditText.isCursorVisible = false
 

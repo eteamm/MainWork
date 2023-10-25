@@ -163,6 +163,7 @@ class TurnActivity : AppCompatActivity() {
         val ButtonToPeople: Button = findViewById(R.id.turnPeopleBtn)
         val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.isNestedScrollingEnabled = false;
 
         val WarningTxt: CardView = findViewById(R.id.WarningJoinTxt)
         val ShareBtn1: Button = findViewById(R.id.ShareBtn)
@@ -204,16 +205,17 @@ class TurnActivity : AppCompatActivity() {
 
         JoinBtn.setOnClickListener() {
 
-
+            JoinBtn.isClickable = false
             val positionNew = Positions(
                 9,
                 "Yuri",
                 "2391",
                 loggedUserId
             ) // idUser для каждого пользователя свой
-            val temp = positionsAdapter.addPosition(positionNew)
+            var temp = positionsAdapter.addPosition(positionNew)
 
             if (temp != 0) {
+                temp++
                 val str = String.format(getString(R.string.warningTxtTurn), temp);
                 val textWarn = findViewById<TextView>(R.id.textWarnTurn)
                 textWarn.text=str
@@ -223,6 +225,7 @@ class TurnActivity : AppCompatActivity() {
                     WarningTxt.startAnimation(outAnimation)
                     Handler().postDelayed({
                         WarningTxt.visibility = View.GONE
+                        JoinBtn.isClickable = true
                     }, 2000)
                 }, 3000)
 

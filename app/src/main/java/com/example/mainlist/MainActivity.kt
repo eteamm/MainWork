@@ -162,7 +162,7 @@ class MainActivity : AppCompatActivity() {
             turnList.add(0, turn)
         }
         turnAdapter.setItems(turnList, true)
-        recyclerView.setNestedScrollingEnabled(false);
+        recyclerView.isNestedScrollingEnabled = false;
 
 
         val bExit = findViewById<ImageView>(R.id.exitImageView)

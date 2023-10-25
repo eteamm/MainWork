@@ -1,6 +1,10 @@
 package com.example.mainlist
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.KeyEvent
@@ -23,6 +27,7 @@ class CreateTurnActivity : AppCompatActivity() {
         val allowEdit = findViewById<EditText>(R.id.createAllowGroup)
         val allowGroupAdapter = AllowGroupAdapter(this)
         allowGroupsRec.adapter = allowGroupAdapter
+        allowGroupsRec.isNestedScrollingEnabled = false;
         allowGroupAdapter.setItems(allowGroupList)
 
 
@@ -60,7 +65,7 @@ class CreateTurnActivity : AppCompatActivity() {
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
+                saveButton.isClickable = nameTurn.length() != 0
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -73,29 +78,50 @@ class CreateTurnActivity : AppCompatActivity() {
             }
         })
 
+        fun isNumeric(s: String): Boolean {
+            return try {
+                s.toDouble()
+                true
+            } catch (e: NumberFormatException) {
+                false
+            }
+        }
+
 
         allowEdit.setOnKeyListener(object : View.OnKeyListener {
             override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
-                if(allowEdit.length() < 4 && allowEdit.length() >= 1){
-                    warningText1.visibility = View.VISIBLE
-                }
-                else if(allowEdit.length() == 4 || allowEdit.length() == 0){
-                    warningText1.visibility = View.GONE
-                }
+                val s = allowEdit.text.toString()
                 if (event.action == KeyEvent.ACTION_DOWN &&
-                    keyCode == KeyEvent.KEYCODE_ENTER &&
-                    allowEdit.length() == 4
+                    keyCode == KeyEvent.KEYCODE_ENTER
                 ) {
-                    val s = allowEdit.text.toString()
-                    val g = AllowGroup(0, s.toInt())
-                    val created = allowGroupAdapter.addAllowGroup(g)
+                    if (allowEdit.length() == 4 && isNumeric(s)){
+                        warningText1.visibility = View.GONE
 
-                    allowEdit.setText("");
-//                    TestEditText.clearFocus()
-//                    TestEditText.isCursorVisible = false
+                        val g = AllowGroup(0, s.toInt())
+                        val created = allowGroupAdapter.addAllowGroup(g)
+
+                        allowEdit.setText("")
+                        allowEdit.requestFocus()
+                        allowEdit.isCursorVisible = true
+                    }
+                    else{
+                        warningText1.visibility = View.VISIBLE
+                        val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                        if (Build.VERSION.SDK_INT >= 26) {
+                            vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE))
+                        } else {
+                            vibrator.vibrate(200)
+                        }
+                        allowEdit.requestFocus()
+                        allowEdit.isCursorVisible = true
+
+                    }
+                    allowEdit.requestFocus()
+                    allowEdit.isCursorVisible = true
 
                     return true
                 }
+
 
 
                 return false
