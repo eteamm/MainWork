@@ -82,4 +82,5 @@ public class MemberAdapter(private val context: Context) : RecyclerView.Adapter<
         memberList.addAll(item)
         notifyDataSetChanged()
     }
+
 }

@@ -123,7 +123,7 @@ class TurnActivity : AppCompatActivity() {
 //
 //        }
 
-        val intent1 = Intent(this, EditTurnActivity::class.java)
+
         val category = intent.categories
         val name : String?
         val desc : String?
@@ -147,6 +147,17 @@ class TurnActivity : AppCompatActivity() {
             creatorUserId = authorID
             myTurnNumberOfPeople.text = "1"
             myTurnPeopleTextView.text = People[1]
+        }
+        else if (category.contains("EditTurn")) {
+            name = intent.getStringExtra("Top")
+            desc = intent.getStringExtra("About")
+            myTurnName.text = name
+            if (desc != null){
+                if (!desc.isEmpty()){
+                    val description = resources.getString(R.string.descriptionBoxTurnCurrent,desc)
+                    myTurnDescription.text = description
+                }
+            }
         }
         else if(category.contains("CurrentTurn")){
             name = intent.getStringExtra("Name")
@@ -266,6 +277,7 @@ class TurnActivity : AppCompatActivity() {
         Pencil.setOnClickListener {
             val intent2 = Intent(this, EditTurnActivity::class.java)
             intent2.putExtra("Top", myTurnName.getText().toString())
+            intent2.putExtra("About", myTurnDescription.getText().toString())
             startActivity(intent2)
             finish()
         }

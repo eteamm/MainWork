@@ -37,7 +37,7 @@ class CreateTurnActivity : AppCompatActivity() {
 
         val saveButton = findViewById<Button>(R.id.createBtnCreate)
         val cancelButton = findViewById<Button>(R.id.backBtnCreate)
-        val warningText1 : TextView = findViewById(R.id.textView14)
+        val warningText1 : TextView = findViewById(R.id.deleteOneGroup)
 
         val idUser = intent.getIntExtra("idUser",-1);
 

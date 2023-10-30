@@ -180,12 +180,12 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/deleteOneGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/exoregular"
                     android:paddingLeft="30dp"
-                    android:text="@string/warningCreateTurn2"
+                    android:text="@string/warningText1"
                     android:textColor="@color/warningText"
                     android:visibility="gone"
                     tools:visibility="visible" />

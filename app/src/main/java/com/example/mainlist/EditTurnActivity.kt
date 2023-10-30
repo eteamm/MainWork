@@ -1,7 +1,11 @@
 package com.example.mainlist
 
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Button
@@ -27,12 +31,17 @@ class EditTurnActivity : AppCompatActivity() {
         val nameMassage = findViewById<EditText>(R.id.queueNameBlock)
         val goToMembers = findViewById<ImageView>(R.id.goToMembersBtn)
         val aboutQueue = findViewById<EditText>(R.id.queueDescriptionBlock)
+        val warningText1 = findViewById<TextView>(R.id.toLessNum)
+        val warningText2 = findViewById<TextView>(R.id.deleteOneGroup)
 
-        val intent1 = intent
-        val top = intent1.getStringExtra("Top") //появление названия очереди
+        //перенос инфы с TurnActivity
+        val inAllInf = intent //интент для получения
+        val top = inAllInf.getStringExtra("Top") //появление названия очереди
+        val about = inAllInf.getStringExtra("About")
         nameMassage.setText(top)
+        aboutQueue.setText(about)
 
-        val sendAboutQueue = aboutQueue.text.toString()
+
 
         noName.visibility = TextView.GONE
         noGroups.visibility = TextView.GONE
@@ -42,12 +51,13 @@ class EditTurnActivity : AppCompatActivity() {
             if (msg.trim().isEmpty()) {
                 noName.visibility = EditText.VISIBLE
             } else {
-                val intent1 = Intent(this, TurnActivity::class.java)
-                intent1.putExtra("About", sendAboutQueue)
-                intent1.putExtra("Top", nameMassage.getText().toString())
-                startActivity(intent1)
+                //отправка инфы в TurnActivity
+                val outAllInf = Intent(this, TurnActivity::class.java) //интент для отправки
+                outAllInf.addCategory("EditTurn")
+                outAllInf.putExtra("Top", nameMassage.getText().toString())
+                outAllInf.putExtra("About", aboutQueue.getText().toString())
+                startActivity(outAllInf)
                 finish()
-
 
             }
         }
@@ -55,7 +65,6 @@ class EditTurnActivity : AppCompatActivity() {
         cancelButton.setOnClickListener {
             val intent2 = Intent(this, TurnActivity::class.java)
             startActivity(intent2)
-            finish()
         }
 
         goToMembers.setOnClickListener {
@@ -70,23 +79,48 @@ class EditTurnActivity : AppCompatActivity() {
         allowGroupsRec.adapter = allowGroupAdapter
         allowGroupsRec.isNestedScrollingEnabled = false;
 
+        fun isNumeric(s: String): Boolean {
+            return try {
+                s.toDouble()
+                true
+            } catch (e: NumberFormatException) {
+                false
+            }
+        }
+
         allowEdit.setOnKeyListener(object : View.OnKeyListener {
             override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
-                if (event.action == KeyEvent.ACTION_DOWN &&
-                    keyCode == KeyEvent.KEYCODE_ENTER
-                ) {
+                if (keyCode == KeyEvent.KEYCODE_ENTER) {
                     val s = allowEdit.text.toString()
-                    val g = AllowGroup(0, s.toInt())
-                    val created = allowGroupAdapter.addAllowGroup(g)
+                    if (s.length == 4 && isNumeric(s)){
+                        warningText1.visibility = View.GONE
 
-                    allowEdit.setText("");
+                        val g = AllowGroup(0, s.toInt())
+                        allowGroupAdapter.addAllowGroup(g)
 
-//                    TestEditText.clearFocus()
-//                    TestEditText.isCursorVisible = false
+                        allowEdit.requestFocus()
+                        allowEdit.isCursorVisible = true
+                    }
+                    else if ((event.action == KeyEvent.ACTION_DOWN)){
+                        warningText1.visibility = View.VISIBLE
+                        val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                        if (Build.VERSION.SDK_INT >= 26) {
+                            vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE))
+                        } else {
+                            vibrator.vibrate(200)
+                        }
+//                        allowEdit.requestFocus()
+//                        allowEdit.isCursorVisible = true
 
+                    }
+                    allowEdit.setText("")
+                    //warningText2.visibility = View.VISIBLE
+                    allowEdit.requestFocus()
+                    allowEdit.isCursorVisible = true
                     return true
                 }
                 return false
+                warningText2.visibility = View.VISIBLE
             }
         })
     }

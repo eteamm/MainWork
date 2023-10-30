@@ -320,6 +320,32 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
+                        android:id="@+id/toLessNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/exoregular"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/warningText1"
+                        android:textColor="@color/warningText"
+                        android:visibility="gone"
+                        tools:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/deleteOneGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/exoregular"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/warningText2"
+                        android:textColor="@color/warningText"
+                        android:visibility="gone"
+                        tools:visibility="gone" />
+
+                    <TextView
                         android:id="@+id/noGroups"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

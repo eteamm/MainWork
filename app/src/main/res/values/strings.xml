@@ -89,9 +89,12 @@
     <string name="status">студент</string>
     <string name="groupNumber">2391</string>
     <string name="nameTurn">Название очереди</string>
-    <string name="allowgroupsTurn">Введите допустимые очереди</string>
+    <string name="allowgroupsTurn">Введите допустимые группы</string>
 
     <string name="memberName">Ненарокова Маргарита Олеговна</string>
     <string name="memberAct1">Разжаловать</string>
     <string name="memberAct2">Удалить из очереди</string>
+
+    <string name="warningText1">Недопустимый номер группы.</string>
+    <string name="warningText2">Вы удалили группу или группы из списка допустимых. Все участники, состоящие в этих группах, будут удалены из очереди.</string>
 </resources>

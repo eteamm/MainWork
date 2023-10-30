@@ -55,4 +55,6 @@ class AllowGroupAdapter(private val context: Context) : RecyclerView.Adapter<All
         allowGroupList.addAll(items)
         notifyDataSetChanged()
     }
+
+
 }
