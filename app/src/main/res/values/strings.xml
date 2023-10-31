@@ -39,6 +39,9 @@
     <string name="StudentsQuantity">%1$d участника</string>
     <string name="search">введите нужное имя...</string>
 
+    <string name="CountStudents">%1$d позиций</string>
+
+
     <string name="mainTextTurn">Очередь</string>
     <string name="justId">#1</string>
     <string name="mainTextTurnDesc">основная информация</string>

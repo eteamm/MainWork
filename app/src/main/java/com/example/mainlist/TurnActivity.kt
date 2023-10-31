@@ -13,6 +13,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mainlist.adapter.PositionsAdapter
+import com.example.mainlist.adapter.TurnAdapter
 import com.example.mainlist.data.Positions
 import com.google.gson.Gson
 import java.util.*
@@ -195,6 +196,11 @@ class TurnActivity : AppCompatActivity() {
         val timer = Timer()
 
 
+        var countStudent : TextView = findViewById(R.id.CountPlacestxt)
+
+
+
+
         val ButtonToPeople: Button = findViewById(R.id.turnPeopleBtn)
         val recyclerView: RecyclerView = findViewById(R.id.PositionsRec)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -222,6 +228,7 @@ class TurnActivity : AppCompatActivity() {
 //            count = count + 1
 //        }
 //        NumberToGoTextView.text = positionsList[2].name.toString()
+
 
 
         if (loggedUserId == admin) {
