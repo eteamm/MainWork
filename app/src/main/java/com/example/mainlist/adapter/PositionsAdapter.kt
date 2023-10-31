@@ -17,7 +17,6 @@ public class PositionsAdapter(private val context: Context, val admin : Int) : R
 
     private var ListPositions = ArrayList<Positions>()
     private var idCurrent = 0
-
     class HolderPositions(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val userNameTextView: TextView = itemView.findViewById(R.id.positionNameTxt)
         val userGroupTextView: TextView = itemView.findViewById(R.id.positionNumberTxt)
