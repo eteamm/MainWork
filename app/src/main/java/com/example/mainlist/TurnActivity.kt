@@ -151,6 +151,8 @@ class TurnActivity : AppCompatActivity() {
         else if (category.contains("EditTurn")) {
             name = intent.getStringExtra("Top")
             desc = intent.getStringExtra("About")
+            author = intent.getStringExtra("Author")
+            myTurnAuthor.text = author
             myTurnName.text = name
             if (desc != null){
                 if (!desc.isEmpty()){
@@ -278,6 +280,7 @@ class TurnActivity : AppCompatActivity() {
             val intent2 = Intent(this, EditTurnActivity::class.java)
             intent2.putExtra("Top", myTurnName.getText().toString())
             intent2.putExtra("About", myTurnDescription.getText().toString())
+            intent2.putExtra("Author", myTurnAuthor.getText().toString())
             startActivity(intent2)
             finish()
         }

@@ -31,6 +31,7 @@ class AllowGroupAdapter(private val context: Context) : RecyclerView.Adapter<All
         holder.TextGroup.text = allowGroup.number.toString()
         holder.DeleteImage.setOnClickListener(){
             val deleted = allowGroupList.removeAt(position)
+
             notifyDataSetChanged()
         }
     }

@@ -38,6 +38,7 @@ class EditTurnActivity : AppCompatActivity() {
         val inAllInf = intent //интент для получения
         val top = inAllInf.getStringExtra("Top") //появление названия очереди
         val about = inAllInf.getStringExtra("About")
+        val author = inAllInf.getStringExtra("Author")
         nameMassage.setText(top)
         aboutQueue.setText(about)
 
@@ -56,20 +57,26 @@ class EditTurnActivity : AppCompatActivity() {
                 outAllInf.addCategory("EditTurn")
                 outAllInf.putExtra("Top", nameMassage.getText().toString())
                 outAllInf.putExtra("About", aboutQueue.getText().toString())
+                outAllInf.putExtra("Author", author.toString())
                 startActivity(outAllInf)
                 finish()
-
             }
-        }
-
-        cancelButton.setOnClickListener {
-            val intent2 = Intent(this, TurnActivity::class.java)
-            startActivity(intent2)
         }
 
         goToMembers.setOnClickListener {
             val intent3 = Intent(this, MembersActivity::class.java)
             startActivity(intent3)
+            finish()
+        }
+
+        cancelButton.setOnClickListener {
+            val outAllInf = Intent(this, TurnActivity::class.java) //интент для отправки
+            outAllInf.addCategory("EditTurn")
+            outAllInf.putExtra("Top", top.toString())
+            outAllInf.putExtra("About", about.toString())
+            outAllInf.putExtra("Author", author.toString())
+            startActivity(outAllInf)
+            finish()
         }
 
         val allowEdit = findViewById<EditText>(R.id.queueGroupsBlock)
@@ -98,6 +105,8 @@ class EditTurnActivity : AppCompatActivity() {
                         val g = AllowGroup(0, s.toInt())
                         allowGroupAdapter.addAllowGroup(g)
 
+                        //allowGroupAdapter.itemCount
+
                         allowEdit.requestFocus()
                         allowEdit.isCursorVisible = true
                     }
@@ -119,8 +128,11 @@ class EditTurnActivity : AppCompatActivity() {
                     allowEdit.isCursorVisible = true
                     return true
                 }
+                if (allowGroupAdapter.itemCount == 0) {
+                    noGroups.visibility = View.VISIBLE
+                }
                 return false
-                warningText2.visibility = View.VISIBLE
+
             }
         })
     }
